@@ -1,2 +1,13 @@
 .header
-  include ../components/_nav.pug
+  .container
+    .row
+      .col-10.offset-12
+        .header__heading
+          h1.title!=content.site.header.heading
+          h2.subtitle!=content.site.header.subheading
+        .header__info
+          p.header__text!=content.site.header.text1
+          p.header__text!=content.site.header.text2  
+          button.btn.button.button--size
+            i.ic.ic--gift.button__ic
+            !=content.site.header.btn

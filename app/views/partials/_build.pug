@@ -1,0 +1,24 @@
+#build.build
+  .container
+    .row
+      .col-9.offset-2
+        .heading.build__heading.heading--border
+          .heading__text!=content.site.build.heading
+    .row
+      .col-24.col-xl-20.offset-xl-2
+        .row
+          each item, i in content.site.build.info.content
+            .col-24.col-md-12.col-xl-8.build__col
+              a.build__item.fancyimage(data-fancybox-group='group1', href!= item.img.href )
+                .build__image(class='build__image--' + (i + 1)) 
+                .build__overlay.align-items-center.d-flex
+                  .row
+                    .col-24
+                      .build__name!= item.name
+                    .col-24  
+                      .build__address!= item.address
+                .build__hover
+                  i.ic.ic--zoom.build__icon   
+          button.btn.button.build__btn
+            i.ic.ic--all.button__ic
+            !=content.site.build.btn     

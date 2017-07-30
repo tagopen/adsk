@@ -1,0 +1,17 @@
+#about.about
+  .container
+    .row
+      .col-9.offset-2
+        .heading.about__heading.heading--border
+          .heading__text!=content.site.about.heading
+        .about__info
+          p.about__text!=content.site.about.text1  
+          p.about__text!=content.site.about.text2 
+            i(class="ic ic--question about__icon" type="button" data-toggle="tooltip" data-animation="false" data-placement="right" title="Строительные нормы и правила (СНиП) — совокупность принятых органами исполнительной власти нормативных актов технического, экономического и правового характера, регламентирующих осуществление градостроительной деятельности, а также инженерных изысканий, архитектурно-строительного проектирования и строительства.") 
+          p.about__text!=content.site.about.text3  
+      .col-10.offset-1.text-center
+        .about__image
+          img.img-fluid(src='img/about.jpg' alt='')
+          
+
+          

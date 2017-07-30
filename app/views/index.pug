@@ -2,13 +2,16 @@ extends base/_layout.pug
 block variables
 
 block styles
-
+  
 block scripts
-
+  // Fancybox JavaScript
+  script(src='js/jquery.fancybox.js')
 block header
+  include components/_nav.pug
   include partials/_header.pug
 block content
-  
+  include partials/_about.pug
+  include partials/_build.pug
 block footer
   include partials/_footer.pug
 block modal

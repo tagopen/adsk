@@ -68,7 +68,9 @@ gulp.task('scripts', () => {
   return gulp.src([
     'node_modules/tether/dist/js/tether.js',
     'node_modules/bootstrap/dist/js/bootstrap.js',
-    'node_modules/jquery/dist/jquery.js'
+    'node_modules/jquery/dist/jquery.js',
+    'node_modules/slick-carousel/slick/slick.js',
+    'node_modules/fancybox/dist/js/jquery.fancybox.js'
   ])
   .pipe($.plumber())
   .pipe(gulp.dest(path.src.js));
@@ -98,18 +100,14 @@ gulp.task('fonts', () => {
    .pipe(browserSync.stream());
 });
 
-gulp.task('bower', () => {
-  return $.bower();
-});
-
 gulp.task('sprite', function() {
  gulp.src(path.watch.spritePng)
    .pipe($.plumber())
    .pipe($.spritesmith({
      imgName: 'sprite.png',
-     //imgPath: 'app/img/sprite.png',
      //retinaSrcFilter: ['app/img/icons/*@2x.png'],
      //retinaImgName: 'sprite@2x.png',
+     //retinaDest: 'app/img/sprite@2x.png',
      cssName: '_sprite.sass',
      cssFormat: 'sass',
      padding: 10
@@ -123,7 +121,6 @@ gulp.task('sprite', function() {
    ));
 });
 
-//gulp.task('svgSprite', function () {
 //  return gulp.src('app/img/icons/**/*.svg')
 //    .pipe($.svgmin({
 //      js2svg: {

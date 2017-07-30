@@ -1,5 +1,9 @@
 +comment('general style')
 +ic
+@each $sprite in $spritesheet-sprites
+  .ic--#{nth($sprite, 10)}
+    &:before
+      +bs($sprite)   
 +cm('form')
 .text-danger
   color: $text-danger
@@ -25,23 +29,90 @@
   flex-direction: column
   min-height: 100vh
 .main
-  flex: 1
+  flex: 1  
 +comment("home page style")
+.button
+  background-color: rgb(192, 0, 19)
+  border-radius: 5px
+  box-shadow: 0 4px 7px rgba(192, 0, 19, 0.37)  
+  cursor: pointer
+  color: #fcfcfc
+  font: 400 14px/18px $font-constantia
+  text-transform: uppercase
+  padding: 20px
+  text-align: center
+  &:hover,
+  &:focus
+    background-color: rgba(192, 0, 19, 0.6)
+    box-shadow: 0 4px 7px rgba(192, 0, 19, 0.37) 
+  &--size
+    width: 100%
+  &__ic
+    margin-right: 12px 
+.heading
+  position: relative
+  padding-left: 35px
+  margin-bottom: 60px
+  &__text
+    font: 700 40px/50px $font-constantia
+    text-transform: uppercase 
+    color: $main-color 
+  &--border  
+    &:before
+      content: ''
+      display: block
+      height: 60px
+      width: 25px
+      position: absolute
+      left: 0
+      top: -18px
+      border-bottom: 5px solid #24a9e1
+      border-left: 5px solid #24a9e1
+      z-index: 10
+    &:after
+      content: ''
+      display: block
+      width: 60px
+      height: 20px
+      position: absolute
+      left: 0
+      top: -18px
+      border-top: 5px solid #24a9e1
+      border-right: 5px solid #24a9e1
+      z-index: 10  
 +comment("nav style")
-.header
-  font-size: 20px 
 .navbar   
   box-shadow: 1.5px -2.6px 50px rgba(0, 0, 0, 0.2)
-  padding: 20px 0
+  padding: 25px 0
+  position: fixed
+  transition: all .3s ease
+  width: 100%
+  z-index: 50
+  background: #fff
+  &--shrink
+    padding: 10px 0
 .nav  
   &__link
-    color: $main-color
+    color: $main-color !important
     font: 400 13px/16px $font-constantia
     text-transform: uppercase
-  &__contact
-    color: #bb0e1e
-    font: 400 13px/16px $font-constantia
-    text-transform: uppercase  
+    &.active
+      color: #bb0e1e !important
+  &__number
+    color: #402e00
+    font: 400 16px/18px $font-trajan   
+    text-transform: uppercase
+    margin-bottom: 5px
+.call   
+  &__btn
+    &--text
+      display: inline-block
+      color: #bb0e1e
+      font: 400 13px/16px $font-constantia
+      text-transform: uppercase 
+      border-bottom: 0.79px dashed #c00013 
+    &--icon
+      margin-right: 5px  
 .logo
   &__link
     display: inline-block    
@@ -49,3 +120,136 @@
   .navbar
     &__row
       width: 100%  
++comment("header style")      
+.header
+  margin-top: 98px
+  padding: 100px 0 70px
+  background: url(../img/headerbg.jpg) no-repeat
+  background-size: cover
+  overflow: hidden
+  &__heading
+    position: relative
+    &:before
+      display: block
+      content: ''
+      position: absolute
+      left: -40px
+      top: -40px
+      height: 35px
+      width: 1000px
+      border-top: 5px solid #cfcfcf
+      border-left: 5px solid #cfcfcf
+    &:after  
+      display: block
+      content: ''
+      position: absolute
+      left: -40px
+      bottom: -40px
+      height: 35px
+      width: 1000px
+      border-bottom: 5px solid #cfcfcf
+      border-left: 5px solid #cfcfcf
+  &__text
+    font: 400 16px/25px $font-constantia
+    color: $main-color
+    margin-bottom: 25px
+    &--span
+      color: #019cdc
+      font: 700 16px/25px $font-constantia
+    &--number 
+      color: #019cdc
+      font: 700 16px/25px $font-trajan
+.title
+  font: 700 43px/48px $font-constantia
+  color: $main-color
+  margin-bottom: 15px
+.subtitle
+  font: 400 16px/23px $font-constantia
+  color: $main-color
+  margin-bottom: 80px
++comment("about style")   
+.about
+  padding: 70px 0 40px
+  &__text
+    color: $main-color
+    font: 400 16px/25px $font-constantia
+    margin-bottom: 20px 
+  &__icon
+    margin-left: 7px
+    cursor: pointer  
+  &__image
+    position: relative
+    display: inline-block  
+    img
+      position: relative
+      z-index: 20
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      left: 55px
+      top: 40px
+      height: 100%
+      width: 100%
+      border: 5px solid #cfcfcf
+      z-index: 15
++comment("build style") 
+.build
+  padding: 50px 0 60px 
+  &__item
+    display: block
+    position: relative
+    margin-bottom: 35px
+    cursor: pointer
+    overflow: hidden
+    transition: all .5s ease
+    &:hover
+      box-shadow: 0 0 0 5px #24a9e1, 0 22px 32px rgba(36, 169, 225, 0.2)
+      .build
+        &__overlay
+          top: 100%
+        &__hover
+          bottom: 0  
+  &__btn
+    margin: 20 auto 0      
+  &__name
+    color: #fff
+    font: 700 18px/20px $font-constantia
+    text-transform: uppercase
+    margin-bottom: 5px
+  &__address
+    color: #fff
+    font: 400 16px/20px $font-constantia  
+    &--span
+      font: 400 16px/20px $font-trajan  
+  &__image
+    display: block
+    height: 300px
+    &--1
+      background: url(../img/build1.jpg) no-repeat
+      background-size: cover
+    &--2
+      background: url(../img/build2.jpg) no-repeat
+      background-size: cover
+    &--3
+      background: url(../img/build3.jpg) no-repeat
+      background-size: cover
+  &__overlay
+    position: absolute
+    left: 0
+    top: 0
+    height: 100%
+    width: 100%
+    background-color: rgba(45, 45, 45, 0.7)
+    text-align: center
+    transition: all .5s ease
+  &__hover
+    position: absolute
+    left: 0
+    bottom: 100%
+    width: 100%
+    height: 40px
+    text-align: center
+    color: #fff  
+    transition: all .5s ease
+    background-color: rgba(36, 169, 225, 0.7)

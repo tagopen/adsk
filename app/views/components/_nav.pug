@@ -1,4 +1,4 @@
-nav.navbar.navbar-toggleable-sm.navbar-light
+nav#mainNav.navbar.navbar-toggleable-sm.navbar-light
   .container.navbar__container
     .row.justify-content-between.justify-content-md-start.navbar__row.align-items-center
       .col-4
@@ -10,7 +10,10 @@ nav.navbar.navbar-toggleable-sm.navbar-light
           span.navbar-toggler-icon
       .col-4.flex-md-last
         .nav__contact.ml-auto
-          | Заказать звонок
+          a.nav__number=content.site.nav.contact.text
+          a.nav__btn.call__btn
+            i.ic.ic--call.call__btn--icon
+            span.call__btn--text!=content.site.nav.btn.text
       .hidden-md-up.w-100
       .col    
         #navbarSupportedContent.collapse.navbar-collapse
