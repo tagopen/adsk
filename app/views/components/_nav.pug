@@ -1,0 +1,22 @@
+nav.navbar.navbar-toggleable-sm.navbar-light
+  .container.navbar__container
+    .row.justify-content-between.justify-content-md-start.navbar__row.align-items-center
+      .col-4
+        .logo.logo.logo--inside
+          a.logo__link(href="/")
+            img.img-fuid.logo__img(src=content.site.logo.img.src, alt=content.site.logo.img.alt)/
+      .col-4.hidden-md-up
+        button.hidden-md-up.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+      .col-4.flex-md-last
+        .nav__contact.ml-auto
+          | Заказать звонок
+      .hidden-md-up.w-100
+      .col    
+        #navbarSupportedContent.collapse.navbar-collapse
+          ul.navbar-nav.nav-fill.w-100
+            each item, i in content.site.nav.links
+              li.nav-item
+                a.nav-link.nav__link(class={"nav-link--active": i === 0}, href=item.href)!= item.name
+                  if (i === 0) 
+                    span.sr-only (current)

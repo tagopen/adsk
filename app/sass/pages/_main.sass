@@ -1,0 +1,51 @@
++comment('general style')
++ic
++cm('form')
+.text-danger
+  color: $text-danger
+  text-align: left
+.form-group.error
+  .form-control
+    border-color: $form-control-error-border-color
+[type=submit]:disabled
+  animation: progress-bar-stripes 2s linear infinite
+  background-image: $btn-submit-loading-bg
+  background-size: 40px 40px
+@keyframes progress-bar-stripes
+  from
+    background-position: 40px 0
+  to
+    background-position: 0 0
++cm('modal')
+.modal
+  -webkit-overflow-scrolling: touch
+  transform: translateZ(0)
+.body
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+.main
+  flex: 1
++comment("home page style")
++comment("nav style")
+.header
+  font-size: 20px 
+.navbar   
+  box-shadow: 1.5px -2.6px 50px rgba(0, 0, 0, 0.2)
+  padding: 20px 0
+.nav  
+  &__link
+    color: $main-color
+    font: 400 13px/16px $font-constantia
+    text-transform: uppercase
+  &__contact
+    color: #bb0e1e
+    font: 400 13px/16px $font-constantia
+    text-transform: uppercase  
+.logo
+  &__link
+    display: inline-block    
++r(760)
+  .navbar
+    &__row
+      width: 100%  
