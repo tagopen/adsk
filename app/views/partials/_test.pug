@@ -1,0 +1,16 @@
+.test
+  .container
+    .row
+      .col-24.col-md-12.offset-md-10.col-lg-10.offset-lg-13
+        .heading.test__heading.heading--border
+          .heading__text!=content.index.test.heading
+        .test__subheading!=content.index.test.subheading  
+        .test__box  
+          .test__title!=content.index.test.title
+          each item, i in content.index.test.info
+            .test__point
+              i.ic.test__icon(class="ic--test-"+(i+1))
+              .test__text!= item.text         
+        button.btn.button.test__btn
+          i.ic.ic--list.button__ic
+          !=content.index.test.btn            

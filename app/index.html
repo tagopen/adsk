@@ -54,13 +54,13 @@
     <nav class="navbar navbar-toggleable-sm navbar-light" id="mainNav">
       <div class="container navbar__container">
         <div class="row justify-content-between justify-content-md-start navbar__row align-items-center">
-          <div class="col-4">
+          <div class="col-8 col-sm-6 hidden-lg-up">
+            <button class="hidden-lg-up navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          </div>
+          <div class="col-sm-10 col-lg-4 hidden-sm-down">
             <div class="logo logo logo--inside"><a class="logo__link" href="/"><img class="img-fuid logo__img" src="img/logo/logo.png"/></a></div>
           </div>
-          <div class="col-4 hidden-md-up">
-            <button class="hidden-md-up navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-          </div>
-          <div class="col-4 flex-md-last">
+          <div class="col-16 col-sm-8 col-lg-5 flex-lg-last">
             <div class="nav__contact ml-auto"><a class="nav__number">+38 (067) 664 31 77</a><a class="nav__btn call__btn"><i class="ic ic--call call__btn--icon"></i><span class="call__btn--text">Заказать звонок</span></a></div>
           </div>
           <div class="hidden-md-up w-100"></div>
@@ -81,7 +81,7 @@
     <div class="header">
       <div class="container">
         <div class="row">
-          <div class="col-10 offset-12">
+          <div class="col-24 col-md-20 offset-md-2 col-lg-12 offset-lg-10 col-xl-10 offset-xl-12">
             <div class="header__heading">
               <h1 class="title">Строительство жилых и промышленных зданий под ключ:</h1>
               <h2 class="subtitle">Проектирование, фундамент, каркас, стены, кровля, комплексная поставка материалов и сопровождение</h2>
@@ -100,18 +100,26 @@
       <div class="about" id="about">
         <div class="container">
           <div class="row">
-            <div class="col-9 offset-2">
+            <div class="col-24 col-lg-10 offset-lg-2">
               <div class="heading about__heading heading--border">
                 <div class="heading__text">О Компании</div>
               </div>
-              <div class="about__info">
-                <p class="about__text">Хотите построить промышленное или жилое здание? Строительная компания ADSK реализует Вашу задумку под ключ. Начиная от создания фундамента и заканчивая кровлей, а также отделкой (для пром. зданий).</p>
-                <p class="about__text">Вы получаете  гарантию результата: до 10 лет на материалы и до 2 лет на работу. На всех этапах реализации проекта мы придерживаемся стандартам СНиП.<i class="ic ic--question about__icon" type="button" data-toggle="tooltip" data-animation="false" data-placement="right" title="Строительные нормы и правила (СНиП) — совокупность принятых органами исполнительной власти нормативных актов технического, экономического и правового характера, регламентирующих осуществление градостроительной деятельности, а также инженерных изысканий, архитектурно-строительного проектирования и строительства."> </i></p>
-                <p class="about__text">Строим здания из металлоконструкций, бетона, кирпича и дерева, на 100% соответствующее утвержденному проекту.</p>
-              </div>
             </div>
-            <div class="col-10 offset-1 text-center">
-              <div class="about__image"><img class="img-fluid" src="img/about.jpg" alt=""></div>
+          </div>
+          <div class="row">
+            <div class="col-24 col-lg-20 offset-lg-2">
+              <div class="row flex-xl-row-reverse justify-content-between">
+                <div class="col-24 col-lg-10 text-center">
+                  <div class="about__image"><img class="img-fluid" src="img/about.jpg" alt=""></div>
+                </div>
+                <div class="col-24 col-lg-10">   
+                  <div class="about__info">
+                    <p class="about__text">Хотите построить промышленное или жилое здание? Строительная компания ADSK реализует Вашу задумку под ключ. Начиная от создания фундамента и заканчивая кровлей, а также отделкой (для пром. зданий).</p>
+                    <p class="about__text">Вы получаете  гарантию результата: до 10 лет на материалы и до 2 лет на работу. На всех этапах реализации проекта мы придерживаемся стандартам СНиП.<i class="ic ic--question about__icon" type="button" data-toggle="tooltip" data-animation="false" data-placement="bottom" title="Строительные нормы и правила (СНиП) — совокупность принятых органами исполнительной власти нормативных актов технического, экономического и правового характера, регламентирующих осуществление градостроительной деятельности, а также инженерных изысканий, архитектурно-строительного проектирования и строительства."> </i></p>
+                    <p class="about__text">Строим здания из металлоконструкций, бетона, кирпича и дерева, на 100% соответствующее утвержденному проекту.</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -119,7 +127,7 @@
       <div class="build" id="build">
         <div class="container">
           <div class="row">
-            <div class="col-9 offset-2">
+            <div class="col-24 col-lg-9 offset-lg-2">
               <div class="heading build__heading heading--border">
                 <div class="heading__text">Мы строим</div>
               </div>
@@ -127,49 +135,136 @@
           </div>
           <div class="row">
             <div class="col-24 col-xl-20 offset-xl-2">
-              <div class="row">
-                <div class="col-24 col-md-12 col-xl-8 build__col"><a class="build__item fancyimage" data-fancybox-group="group1" href="img/build1.jpg">
-                    <div class="build__image build__image--1"> </div>
-                    <div class="build__overlay align-items-center d-flex">
-                      <div class="row">
-                        <div class="col-24">
-                          <div class="build__name">Название здания</div>
-                        </div>
-                        <div class="col-24"> 
-                          <div class="build__address">г. Киев. ул. Независимости <span class="build__address--span">12/2</span></div>
-                        </div>
+              <div class="row justify-content-center">
+                      <div class="col-24 col-md-12 col-xl-8 build__col"><a class="build__item fancyimage" rel="group" data-fancybox="group1" href="img/build1.jpg">
+                          <div class="build__image build__image--1"> </div>
+                          <div class="build__overlay align-items-center d-flex">
+                            <div class="row">
+                              <div class="col-24">
+                                <div class="build__name">Название здания</div>
+                              </div>
+                              <div class="col-24"> 
+                                <div class="build__address">г. Киев. ул. Независимости <span class="build__address--span">12/2</span></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="build__hover"><i class="ic ic--zoom build__icon">  </i></div></a>
                       </div>
-                    </div>
-                    <div class="build__hover"><i class="ic ic--zoom build__icon">  </i></div></a></div>
-                <div class="col-24 col-md-12 col-xl-8 build__col"><a class="build__item fancyimage" data-fancybox-group="group1" href="img/build2.jpg">
-                    <div class="build__image build__image--2"> </div>
-                    <div class="build__overlay align-items-center d-flex">
-                      <div class="row">
-                        <div class="col-24">
-                          <div class="build__name">Название здания</div>
-                        </div>
-                        <div class="col-24"> 
-                          <div class="build__address">г. Киев. ул. Независимости <span class="build__address--span">12/2</span></div>
-                        </div>
+                      <div class="col-24 col-md-12 col-xl-8 build__col"><a class="build__item fancyimage" rel="group" data-fancybox="group1" href="img/build2.jpg">
+                          <div class="build__image build__image--2"> </div>
+                          <div class="build__overlay align-items-center d-flex">
+                            <div class="row">
+                              <div class="col-24">
+                                <div class="build__name">Название здания</div>
+                              </div>
+                              <div class="col-24"> 
+                                <div class="build__address">г. Киев. ул. Независимости <span class="build__address--span">12/2</span></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="build__hover"><i class="ic ic--zoom build__icon">  </i></div></a>
                       </div>
-                    </div>
-                    <div class="build__hover"><i class="ic ic--zoom build__icon">  </i></div></a></div>
-                <div class="col-24 col-md-12 col-xl-8 build__col"><a class="build__item fancyimage" data-fancybox-group="group1" href="img/build3.jpg">
-                    <div class="build__image build__image--3"> </div>
-                    <div class="build__overlay align-items-center d-flex">
-                      <div class="row">
-                        <div class="col-24">
-                          <div class="build__name">Название здания</div>
-                        </div>
-                        <div class="col-24"> 
-                          <div class="build__address">г. Киев. ул. Независимости <span class="build__address--span">12/2</span></div>
-                        </div>
+                      <div class="col-24 col-md-12 col-xl-8 build__col"><a class="build__item fancyimage" rel="group" data-fancybox="group1" href="img/build3.jpg">
+                          <div class="build__image build__image--3"> </div>
+                          <div class="build__overlay align-items-center d-flex">
+                            <div class="row">
+                              <div class="col-24">
+                                <div class="build__name">Название здания</div>
+                              </div>
+                              <div class="col-24"> 
+                                <div class="build__address">г. Киев. ул. Независимости <span class="build__address--span">12/2</span></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="build__hover"><i class="ic ic--zoom build__icon">  </i></div></a>
                       </div>
-                    </div>
-                    <div class="build__hover"><i class="ic ic--zoom build__icon">  </i></div></a></div>
+                      <div class="col-24 col-md-12 col-xl-8 build__col"><a class="build__item fancyimage" rel="group" data-fancybox="group1" href="img/build4.jpg">
+                          <div class="build__image build__image--4"> </div>
+                          <div class="build__overlay align-items-center d-flex">
+                            <div class="row">
+                              <div class="col-24">
+                                <div class="build__name">Название здания</div>
+                              </div>
+                              <div class="col-24"> 
+                                <div class="build__address">г. Киев. ул. Независимости <span class="build__address--span">12/2</span></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="build__hover"><i class="ic ic--zoom build__icon">  </i></div></a>
+                      </div>
+                      <div class="col-24 col-md-12 col-xl-8 build__col"><a class="build__item fancyimage" rel="group" data-fancybox="group1" href="img/build5.jpg">
+                          <div class="build__image build__image--5"> </div>
+                          <div class="build__overlay align-items-center d-flex">
+                            <div class="row">
+                              <div class="col-24">
+                                <div class="build__name">Название здания</div>
+                              </div>
+                              <div class="col-24"> 
+                                <div class="build__address">г. Киев. ул. Независимости <span class="build__address--span">12/2</span></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="build__hover"><i class="ic ic--zoom build__icon">  </i></div></a>
+                      </div>
+                      <div class="col-24 col-md-12 col-xl-8 build__col"><a class="build__item fancyimage" rel="group" data-fancybox="group1" href="img/build6.jpg">
+                          <div class="build__image build__image--6"> </div>
+                          <div class="build__overlay align-items-center d-flex">
+                            <div class="row">
+                              <div class="col-24">
+                                <div class="build__name">Название здания</div>
+                              </div>
+                              <div class="col-24"> 
+                                <div class="build__address">г. Киев. ул. Независимости <span class="build__address--span">12/2</span></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="build__hover"><i class="ic ic--zoom build__icon">  </i></div></a>
+                      </div>
+                      <div class="col-24 col-md-12 col-xl-8 build__col build__col--hidden"><a class="build__item fancyimage" rel="group" data-fancybox="group1" href="img/build3.jpg">
+                          <div class="build__image build__image--7"> </div>
+                          <div class="build__overlay align-items-center d-flex">
+                            <div class="row">
+                              <div class="col-24">
+                                <div class="build__name">Название здания</div>
+                              </div>
+                              <div class="col-24"> 
+                                <div class="build__address">г. Киев. ул. Независимости <span class="build__address--span">12/2</span></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="build__hover"><i class="ic ic--zoom build__icon">  </i></div></a>
+                      </div>
+              </div>
+              <div class="row justify-content-center">         
                 <button class="btn button build__btn"><i class="ic ic--all button__ic"></i>Смотреть все объекты
                 </button>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="test">
+        <div class="container">
+          <div class="row">
+            <div class="col-24 col-md-12 offset-md-10 col-lg-10 offset-lg-13">
+              <div class="heading test__heading heading--border">
+                <div class="heading__text">Тест</div>
+              </div>
+              <div class="test__subheading">Узнайте за <span class="test__subheading--span">3</span> минуты стоимость вашего здания!</div>
+              <div class="test__box"> 
+                <div class="test__title">Ответьте на 10 вопросов и получите:</div>
+                <div class="test__point"><i class="ic test__icon ic--test-1"></i>
+                  <div class="test__text">Предварительный проект вашего здания</div>
+                </div>
+                <div class="test__point"><i class="ic test__icon ic--test-2"></i>
+                  <div class="test__text">Сметную стоимость работ «под ключ»</div>
+                </div>
+                <div class="test__point"><i class="ic test__icon ic--test-3"></i>
+                  <div class="test__text">Подарок за экономию нашего времени</div>
+                </div>
+              </div>
+              <button class="btn button test__btn"><i class="ic ic--list button__ic"></i>Пройдите тест прямо сейчас
+              </button>
             </div>
           </div>
         </div>
@@ -186,7 +281,7 @@
     <!-- Old browsers reject JavaScript-->
     <script src="js/jquery.reject.js"></script>
     <!-- Fancybox JavaScript-->
-    <script src="js/jquery.fancybox.js"></script>
+    <script src="js/jquery.fancybox.js">   </script>
     <!-- Custom JavaScript-->
     <script src="js/main.js"></script>
     <!-- endbuild-->

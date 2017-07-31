@@ -41,6 +41,7 @@
   text-transform: uppercase
   padding: 20px
   text-align: center
+  white-space: normal
   &:hover,
   &:focus
     background-color: rgba(192, 0, 19, 0.6)
@@ -48,13 +49,19 @@
   &--size
     width: 100%
   &__ic
-    margin-right: 12px 
+    margin-right: 12px
++r(760)
+  .button
+    white-space: nowrap  
++r(992)
+  .button
+    min-width: 360px      
 .heading
   position: relative
   padding-left: 35px
-  margin-bottom: 60px
+  margin-bottom: 30px
   &__text
-    font: 700 40px/50px $font-constantia
+    font: 700 20px/30px $font-constantia
     text-transform: uppercase 
     color: $main-color 
   &--border  
@@ -80,19 +87,28 @@
       border-top: 5px solid #24a9e1
       border-right: 5px solid #24a9e1
       z-index: 10  
++r(760)
+  .heading
+    margin-bottom: 50px
+    &__text
+      font: 700 40px/50px $font-constantia      
 +comment("nav style")
 .navbar   
   box-shadow: 1.5px -2.6px 50px rgba(0, 0, 0, 0.2)
-  padding: 25px 0
   position: fixed
   transition: all .3s ease
   width: 100%
   z-index: 50
   background: #fff
-  &--shrink
-    padding: 10px 0
+  &-nav
+    padding-top: 15px
+  &-toggler
+    border: 0 !important 
+    outline: none !important
+    cursor: pointer
 .nav  
   &__link
+    display: inline-block
     color: $main-color !important
     font: 400 13px/16px $font-constantia
     text-transform: uppercase
@@ -105,6 +121,7 @@
     margin-bottom: 5px
 .call   
   &__btn
+    display: block
     &--text
       display: inline-block
       color: #bb0e1e
@@ -118,58 +135,88 @@
     display: inline-block    
 +r(760)
   .navbar
+    padding: 25px 0
+    &-nav
+      padding-top: 0
     &__row
-      width: 100%  
+      width: 100% 
++r(992)
+  .navbar
+    &-collapse
+      display: flex !important
 +comment("header style")      
 .header
-  margin-top: 98px
-  padding: 100px 0 70px
-  background: url(../img/headerbg.jpg) no-repeat
+  margin-top: 65px
+  padding: 30px 0 70px
+  background: url(../img/headerbg320.jpg) no-repeat
   background-size: cover
-  overflow: hidden
+  overflow: hidden 
   &__heading
     position: relative
-    &:before
-      display: block
-      content: ''
-      position: absolute
-      left: -40px
-      top: -40px
-      height: 35px
-      width: 1000px
-      border-top: 5px solid #cfcfcf
-      border-left: 5px solid #cfcfcf
-    &:after  
-      display: block
-      content: ''
-      position: absolute
-      left: -40px
-      bottom: -40px
-      height: 35px
-      width: 1000px
-      border-bottom: 5px solid #cfcfcf
-      border-left: 5px solid #cfcfcf
   &__text
     font: 400 16px/25px $font-constantia
-    color: $main-color
+    color: #fff
     margin-bottom: 25px
+    text-align: center
     &--span
       color: #019cdc
       font: 700 16px/25px $font-constantia
     &--number 
       color: #019cdc
       font: 700 16px/25px $font-trajan
++r(760)
+  .header  
+    padding: 100px 0 70px
+    margin-top: 98px
+    background: url(../img/headerbg.jpg) no-repeat
+    background-size: cover
+    &__text
+      color: $main-color
+      text-align: left
+    &__heading 
+      &:before
+        display: block
+        content: ''
+        position: absolute
+        left: -40px
+        top: -40px
+        height: 35px
+        width: 1000px
+        border-top: 5px solid #cfcfcf
+        border-left: 5px solid #cfcfcf
+      &:after  
+        display: block
+        content: ''
+        position: absolute
+        left: -40px
+        bottom: -40px
+        height: 35px
+        width: 1000px
+        border-bottom: 5px solid #cfcfcf
+        border-left: 5px solid #cfcfcf     
 .title
-  font: 700 43px/48px $font-constantia
-  color: $main-color
+  font: 700 18px/28px $font-constantia
+  color: #fff
   margin-bottom: 15px
+  text-align: center
 .subtitle
-  font: 400 16px/23px $font-constantia
-  color: $main-color
-  margin-bottom: 80px
+  font: 400 16px/20px $font-constantia
+  color: #fff
+  margin-bottom: 30px
+  text-align: center
++r(760)
+  .title
+    font: 700 43px/48px $font-constantia
+    color: $main-color
+    text-align: left
+  .subtitle
+    font: 400 16px/23px $font-constantia  
+    color: $main-color
+    margin-bottom: 80px
+    text-align: left
 +comment("about style")   
 .about
-  padding: 70px 0 40px
+  padding: 70px 0 30px
   &__text
     color: $main-color
     font: 400 16px/25px $font-constantia
@@ -180,22 +227,37 @@
   &__image
     position: relative
     display: inline-block  
+    margin-bottom: 20px
     img
       position: relative
       z-index: 20
-    &:before
-      content: ''
-      display: block
-      position: absolute
-      left: 55px
-      top: 40px
-      height: 100%
-      width: 100%
-      border: 5px solid #cfcfcf
-      z-index: 15
++r(760)
+  .about
+    &__image  
+      margin-bottom: 60px   
+      &:before
+        content: ''
+        display: block
+        position: absolute
+        left: 55px
+        top: 40px
+        height: 100%
+        width: 100%
+        border: 5px solid #cfcfcf
+        z-index: 15
++r(1200)
+  .about
+    &__image
+      margin-bottom: 0        
 +comment("build style") 
 .build
-  padding: 50px 0 60px 
+  padding: 60px 0 60px 
+  &__col
+    transition: all .3s ease
+    &--hidden
+      visibility: visible
+      opacity: 0
+      display: none
   &__item
     display: block
     position: relative
@@ -203,15 +265,15 @@
     cursor: pointer
     overflow: hidden
     transition: all .5s ease
-    &:hover
+    z-index: 30
+    &:hover,
+    &:focus
       box-shadow: 0 0 0 5px #24a9e1, 0 22px 32px rgba(36, 169, 225, 0.2)
       .build
         &__overlay
           top: 100%
         &__hover
-          bottom: 0  
-  &__btn
-    margin: 20 auto 0      
+          bottom: 0       
   &__name
     color: #fff
     font: 700 18px/20px $font-constantia
@@ -234,6 +296,18 @@
     &--3
       background: url(../img/build3.jpg) no-repeat
       background-size: cover
+    &--4
+      background: url(../img/build4.jpg) no-repeat
+      background-size: cover
+    &--5
+      background: url(../img/build5.jpg) no-repeat
+      background-size: cover
+    &--6
+      background: url(../img/build6.jpg) no-repeat
+      background-size: cover
+    &--7
+      background: url(../img/build3.jpg) no-repeat
+      background-size: cover       
   &__overlay
     position: absolute
     left: 0
@@ -243,6 +317,7 @@
     background-color: rgba(45, 45, 45, 0.7)
     text-align: center
     transition: all .5s ease
+    z-index: 20
   &__hover
     position: absolute
     left: 0
@@ -253,3 +328,33 @@
     color: #fff  
     transition: all .5s ease
     background-color: rgba(36, 169, 225, 0.7)
++comment("test style")
+.test
+  padding: 45px 0
+  background: url(../img/testbg.jpg) no-repeat
+  background-size: cover
+  &__heading
+    margin-bottom: 15px
+  &__subheading
+    color: rgb(45, 45, 45)
+    font: 700 18px/20px $font-constantia
+    margin-bottom: 35px  
+    &--span
+      font: 700 18px/20px $font-trajan
+  &__title
+    color: rgb(45, 45, 45)
+    font: 400 18px/20px $font-constantia 
+    margin-bottom: 20px
+  &__point
+    position: relative
+    padding-left: 30px
+    margin-bottom: 25px
+  &__icon
+    position: absolute
+    left: 0
+    top: 0      
+  &__text  
+    color: rgb(45, 45, 45)
+    font: 700 italic 18px/20px $font-constantia  
+  &__btn
+    margin-top: 20px  

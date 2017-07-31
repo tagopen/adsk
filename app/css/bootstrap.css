@@ -5108,16 +5108,6 @@ tbody.collapse.show {
         -ms-flex-align: center;
             align-items: center;
   }
-  .navbar-toggleable .navbar-collapse {
-    display: -webkit-box !important;
-    display: -webkit-flex !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
-    width: 100%;
-  }
-  .navbar-toggleable .navbar-toggler {
-    display: none;
-  }
 }
 
 @media (max-width: 759px) {
@@ -5165,16 +5155,6 @@ tbody.collapse.show {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-  .navbar-toggleable-sm .navbar-collapse {
-    display: -webkit-box !important;
-    display: -webkit-flex !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
-    width: 100%;
-  }
-  .navbar-toggleable-sm .navbar-toggler {
-    display: none;
   }
 }
 
@@ -5224,16 +5204,6 @@ tbody.collapse.show {
         -ms-flex-align: center;
             align-items: center;
   }
-  .navbar-toggleable-md .navbar-collapse {
-    display: -webkit-box !important;
-    display: -webkit-flex !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
-    width: 100%;
-  }
-  .navbar-toggleable-md .navbar-toggler {
-    display: none;
-  }
 }
 
 @media (max-width: 1199px) {
@@ -5281,16 +5251,6 @@ tbody.collapse.show {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-  .navbar-toggleable-lg .navbar-collapse {
-    display: -webkit-box !important;
-    display: -webkit-flex !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
-    width: 100%;
-  }
-  .navbar-toggleable-lg .navbar-toggler {
-    display: none;
   }
 }
 
@@ -5341,18 +5301,6 @@ tbody.collapse.show {
           align-items: center;
 }
 
-.navbar-toggleable-xl .navbar-collapse {
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  width: 100%;
-}
-
-.navbar-toggleable-xl .navbar-toggler {
-  display: none;
-}
-
 .navbar-light .navbar-brand,
 .navbar-light .navbar-toggler {
   color: rgba(0, 0, 0, 0.9);
@@ -5388,7 +5336,7 @@ tbody.collapse.show {
 }
 
 .navbar-light .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  background-image: url(../img/menu.png);
 }
 
 .navbar-light .navbar-text {

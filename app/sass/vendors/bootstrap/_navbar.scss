@@ -153,15 +153,10 @@
         }
 
         // scss-lint:disable ImportantRule
-        .navbar-collapse {
-          display: flex !important;
-          width: 100%;
-        }
+
         // scss-lint:enable ImportantRule
 
-        .navbar-toggler {
-          display: none;
-        }
+
       }
     }
   }
@@ -209,7 +204,7 @@
   }
 
   .navbar-toggler-icon {
-    background-image: $navbar-light-toggler-bg;
+    background-image: url(../img/menu.png);
   }
 
   .navbar-text {

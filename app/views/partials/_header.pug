@@ -1,13 +1,13 @@
 .header
   .container
     .row
-      .col-10.offset-12
+      .col-24.col-md-20.offset-md-2.col-lg-12.offset-lg-10.col-xl-10.offset-xl-12
         .header__heading
-          h1.title!=content.site.header.heading
-          h2.subtitle!=content.site.header.subheading
+          h1.title!=content.index.header.heading
+          h2.subtitle!=content.index.header.subheading
         .header__info
-          p.header__text!=content.site.header.text1
-          p.header__text!=content.site.header.text2  
+          p.header__text!=content.index.header.text1
+          p.header__text!=content.index.header.text2  
           button.btn.button.button--size
             i.ic.ic--gift.button__ic
-            !=content.site.header.btn
+            !=content.index.header.btn

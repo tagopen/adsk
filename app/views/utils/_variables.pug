@@ -59,6 +59,31 @@
             href: "",
             text: ""
           }
+        }
+      }, //- site
+      index: {
+        hostname: "index.html",
+        title: "Главная страница",
+        meta: {
+          description: "",
+          keywords: "",
+          openGraph: {
+            title: "Site name",
+            siteName: "Site name",
+            description: "Описание сайта",
+            type: "website",
+            locale: "ru_RU",
+            image: "microformat.png",
+            imageType: "image/png",
+            url: hostname
+          },
+          twitter: {
+            card: "summary",
+            site: "@flickr",
+            title: "My Site",
+            description: "My Site is cool",
+            image: hostname + "/img/logo/microformat.png"
+          }
         },
         header: {
           heading: "Строительство жилых и промышленных зданий под ключ:",
@@ -66,6 +91,12 @@
           text1: "Мы подготовим смету <span class=\"header__text--span\">в течении <span class=\"header__text--number\">48</span> часов</span>",
           text2: "Оставьте ваши контакты сейчас и <span class=\"header__text--span\">совершенно бесплатно</span> получите проект объекта.",
           btn: "Получить подарок и рассчитать смету проекта"
+        },
+        about: {
+          heading: "О Компании",
+          text1: "Хотите построить промышленное или жилое здание? Строительная компания ADSK реализует Вашу задумку под ключ. Начиная от создания фундамента и заканчивая кровлей, а также отделкой (для пром. зданий).",
+          text2: "Вы получаете  гарантию результата: до 10 лет на материалы и до 2 лет на работу. На всех этапах реализации проекта мы придерживаемся стандартам СНиП.",
+          text3: "Строим здания из металлоконструкций, бетона, кирпича и дерева, на 100% соответствующее утвержденному проекту."
         },
         about: {
           heading: "О Компании",
@@ -98,34 +129,54 @@
                 },
                 name: "Название здания",
                 address: "г. Киев. ул. Независимости <span class=\"build__address--span\">12/2</span>"
+              },
+              {
+                img: {
+                  href: "img/build4.jpg"
+                },
+                name: "Название здания",
+                address: "г. Киев. ул. Независимости <span class=\"build__address--span\">12/2</span>"
+              },
+              {
+                img: {
+                  href: "img/build5.jpg"
+                },
+                name: "Название здания",
+                address: "г. Киев. ул. Независимости <span class=\"build__address--span\">12/2</span>"
+              },
+              {
+                img: {
+                  href: "img/build6.jpg"
+                },
+                name: "Название здания",
+                address: "г. Киев. ул. Независимости <span class=\"build__address--span\">12/2</span>"
+              },
+              {
+                img: {
+                  href: "img/build3.jpg"
+                },
+                name: "Название здания",
+                address: "г. Киев. ул. Независимости <span class=\"build__address--span\">12/2</span>"
               }
             ]
           }
-        }
-      }, //- site
-      index: {
-        hostname: "index.html",
-        title: "Главная страница",
-        meta: {
-          description: "",
-          keywords: "",
-          openGraph: {
-            title: "Site name",
-            siteName: "Site name",
-            description: "Описание сайта",
-            type: "website",
-            locale: "ru_RU",
-            image: "microformat.png",
-            imageType: "image/png",
-            url: hostname
-          },
-          twitter: {
-            card: "summary",
-            site: "@flickr",
-            title: "My Site",
-            description: "My Site is cool",
-            image: hostname + "/img/logo/microformat.png"
-          }
+        },
+        test: {
+          heading: "Тест",
+          subheading: "Узнайте за <span class=\"test__subheading--span\">3</span> минуты стоимость вашего здания!",
+          title: "Ответьте на 10 вопросов и получите:",
+          info: [
+            {
+              text: "Предварительный проект вашего здания"
+            },
+            {             
+              text: "Сметную стоимость работ «под ключ»"
+            },
+            {
+              text: "Подарок за экономию нашего времени"
+            }
+          ],
+          btn: "Пройдите тест прямо сейчас"
         }
       }, //- index
     }

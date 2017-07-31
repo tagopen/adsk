@@ -1,6 +1,15 @@
 (function($) {
   "use strict"; // Start of use strict
 
+  $(document).ready(function(){
+    $(".navbar-nav").on("click",".nav__link", function (event) {
+      event.preventDefault();
+      var id  = $(this).attr('href'),
+      top = $(id).offset().top;
+      $('body,html').animate({scrollTop: top -$('.navbar').outerHeight()}, 1500);
+    });
+  });
+
   // Old browser notification
   $(function() {
     $.reject({
@@ -44,9 +53,17 @@
       $('[data-toggle="tooltip"]').tooltip();
     });
 
-   // Fancy Box
-  if ($("a.fancyimage").length) {
-    $("a.fancyimage").fancybox(); 
-  };
+  // Build Btn show all
+    $('.build__btn').on('click', function () {
+      $('.build__col').removeClass('build__col--hidden');
+      $('.build__btn').hide();
+    }); 
+
+  // Fancy Box
+   $("[data-fancybox]").fancybox({
+    // Options will go here
+  });
+
+
 
 })(jQuery); // End of use strict
