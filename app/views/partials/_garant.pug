@@ -1,0 +1,15 @@
+.garant
+  .container
+    .row
+      .col-24.col-lg-20.offset-lg-2
+        .heading.garant__heading.heading--border
+          .heading__text!=content.index.garant.heading
+      .col-24.col-lg-20.offset-lg-2    
+        .garant__box
+          img.img-fluid.garant__img(src=content.index.garant.img.src, alt=content.index.garant.img.alt)
+          .row
+            .col-22.offset-1.col-lg-13.offset-lg-2
+              .garant__info
+                .garant__text=content.index.garant.text
+                .garant__subtext=content.index.garant.subtext  
+            

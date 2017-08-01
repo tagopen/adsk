@@ -64,6 +64,10 @@
     font: 700 20px/30px $font-constantia
     text-transform: uppercase 
     color: $main-color 
+    &--span
+      font: 700 20px/30px $font-trajan
+      text-transform: uppercase 
+      color: $main-color 
   &--border  
     &:before
       content: ''
@@ -91,7 +95,9 @@
   .heading
     margin-bottom: 50px
     &__text
-      font: 700 40px/50px $font-constantia      
+      font: 700 40px/50px $font-constantia   
+      &--span
+        font: 700 40px/50px $font-trajan   
 +comment("nav style")
 .navbar   
   box-shadow: 1.5px -2.6px 50px rgba(0, 0, 0, 0.2)
@@ -358,3 +364,145 @@
     font: 700 italic 18px/20px $font-constantia  
   &__btn
     margin-top: 20px  
++comment("garant style") 
+.garant
+  padding: 90px 0 80px
+  &__heading
+    margin-bottom: 270px
+  &__box
+    position: relative
+    background: #fff
+    padding: 80px 0
+    border: 5px solid rgb(207, 207, 207)
+    box-shadow: 0 14px 18px rgba(34, 34, 34, 0.09)
+    z-index: 20
+  &__text
+    color: rgb(45, 45, 45)
+    font: 400 20px/30px $font-constantia
+    margin-bottom: 20px
+  &__subtext
+    color: rgb(45, 45, 45)
+    font: 400 italic 14px/20px $font-constantia 
+  &__info
+    position: relative
+    &:before
+      content: "\f10d"
+      position: absolute
+      top: -50px
+      left: -10px
+      font-family: $font-awesome
+      color: rgb(36, 169, 225)
+      font-size: 40px
+    &:after  
+      content: "\f10e"
+      position: absolute
+      bottom: -50px
+      right: -10px
+      font-family: $font-awesome
+      color: rgb(36, 169, 225)
+      font-size: 40px
+  &__img    
+    position: absolute
+    bottom: 101%
+    left: 50%
+    margin-left: -103px
+    max-height: 260px
++r(992)
+  .garant
+    &__heading
+      margin-bottom: 60px
+    &__text
+      font: 400 37px/44px $font-constantia
+    &__subtext
+      font: 400 italic 18px/20px $font-constantia 
+    &__info
+      &:before
+        top: -50px
+        left: -60px
+      &:after  
+        bottom: -50px
+        right: -10px
+    &__img
+      margin: 0
+      left: auto
+      right: -10px
+      bottom: 0
+      max-height: none 
++comment("scheme style")
+.scheme
+  padding: 90px 0 160px
+  background: url(../img/schemebg.jpg) no-repeat
+  background-size: cover   
+  &__heading
+    margin-bottom: 15px
+  &__subheading
+    padding-left: 40px 
+    margin-bottom: 90px  
+  &__col
+    &--3
+      order: 1   
+  &__container
+    position: relative
+  &__border
+    position: absolute
+    top: 55px
+    left: 100px
+    width: 1040px
+    height: 53%
+    border: 2px dashed rgb(36, 169, 225)
+    border-left: 0
+.item
+  text-align: center
+  margin-bottom: 50px
+  &__box
+    position: relative
+    margin: 0 auto 20px
+    box-shadow: 0 8px 18px rgba(52, 60, 59, 0.15)
+    border-radius: 50%
+    background-color: #FFF
+    height: 110px
+    width: 110px
+    text-align: center
+    z-index: 20 
+  &__number
+    position: absolute
+    left: 5px
+    top: 5px
+    font: 700 12px/24px $font-trajan
+    text-transform: uppercase
+    color: #fff
+    background-color: rgb(192, 0, 19)
+    box-shadow: 0 1px 10px rgba(192, 0, 19, 0.35) 
+    border-radius: 50%
+    text-align: center
+    height: 20px
+    width: 20px
+  &__icon
+    line-height: 110px    
+  &__text
+    color: rgb(45, 45, 45)
+    font: 700 16px/20px $font-constantia
+    text-transform: uppercase
+    &--span
+      color: rgb(45, 45, 45)
+      font: 700 16px/24px $font-trajan
+    &--break
+      display: block   
+.date
+  &__info
+    display: inline-block
+    padding-left: 10px
+  &__text
+    color: rgb(45, 45, 45)  
+    font: 700 18px/25px $font-constantia
+    text-transform: uppercase
+  &__number
+    color: rgb(36, 169, 225)   
+    font: 700 16px/25px $font-trajan
+  &__icon
+    vertical-align: top
+    padding-top: 5px     
++r(992)
+  .scheme
+    &__col
+      order: 0          
