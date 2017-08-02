@@ -18,7 +18,7 @@ mixin personalCols(count)
         .row.justify-content-center
           each item, i in content.index.build.info.content
             +personalCols(i)
-              a.build__item.fancyimage(rel="group" data-fancybox="group1" href!=item.img.href)
+              a.build__item
                 .build__image(class='build__image--' + (i + 1)) 
                 .build__overlay.align-items-center.d-flex
                   .row

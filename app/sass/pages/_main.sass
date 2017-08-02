@@ -685,6 +685,33 @@
     display: block
     img
       display: inline-block  
+.fancybox-thumbs 
+  top: auto
+  width: auto
+  bottom: 0
+  left: 0
+  right : 0
+  height: 95px
+  padding: 10px
+  box-sizing: border-box
+  background: rgba(0, 0, 0, 0.3)
+.fancybox-show-thumbs .fancybox-inner 
+  right: 0
+  bottom: 95px      
 +comment("partner style")
 .partner  
-  padding: 80px 0 50px       
+  padding: 80px 0 50px 
+  background-color: #f9f8f8  
+  &__item
+    text-align: center
+    padding: 0 40px
+  &__image
+    display: inline-block !important    
+    margin-bottom: 30px
+  &__title
+    color: $main-color 
+    font: 700 16px/20px $font-constantia  
+    margin-bottom: 10px
+  &__text  
+    color: $main-color 
+    font: 400 12px/16px $font-constantia  

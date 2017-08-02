@@ -41,6 +41,8 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <!-- Font-Awesome CSS-->
     <link rel="stylesheet" href="css/font-awesome.css">
+    <!-- Fancybox 3 CSS -->
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
     <!-- endbuild-->
@@ -136,7 +138,7 @@
           <div class="row">
             <div class="col-24 col-xl-20 offset-xl-2">
               <div class="row justify-content-center">
-                      <div class="col-24 col-md-12 col-xl-8 build__col"><a class="build__item fancyimage" rel="group" data-fancybox="group1" href="img/build1.jpg">
+                      <div class="col-24 col-md-12 col-xl-8 build__col"><a class="build__item">
                           <div class="build__image build__image--1"> </div>
                           <div class="build__overlay align-items-center d-flex">
                             <div class="row">
@@ -150,7 +152,7 @@
                           </div>
                           <div class="build__hover"><i class="ic ic--zoom build__icon">  </i></div></a>
                       </div>
-                      <div class="col-24 col-md-12 col-xl-8 build__col"><a class="build__item fancyimage" rel="group" data-fancybox="group1" href="img/build2.jpg">
+                      <div class="col-24 col-md-12 col-xl-8 build__col"><a class="build__item">
                           <div class="build__image build__image--2"> </div>
                           <div class="build__overlay align-items-center d-flex">
                             <div class="row">
@@ -164,7 +166,7 @@
                           </div>
                           <div class="build__hover"><i class="ic ic--zoom build__icon">  </i></div></a>
                       </div>
-                      <div class="col-24 col-md-12 col-xl-8 build__col"><a class="build__item fancyimage" rel="group" data-fancybox="group1" href="img/build3.jpg">
+                      <div class="col-24 col-md-12 col-xl-8 build__col"><a class="build__item">
                           <div class="build__image build__image--3"> </div>
                           <div class="build__overlay align-items-center d-flex">
                             <div class="row">
@@ -178,7 +180,7 @@
                           </div>
                           <div class="build__hover"><i class="ic ic--zoom build__icon">  </i></div></a>
                       </div>
-                      <div class="col-24 col-md-12 col-xl-8 build__col"><a class="build__item fancyimage" rel="group" data-fancybox="group1" href="img/build4.jpg">
+                      <div class="col-24 col-md-12 col-xl-8 build__col"><a class="build__item">
                           <div class="build__image build__image--4"> </div>
                           <div class="build__overlay align-items-center d-flex">
                             <div class="row">
@@ -192,7 +194,7 @@
                           </div>
                           <div class="build__hover"><i class="ic ic--zoom build__icon">  </i></div></a>
                       </div>
-                      <div class="col-24 col-md-12 col-xl-8 build__col"><a class="build__item fancyimage" rel="group" data-fancybox="group1" href="img/build5.jpg">
+                      <div class="col-24 col-md-12 col-xl-8 build__col"><a class="build__item">
                           <div class="build__image build__image--5"> </div>
                           <div class="build__overlay align-items-center d-flex">
                             <div class="row">
@@ -206,7 +208,7 @@
                           </div>
                           <div class="build__hover"><i class="ic ic--zoom build__icon">  </i></div></a>
                       </div>
-                      <div class="col-24 col-md-12 col-xl-8 build__col"><a class="build__item fancyimage" rel="group" data-fancybox="group1" href="img/build6.jpg">
+                      <div class="col-24 col-md-12 col-xl-8 build__col"><a class="build__item">
                           <div class="build__image build__image--6"> </div>
                           <div class="build__overlay align-items-center d-flex">
                             <div class="row">
@@ -220,7 +222,7 @@
                           </div>
                           <div class="build__hover"><i class="ic ic--zoom build__icon">  </i></div></a>
                       </div>
-                      <div class="col-24 col-md-12 col-xl-8 build__col build__col--hidden"><a class="build__item fancyimage" rel="group" data-fancybox="group1" href="img/build3.jpg">
+                      <div class="col-24 col-md-12 col-xl-8 build__col build__col--hidden"><a class="build__item">
                           <div class="build__image build__image--7"> </div>
                           <div class="build__overlay align-items-center d-flex">
                             <div class="row">
@@ -357,10 +359,234 @@
                     </div>
                   </div>
                 </div>
+                <div class="slider__item">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="slider__image"><img class="img-fluid" src="img/slider1main.jpg" alt="Слайд 1"></div>
+                    </div>
+                    <div class="col-12">
+                      <div class="project__info">
+                        <div class="project__name">Проект “Калифорния”</div>
+                        <div class="project__box">
+                          <table class="table project__table">
+                            <tbody>
+                              <tr class="project__row">
+                                <td class="project__data project__data--left"><i class="ic ic--table1"></i>Расположение:
+                                </td>
+                                <td class="project__data project__data--right">г. Киев. ул. Новосадова</td>
+                              </tr>
+                              <tr class="project__row">
+                                <td class="project__data project__data--left"><i class="ic ic--table2"></i>Размеры дома:
+                                </td>
+                                <td class="project__data project__data--right">8,3 м х 8,6 м</td>
+                              </tr>
+                              <tr class="project__row">
+                                <td class="project__data project__data--left"><i class="ic ic--table3"></i>Площадь дома:
+                                </td>
+                                <td class="project__data project__data--right">112 м<sup>2</sup></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div class="project__details">
+                          <div class="project__elem">
+                            <div class="project__elem--top">Фундамент:</div>
+                            <div class="project__elem--bot">Монолитная железобетонная лента</div>
+                          </div>
+                          <div class="project__elem">
+                            <div class="project__elem--top">Внутрення отделка:</div>
+                            <div class="project__elem--bot">Вагонка</div>
+                          </div>
+                          <div class="project__elem">
+                            <div class="project__elem--top">Кровля:</div>
+                            <div class="project__elem--bot">Металлочерепица</div>
+                          </div>
+                          <div class="project__elem">
+                            <div class="project__elem--top">Стены:</div>
+                            <div class="project__elem--bot">Каркасные, утепление 150мм</div>
+                          </div>
+                          <div class="project__elem">
+                            <div class="project__elem--top">Наружная отделка:</div>
+                            <div class="project__elem--bot">Имитация бруса с покраской</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="slider__item">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="slider__image"><img class="img-fluid" src="img/slider1main.jpg" alt="Слайд 1"></div>
+                    </div>
+                    <div class="col-12">
+                      <div class="project__info">
+                        <div class="project__name">Проект “Калифорния”</div>
+                        <div class="project__box">
+                          <table class="table project__table">
+                            <tbody>
+                              <tr class="project__row">
+                                <td class="project__data project__data--left"><i class="ic ic--table1"></i>Расположение:
+                                </td>
+                                <td class="project__data project__data--right">г. Киев. ул. Новосадова</td>
+                              </tr>
+                              <tr class="project__row">
+                                <td class="project__data project__data--left"><i class="ic ic--table2"></i>Размеры дома:
+                                </td>
+                                <td class="project__data project__data--right">8,3 м х 8,6 м</td>
+                              </tr>
+                              <tr class="project__row">
+                                <td class="project__data project__data--left"><i class="ic ic--table3"></i>Площадь дома:
+                                </td>
+                                <td class="project__data project__data--right">112 м<sup>2</sup></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div class="project__details">
+                          <div class="project__elem">
+                            <div class="project__elem--top">Фундамент:</div>
+                            <div class="project__elem--bot">Монолитная железобетонная лента</div>
+                          </div>
+                          <div class="project__elem">
+                            <div class="project__elem--top">Внутрення отделка:</div>
+                            <div class="project__elem--bot">Вагонка</div>
+                          </div>
+                          <div class="project__elem">
+                            <div class="project__elem--top">Кровля:</div>
+                            <div class="project__elem--bot">Металлочерепица</div>
+                          </div>
+                          <div class="project__elem">
+                            <div class="project__elem--top">Стены:</div>
+                            <div class="project__elem--bot">Каркасные, утепление 150мм</div>
+                          </div>
+                          <div class="project__elem">
+                            <div class="project__elem--top">Наружная отделка:</div>
+                            <div class="project__elem--bot">Имитация бруса с покраской</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="hidden-md-down" id="example">
                 <carousel-3d :width="950" :height="600" :border="0" :clickable="false" :controls-visible="true" :perspective="0" :space="950" :display="3">
                   <slide :index="00">
+                    <div class="slider__item">
+                      <div class="row">
+                        <div class="col-12">
+                          <div class="slider__image"><img class="img-fluid" src="img/slider1main.jpg" alt="Слайд 1"></div>
+                        </div>
+                        <div class="col-12">
+                          <div class="project__info">
+                            <div class="project__name">Проект “Калифорния”</div>
+                            <div class="project__box">
+                              <table class="table project__table">
+                                <tbody>
+                                  <tr class="project__row">
+                                    <td class="project__data project__data--left"><i class="ic ic--table1"></i>Расположение:
+                                    </td>
+                                    <td class="project__data project__data--right">г. Киев. ул. Новосадова</td>
+                                  </tr>
+                                  <tr class="project__row">
+                                    <td class="project__data project__data--left"><i class="ic ic--table2"></i>Размеры дома:
+                                    </td>
+                                    <td class="project__data project__data--right">8,3 м х 8,6 м</td>
+                                  </tr>
+                                  <tr class="project__row">
+                                    <td class="project__data project__data--left"><i class="ic ic--table3"></i>Площадь дома:
+                                    </td>
+                                    <td class="project__data project__data--right">112 м<sup>2</sup></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                            <div class="project__details">
+                              <div class="project__elem">
+                                <div class="project__elem--top">Фундамент:</div>
+                                <div class="project__elem--bot">Монолитная железобетонная лента</div>
+                              </div>
+                              <div class="project__elem">
+                                <div class="project__elem--top">Внутрення отделка:</div>
+                                <div class="project__elem--bot">Вагонка</div>
+                              </div>
+                              <div class="project__elem">
+                                <div class="project__elem--top">Кровля:</div>
+                                <div class="project__elem--bot">Металлочерепица</div>
+                              </div>
+                              <div class="project__elem">
+                                <div class="project__elem--top">Стены:</div>
+                                <div class="project__elem--bot">Каркасные, утепление 150мм</div>
+                              </div>
+                              <div class="project__elem">
+                                <div class="project__elem--top">Наружная отделка:</div>
+                                <div class="project__elem--bot">Имитация бруса с покраской</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </slide>
+                  <slide :index="01">
+                    <div class="slider__item">
+                      <div class="row">
+                        <div class="col-12">
+                          <div class="slider__image"><img class="img-fluid" src="img/slider1main.jpg" alt="Слайд 1"></div>
+                        </div>
+                        <div class="col-12">
+                          <div class="project__info">
+                            <div class="project__name">Проект “Калифорния”</div>
+                            <div class="project__box">
+                              <table class="table project__table">
+                                <tbody>
+                                  <tr class="project__row">
+                                    <td class="project__data project__data--left"><i class="ic ic--table1"></i>Расположение:
+                                    </td>
+                                    <td class="project__data project__data--right">г. Киев. ул. Новосадова</td>
+                                  </tr>
+                                  <tr class="project__row">
+                                    <td class="project__data project__data--left"><i class="ic ic--table2"></i>Размеры дома:
+                                    </td>
+                                    <td class="project__data project__data--right">8,3 м х 8,6 м</td>
+                                  </tr>
+                                  <tr class="project__row">
+                                    <td class="project__data project__data--left"><i class="ic ic--table3"></i>Площадь дома:
+                                    </td>
+                                    <td class="project__data project__data--right">112 м<sup>2</sup></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                            <div class="project__details">
+                              <div class="project__elem">
+                                <div class="project__elem--top">Фундамент:</div>
+                                <div class="project__elem--bot">Монолитная железобетонная лента</div>
+                              </div>
+                              <div class="project__elem">
+                                <div class="project__elem--top">Внутрення отделка:</div>
+                                <div class="project__elem--bot">Вагонка</div>
+                              </div>
+                              <div class="project__elem">
+                                <div class="project__elem--top">Кровля:</div>
+                                <div class="project__elem--bot">Металлочерепица</div>
+                              </div>
+                              <div class="project__elem">
+                                <div class="project__elem--top">Стены:</div>
+                                <div class="project__elem--bot">Каркасные, утепление 150мм</div>
+                              </div>
+                              <div class="project__elem">
+                                <div class="project__elem--top">Наружная отделка:</div>
+                                <div class="project__elem--bot">Имитация бруса с покраской</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </slide>
+                  <slide :index="02">
                     <div class="slider__item">
                       <div class="row">
                         <div class="col-12">
@@ -570,16 +796,42 @@
               </div>
               <div class="row">
                 <div class="col-12 col-lg-6">
-                  <div class="team__sert"><a class="team__link fancyimage" rel="group1" data-fancybox="group2" href="img/team1.jpg"><img class="img-fluid" src="img/team1.jpg"></a></div>
+                  <div class="team__sert"><a class="team__link" data-fancybox="images" href="img/team1.jpg"><img class="img-fluid" src="img/team1.jpg"></a></div>
                 </div>
                 <div class="col-12 col-lg-6">
-                  <div class="team__sert"><a class="team__link fancyimage" rel="group1" data-fancybox="group2" href="img/team1.jpg"><img class="img-fluid" src="img/team1.jpg"></a></div>
+                  <div class="team__sert"><a class="team__link" data-fancybox="images" href="img/team1.jpg"><img class="img-fluid" src="img/team1.jpg"></a></div>
                 </div>
                 <div class="col-12 col-lg-6">
-                  <div class="team__sert"><a class="team__link fancyimage" rel="group1" data-fancybox="group2" href="img/team1.jpg"><img class="img-fluid" src="img/team1.jpg"></a></div>
+                  <div class="team__sert"><a class="team__link" data-fancybox="images" href="img/team1.jpg"><img class="img-fluid" src="img/team1.jpg"></a></div>
                 </div>
                 <div class="col-12 col-lg-6">
-                  <div class="team__sert"><a class="team__link fancyimage" rel="group1" data-fancybox="group2" href="img/team1.jpg"><img class="img-fluid" src="img/team1.jpg"></a></div>
+                  <div class="team__sert"><a class="team__link" data-fancybox="images" href="img/team1.jpg"><img class="img-fluid" src="img/team1.jpg"></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="partner">
+        <div class="container">
+          <div class="row">
+            <div class="col-24 col-lg-20 offset-lg-2">
+              <div class="partner__slider">
+                <div class="partner__item"><img class="img-fluid partner__image" src="img/partner1.png" alt="Партнер">
+                  <div class="partner__title">СМ «пятёрочка»</div>
+                  <div class="partner__text">Таким образом рамки и место обучения кадров требуют от нас анализа модели развития.</div>
+                </div>
+                <div class="partner__item"><img class="img-fluid partner__image" src="img/partner1.png" alt="Партнер">
+                  <div class="partner__title">СМ «пятёрочка»</div>
+                  <div class="partner__text">Таким образом рамки и место обучения кадров требуют от нас анализа модели развития.</div>
+                </div>
+                <div class="partner__item"><img class="img-fluid partner__image" src="img/partner1.png" alt="Партнер">
+                  <div class="partner__title">СМ «пятёрочка»</div>
+                  <div class="partner__text">Таким образом рамки и место обучения кадров требуют от нас анализа модели развития.</div>
+                </div>
+                <div class="partner__item"><img class="img-fluid partner__image" src="img/partner1.png" alt="Партнер">
+                  <div class="partner__title">СМ «пятёрочка»</div>
+                  <div class="partner__text">Таким образом рамки и место обучения кадров требуют от нас анализа модели развития.</div>
                 </div>
               </div>
             </div>
@@ -589,10 +841,10 @@
     </main>
     <div class="footer"></div>
     <!-- build:js js/bundle.min.js-->
-    <!-- Tether JavaScript-->
-    <script src="js/tether.js"></script>
     <!-- jQuery-->
     <script src="js/jquery.js"></script>
+    <!-- Tether JavaScript    -->
+    <script src="js/tether.js"></script>
     <!-- Bootstrap JavaScript-->
     <script src="js/bootstrap.js"></script>
     <!-- Old browsers reject JavaScript-->
@@ -606,6 +858,8 @@
     <script src="js/vue-carousel-3d.min.js"></script>
     <!-- Match-Height JavaScript      -->
     <script src="js/jquery.matchHeight.js"></script>
+    <!-- Fancybox 3 JavaScript-->
+    <script src="js/jquery.fancybox.min.js"></script>
     <!-- Custom JavaScript-->
     <script src="js/main.js"></script>
     <!-- endbuild-->

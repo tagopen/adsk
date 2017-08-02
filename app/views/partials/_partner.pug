@@ -1,0 +1,12 @@
+.partner
+  .container
+    .row
+      .col-24.col-lg-20.offset-lg-2
+        .partner__slider
+           each item, i in content.index.partner.slides
+            .partner__item
+              img.img-fluid.partner__image(src!= item.img.src, alt!= item.img.alt)
+              .partner__title!= item.heading
+              .partner__text!= item.text 
+
+

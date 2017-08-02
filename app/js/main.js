@@ -59,11 +59,6 @@
       $('.build__btn').hide();
     }); 
 
-  // Fancy Box
-   $("[data-fancybox]").fancybox({
-    // Options will go here
-  });
-
   // Today date
   $(function () {
     Date.prototype.addDays = function(days) {
@@ -158,6 +153,12 @@ $('.project__slider').slick({
 });
 
 
+$('[data-fancybox="images"]').fancybox({
+  thumbs : {
+    autoStart : true
+  }
+})
+
 new Vue({
   el: '#example',
   data: {
@@ -180,5 +181,35 @@ new Vue({
     });
   }
 
+
+  $('.partner__slider').slick({
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  arrows: true,
+  dots: false,
+  infinite: true,
+  focusOnSelect: true,
+  prevArrow: '<button type="button" data-role="none" class="slick-prev" aria-label="Previous" tabindex="0" role="button"></button>',
+  nextArrow: '<button type="button" data-role="none" class="slick-next" aria-label="Next" tabindex="0" role="button"></button>',
+  responsive: [
+  {
+    breakpoint: 992,
+    settings: {
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      infinite: false
+    }
+  },
+  {
+    breakpoint: 760,
+    settings: {
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      centerMode: false,
+      infinite: false
+    }
+  }
+  ]
+});
 
 })(jQuery); // End of use strict
