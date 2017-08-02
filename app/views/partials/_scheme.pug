@@ -1,11 +1,11 @@
 .scheme
   .container
     .row
-      .col-24.col-lg-18.offset-lg-2
+      .col-24.col-lg-17.col-xl-16.offset-lg-2
         .heading.scheme__heading.heading--border
           .heading__text!=content.index.scheme.heading
         .scheme__subheading!=content.index.scheme.subheading 
-          i(class="ic ic--question about__icon" type="button" data-toggle="tooltip" data-animation="false" data-placement="bottom" title="Строительные нормы и правила (СНиП) — совокупность принятых органами исполнительной власти нормативных актов технического, экономического и правового характера, регламентирующих осуществление градостроительной деятельности, а также инженерных изысканий, архитектурно-строительного проектирования и строительства.")  
+          i.hidden-sm-down(class="ic ic--question about__icon" type="button" data-toggle="tooltip" data-animation="false" data-placement="left" title="Строительные нормы и правила (СНиП) — совокупность принятых органами исполнительной власти нормативных актов технического, экономического и правового характера, регламентирующих осуществление градостроительной деятельности, а также инженерных изысканий, архитектурно-строительного проектирования и строительства.")  
       .col-24.col-lg-4
         .scheme__date.date
           i.ic.ic--date.date__icon
@@ -13,12 +13,12 @@
             .date__text!=content.index.scheme.date
             .date__number 26.03.2017  
   .container.scheme__container      
-    .scheme__border
+    .scheme__border.hidden-md-down
     .row
       each item, i in content.index.scheme.info.content
         .col-12.col-lg-6.scheme__col(class='scheme__col--' + (i + 1)) 
           .scheme__item.item
-            .item__date
+            .item__date(data-time!=item.date)
             .item__box(class='item__box--first-' + (i + 1)) 
               i.ic.item__icon(class="ic--scheme-" + (i + 1))
               .item__number!=item.number

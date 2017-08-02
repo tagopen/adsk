@@ -68,6 +68,8 @@
       font: 700 20px/30px $font-trajan
       text-transform: uppercase 
       color: $main-color 
+    &--white
+      color: #fff  
   &--border  
     &:before
       content: ''
@@ -342,13 +344,13 @@
   &__heading
     margin-bottom: 15px
   &__subheading
-    color: rgb(45, 45, 45)
+    color: $main-color
     font: 700 18px/20px $font-constantia
     margin-bottom: 35px  
     &--span
       font: 700 18px/20px $font-trajan
   &__title
-    color: rgb(45, 45, 45)
+    color: $main-color
     font: 400 18px/20px $font-constantia 
     margin-bottom: 20px
   &__point
@@ -360,7 +362,7 @@
     left: 0
     top: 0      
   &__text  
-    color: rgb(45, 45, 45)
+    color: $main-color
     font: 700 italic 18px/20px $font-constantia  
   &__btn
     margin-top: 20px  
@@ -377,11 +379,11 @@
     box-shadow: 0 14px 18px rgba(34, 34, 34, 0.09)
     z-index: 20
   &__text
-    color: rgb(45, 45, 45)
+    color: $main-color
     font: 400 20px/30px $font-constantia
     margin-bottom: 20px
   &__subtext
-    color: rgb(45, 45, 45)
+    color: $main-color
     font: 400 italic 14px/20px $font-constantia 
   &__info
     position: relative
@@ -428,6 +430,64 @@
       right: -10px
       bottom: 0
       max-height: none 
++comment("project style")  
+.project
+  padding: 75px 0 70px
+  background: url(../img/projectbg.jpg) no-repeat
+  background-size: cover
+  &__info
+    padding: 40px 0 40px 
+  &__name  
+    color: $main-color
+    font: 700 30px/36px $font-constantia 
+    text-transform: uppercase
+    padding-left: 10px
+    margin-bottom: 25px
+  &__box
+    padding-right: 40px 
+    padding-left: 30px 
+  &__data
+    border: 0 !important
+    &--left
+      position: relative
+      color: $main-color
+      font: 700 18px/20px $font-constantia 
+      .ic
+        position: absolute
+        left: -20px
+        top: 12px
+    &--right
+      text-align: right
+      color: $main-color
+      font: 400 18px/20px $font-constantia 
+  &__icon
+    min-width: 20px    
+  &__details
+    padding-left: 10px   
+  &__elem
+    margin-bottom: 15px
+    &--top
+      color: #727272    
+      font: 400 16px/20px $font-constantia 
+    &--bot 
+      color: $main-color 
+      font: 700 16px/20px $font-constantia
+  &__btn
+    display: block
+    margin: 15px auto 0    
+.slider      
+  &__item
+    opacity: 0.8
+    background: #fff
+    padding-left: 30px
+    box-shadow: 0 9px 27px rgba(52, 60, 59, 0.2)
+    border-radius: 5px
+    &.slick-active
+      opacity: 1
+  &__image
+    padding-top: 30px    
+.carousel-3d-slide
+  opacity: 0.8 !important    
 +comment("scheme style")
 .scheme
   padding: 90px 0 160px
@@ -437,20 +497,12 @@
     margin-bottom: 15px
   &__subheading
     padding-left: 40px 
-    margin-bottom: 90px  
+    margin-bottom: 30px  
   &__col
     &--3
       order: 1   
   &__container
     position: relative
-  &__border
-    position: absolute
-    top: 55px
-    left: 100px
-    width: 1040px
-    height: 53%
-    border: 2px dashed rgb(36, 169, 225)
-    border-left: 0
 .item
   text-align: center
   margin-bottom: 50px
@@ -480,20 +532,26 @@
   &__icon
     line-height: 110px    
   &__text
-    color: rgb(45, 45, 45)
-    font: 700 16px/20px $font-constantia
+    color: $main-color
+    font: 700 14px/18px $font-constantia
     text-transform: uppercase
     &--span
-      color: rgb(45, 45, 45)
+      color: $main-color
       font: 700 16px/24px $font-trajan
     &--break
-      display: block   
+      display: block  
+  &__date     
+    color: rgb(36, 169, 225)   
+    font: 700 16px/25px $font-trajan
+    margin-bottom: 15px
 .date
+  margin-bottom: 20px
+  text-align: center
   &__info
     display: inline-block
     padding-left: 10px
   &__text
-    color: rgb(45, 45, 45)  
+    color: $main-color 
     font: 700 18px/25px $font-constantia
     text-transform: uppercase
   &__number
@@ -501,8 +559,92 @@
     font: 700 16px/25px $font-trajan
   &__icon
     vertical-align: top
-    padding-top: 5px     
+    padding-top: 5px      
+.item
+  &__box
+    &--first
+      position: relative
+      &-1
+        z-index: 20
+        &:before
+          content: ""
+          display: block
+          position: absolute
+          left: 100%
+          top: 50%
+          width: 100%
+          border: 1px dashed rgba(45, 45, 45, 0.6)
+      &-2
+        z-index: 20 
+      &-2,
+      &-4    
+        &:before
+          content: ""
+          display: block
+          position: absolute
+          left: 50%
+          top: 100%
+          height: 190px
+          border: 1px dashed rgba(45, 45, 45, 0.6)
+      &-3 
+        z-index: 22
+        &:before
+          content: ""
+          display: block
+          position: absolute
+          right: 100%
+          top: 50%
+          width: 100%
+          border: 1px dashed rgba(45, 45, 45, 0.6) 
+      &-4
+        z-index: 23  
+    &--second
+      &-1
+        z-index: 24
+        @extend .item__box--first-1
+      &-2
+        @extend .item__box--first-2 
+        z-index: 25  
+      &-3
+        @extend .item__box--first-3 
+        z-index: 25 
+      &-4
+        z-index: 26 
++r(450)
+  .item
+    &__box
+      &--first
+        &-1,
+        &-3
+          &:before
+            width: 180%   
++r(760)  
+  .item
+    &__box
+      &--first
+        &-1,
+        &-3
+          &:before
+            width: 270px                                    
 +r(992)
   .scheme
     &__col
-      order: 0          
+      order: 0 
+    &__border
+      position: absolute
+      top: 95px
+      left: 100px
+      width: 850px
+      height: 53%
+      border: 2px dashed rgb(36, 169, 225)
+      border-left: 0 
+  .item
+    &__text
+      font: 700 16px/20px $font-constantia
+    &__box
+      &:before
+        display: none 
++r(1200)
+  .scheme
+    &__border
+      width: 1040px        
