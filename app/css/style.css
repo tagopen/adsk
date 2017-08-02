@@ -1792,6 +1792,53 @@
 }
 
 .exp__image {
-  position: relative;
-  top: -30px;
+  margin-top: -30px;
+}
+
+/* ---------------------------------------- */
+/* T E A M    S T Y L E                     */
+/* ---------------------------------------- */
+.team {
+  padding: 80px 0;
+}
+
+.team__row {
+  margin-bottom: 60px;
+}
+
+.team__heading {
+  margin-bottom: 50px;
+}
+
+.team__info {
+  padding-top: 30px;
+}
+
+.team__title {
+  color: #2d2d2d;
+  font: 400 20px/26px "Constantia", sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.team__text {
+  color: #2d2d2d;
+  font: 400 16px/20px "Constantia", sans-serif;
+  margin-bottom: 15px;
+}
+
+.team__link {
+  text-align: center;
+  display: block;
+}
+
+.team__link img {
+  display: inline-block;
+}
+
+/* ---------------------------------------- */
+/* P A R T N E R    S T Y L E               */
+/* ---------------------------------------- */
+.partner {
+  padding: 80px 0 50px;
 }

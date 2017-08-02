@@ -168,4 +168,17 @@ new Vue({
     'slide': Carousel3d.Slide
   }
 })
+
+
+  if( $( window ).width() >= 992 ) {
+
+    $('.exp__image').matchHeight({
+      byRow: true,
+      property: 'height',
+      target: null,
+      remove: false
+    });
+  }
+
+
 })(jQuery); // End of use strict

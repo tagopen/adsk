@@ -1,0 +1,25 @@
+.team
+  .container
+    .row
+      .col-24.col-lg-17.col-xl-16.offset-lg-2
+        .heading.team__heading.heading--border
+          .heading__text!=content.index.team.heading
+      .col-24.col-lg-20.offset-lg-2    
+        .row.team__row
+          .col-24.col-md-14
+            .team__image
+              img.img-fluid(src=content.index.team.image.src, alt=content.index.team.image.alt)
+          .col-24.col-md-10  
+            .team__info
+              .team__title!=content.index.team.title
+              each item, i in content.index.team.info
+                .team__text!= item.text
+        .row
+          each item, i in content.index.team.sert
+            .col-12.col-lg-6
+              .team__sert
+                a.team__link.fancyimage(rel="group1" data-fancybox="group2" href!=item.src)
+                  img.img-fluid(src=item.src)
+
+
+
