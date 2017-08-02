@@ -1,4 +1,17 @@
 .exp
   .container
     .row
-      
+      .col-24.col-lg-20.offset-lg-2
+        .row.align-self-stretch.align-items-center
+          .col-24.col-lg-12       
+            .exp__box
+              .exp__heading!=content.index.exp.heading1
+              .exp__image
+                img.img-fluid(src=content.index.exp.image1)
+              .exp__text!=content.index.exp.text1  
+          .col-24.col-lg-12       
+            .exp__box
+              .exp__heading!=content.index.exp.heading2
+              .exp__image
+                img.img-fluid(src=content.index.exp.image2)
+              .exp__text!=content.index.exp.text2           

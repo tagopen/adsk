@@ -1769,3 +1769,29 @@
     width: 1040px;
   }
 }
+
+/* ---------------------------------------- */
+/* E X P    S T Y L E                       */
+/* ---------------------------------------- */
+.exp__box {
+  text-align: center;
+}
+
+.exp__heading {
+  color: #c00013;
+  font: 400 48px/50px "Constantia", sans-serif;
+}
+
+.exp__heading--span {
+  font: 700 72px/72px "TrajanPro3", sans-serif;
+}
+
+.exp__text {
+  font: 400 20px/27px "Constantia", sans-serif;
+  color: #c00013;
+}
+
+.exp__image {
+  position: relative;
+  top: -30px;
+}
