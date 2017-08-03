@@ -14,7 +14,7 @@ mixin personalCols(count)
         .heading.build__heading.heading--border
           .heading__text!=content.index.build.heading
     .row
-      .col-24.col-xl-20.offset-xl-2
+      .col-24.col-sm-20.offset-sm-2.col-md-24.offset-md-0.col-xl-20.offset-xl-2
         .row.justify-content-center
           each item, i in content.index.build.info.content
             +personalCols(i)

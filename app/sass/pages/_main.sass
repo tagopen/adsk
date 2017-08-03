@@ -486,8 +486,21 @@
       opacity: 1
   &__image
     padding-top: 30px    
-.carousel-3d-slide
-  opacity: 0.8 !important    
+.carousel-3d
+  &-slide
+    opacity: 0.8 !important  
+  &-controls
+    a.prev,
+    a.next
+      width: 40px !important 
+      height: 80px !important 
+      span
+        width: 40px !important 
+        height: 80px !important
+        line-height: 80px !important
+        background-color: #24a9e1 !important  
+        border-radius: 5px !important  
+        box-shadow: 0 4px 7px rgba(36, 169, 225, 0.37) !important      
 +comment("scheme style")
 .scheme
   padding: 90px 0 160px
@@ -680,6 +693,8 @@
     color: $main-color 
     font: 400 16px/20px $font-constantia
     margin-bottom: 15px
+  &__sert
+    margin-bottom: 30px  
   &__link
     text-align: center
     display: block
@@ -688,6 +703,10 @@
 .fancybox  
   &-skin
     padding: 0 !important
++r(992)
+  .team
+    &__sert
+      margin-bottom: 0    
 +comment("partner style")
 .partner  
   padding: 80px 0 50px 
@@ -759,6 +778,28 @@
 .contact
   padding: 60px 0 35px
   overflow: hidden
+  &__box  
+    position: relative
+    &:before
+      display: block
+      content: ''
+      position: absolute
+      left: -40px
+      top: -30px
+      height: 35px
+      width: 1000px
+      border-top: 5px solid #cfcfcf
+      border-left: 5px solid #cfcfcf
+    &:after  
+      display: block
+      content: ''
+      position: absolute
+      left: -40px
+      bottom: -35px
+      height: 35px
+      width: 1000px
+      border-bottom: 5px solid #cfcfcf
+      border-left: 5px solid #cfcfcf
   &__info
     padding-top: 65px
   &__icon
@@ -786,27 +827,6 @@
 #map
   width: 100%
   height: 400px
-+r(992)
-  .contact
-    &__box  
-      position: relative
-      &:before
-        display: block
-        content: ''
-        position: absolute
-        left: -40px
-        top: -30px
-        height: 35px
-        width: 1000px
-        border-top: 5px solid #cfcfcf
-        border-left: 5px solid #cfcfcf
-      &:after  
-        display: block
-        content: ''
-        position: absolute
-        left: -40px
-        bottom: -35px
-        height: 35px
-        width: 1000px
-        border-bottom: 5px solid #cfcfcf
-        border-left: 5px solid #cfcfcf
++r(760)
+  .contact__info
+    margin-left: 10px  

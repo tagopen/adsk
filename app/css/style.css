@@ -1569,6 +1569,24 @@
   opacity: 0.8 !important;
 }
 
+.carousel-3d-controls a.prev,
+.carousel-3d-controls a.next {
+  width: 40px !important;
+  height: 80px !important;
+}
+
+.carousel-3d-controls a.prev span,
+.carousel-3d-controls a.next span {
+  width: 40px !important;
+  height: 80px !important;
+  line-height: 80px !important;
+  background-color: #24a9e1 !important;
+  -webkit-border-radius: 5px !important;
+          border-radius: 5px !important;
+  -webkit-box-shadow: 0 4px 7px rgba(36, 169, 225, 0.37) !important;
+          box-shadow: 0 4px 7px rgba(36, 169, 225, 0.37) !important;
+}
+
 /* ---------------------------------------- */
 /* S C H E M E    S T Y L E                 */
 /* ---------------------------------------- */
@@ -1850,6 +1868,10 @@
   margin-bottom: 15px;
 }
 
+.team__sert {
+  margin-bottom: 30px;
+}
+
 .team__link {
   text-align: center;
   display: block;
@@ -1861,6 +1883,12 @@
 
 .fancybox-skin {
   padding: 0 !important;
+}
+
+@media only screen and (min-width: 992px) {
+  .team__sert {
+    margin-bottom: 0;
+  }
 }
 
 /* ---------------------------------------- */
@@ -1973,6 +2001,34 @@
   overflow: hidden;
 }
 
+.contact__box {
+  position: relative;
+}
+
+.contact__box:before {
+  display: block;
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: -30px;
+  height: 35px;
+  width: 1000px;
+  border-top: 5px solid #cfcfcf;
+  border-left: 5px solid #cfcfcf;
+}
+
+.contact__box:after {
+  display: block;
+  content: '';
+  position: absolute;
+  left: -40px;
+  bottom: -35px;
+  height: 35px;
+  width: 1000px;
+  border-bottom: 5px solid #cfcfcf;
+  border-left: 5px solid #cfcfcf;
+}
+
 .contact__info {
   padding-top: 65px;
 }
@@ -2017,30 +2073,8 @@
   height: 400px;
 }
 
-@media only screen and (min-width: 992px) {
-  .contact__box {
-    position: relative;
-  }
-  .contact__box:before {
-    display: block;
-    content: '';
-    position: absolute;
-    left: -40px;
-    top: -30px;
-    height: 35px;
-    width: 1000px;
-    border-top: 5px solid #cfcfcf;
-    border-left: 5px solid #cfcfcf;
-  }
-  .contact__box:after {
-    display: block;
-    content: '';
-    position: absolute;
-    left: -40px;
-    bottom: -35px;
-    height: 35px;
-    width: 1000px;
-    border-bottom: 5px solid #cfcfcf;
-    border-left: 5px solid #cfcfcf;
+@media only screen and (min-width: 760px) {
+  .contact__info {
+    margin-left: 10px;
   }
 }
