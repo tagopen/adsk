@@ -1483,12 +1483,12 @@
 }
 
 .project__info {
-  padding: 40px 0 40px;
+  padding: 40px 0 0;
 }
 
 .project__name {
   color: #2d2d2d;
-  font: 700 30px/36px "Constantia", sans-serif;
+  font: 700 18px/24px "Constantia", sans-serif;
   text-transform: uppercase;
   padding-left: 10px;
   margin-bottom: 25px;
@@ -1506,7 +1506,7 @@
 .project__data--left {
   position: relative;
   color: #2d2d2d;
-  font: 700 18px/20px "Constantia", sans-serif;
+  font: 700 14px/18px "Constantia", sans-serif;
 }
 
 .project__data--left .ic {
@@ -1518,7 +1518,7 @@
 .project__data--right {
   text-align: right;
   color: #2d2d2d;
-  font: 400 18px/20px "Constantia", sans-serif;
+  font: 400 14px/18px "Constantia", sans-serif;
 }
 
 .project__icon {
@@ -1535,12 +1535,12 @@
 
 .project__elem--top {
   color: #727272;
-  font: 400 16px/20px "Constantia", sans-serif;
+  font: 400 14px/16px "Constantia", sans-serif;
 }
 
 .project__elem--bot {
   color: #2d2d2d;
-  font: 700 16px/20px "Constantia", sans-serif;
+  font: 700 14px/16px "Constantia", sans-serif;
 }
 
 .project__btn .ic {
@@ -1549,8 +1549,9 @@
 
 .slider__item {
   opacity: 0.8;
+  padding-left: 10px;
+  padding-right: 10px;
   background: #fff;
-  padding-left: 30px;
   -webkit-box-shadow: 0 9px 27px rgba(52, 60, 59, 0.2);
           box-shadow: 0 9px 27px rgba(52, 60, 59, 0.2);
   -webkit-border-radius: 5px;
@@ -1569,22 +1570,108 @@
   opacity: 0.8 !important;
 }
 
-.carousel-3d-controls a.prev,
-.carousel-3d-controls a.next {
-  width: 40px !important;
-  height: 80px !important;
-}
-
 .carousel-3d-controls a.prev span,
 .carousel-3d-controls a.next span {
+  color: #fff;
+  line-height: 65px !important;
+  text-align: center;
+  display: block;
   width: 40px !important;
   height: 80px !important;
-  line-height: 80px !important;
   background-color: #24a9e1 !important;
   -webkit-border-radius: 5px !important;
           border-radius: 5px !important;
   -webkit-box-shadow: 0 4px 7px rgba(36, 169, 225, 0.37) !important;
           box-shadow: 0 4px 7px rgba(36, 169, 225, 0.37) !important;
+}
+
+@media only screen and (max-width: 991px) {
+  .project__slider .slick-disabled {
+    display: none;
+  }
+  .project__slider .slick-next, .project__slider .slick-prev {
+    top: auto;
+    bottom: -30px;
+    z-index: 20;
+  }
+  .project__slider .slick-next:hover:before, .project__slider .slick-prev:hover:before {
+    color: #c00013;
+  }
+  .project__slider .slick-next {
+    right: 0;
+    height: 60px;
+    width: 25px;
+    background-color: #24a9e1;
+    -webkit-border-radius: 4px;
+            border-radius: 4px;
+    -webkit-box-shadow: 0 4px 7px rgba(36, 169, 225, 0.37);
+            box-shadow: 0 4px 7px rgba(36, 169, 225, 0.37);
+  }
+  .project__slider .slick-next:before {
+    height: 60px;
+    width: 25px;
+    content: "\f054";
+    font-family: "FontAwesome";
+    color: #fff;
+    font-size: 16px;
+    line-height: 60px;
+  }
+  .project__slider .slick-prev {
+    left: 0;
+    height: 60px;
+    width: 25px;
+    background-color: #24a9e1;
+    -webkit-border-radius: 4px;
+            border-radius: 4px;
+    -webkit-box-shadow: 0 4px 7px rgba(36, 169, 225, 0.37);
+            box-shadow: 0 4px 7px rgba(36, 169, 225, 0.37);
+  }
+  .project__slider .slick-prev:before {
+    height: 60px;
+    width: 25px;
+    content: "\f053";
+    font-family: "FontAwesome";
+    color: #fff;
+    font-size: 16px;
+    line-height: 60px;
+  }
+}
+
+@media only screen and (min-width: 760px) {
+  .project__name {
+    font: 700 30px/36px "Constantia", sans-serif;
+  }
+  .project__data--left {
+    font: 700 18px/20px "Constantia", sans-serif;
+  }
+  .project__data--right {
+    font: 400 18px/20px "Constantia", sans-serif;
+  }
+  .project__elem--top {
+    font: 400 16px/20px "Constantia", sans-serif;
+  }
+  .project__elem--bot {
+    font: 700 16px/20px "Constantia", sans-serif;
+  }
+  .slider__item {
+    padding-left: 30px;
+    padding-right: 0;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .project__info {
+    padding: 40px 0;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .carousel-3d-controls a.prev {
+    left: 75px !important;
+  }
+  .carousel-3d-controls a.next {
+    right: 75px !important;
+  }
 }
 
 /* ---------------------------------------- */
@@ -1920,6 +2007,58 @@
   font: 400 12px/16px "Constantia", sans-serif;
 }
 
+@media only screen and (max-width: 992px) {
+  .partner__slider .slick-disabled {
+    display: none;
+  }
+  .partner__slider .slick-next, .partner__slider .slick-prev {
+    top: auto;
+    bottom: -30px;
+    z-index: 20;
+  }
+  .partner__slider .slick-next:hover:before, .partner__slider .slick-prev:hover:before {
+    color: #c00013;
+  }
+  .partner__slider .slick-next {
+    right: 0;
+    height: 60px;
+    width: 25px;
+    background-color: #24a9e1;
+    -webkit-border-radius: 4px;
+            border-radius: 4px;
+    -webkit-box-shadow: 0 4px 7px rgba(36, 169, 225, 0.37);
+            box-shadow: 0 4px 7px rgba(36, 169, 225, 0.37);
+  }
+  .partner__slider .slick-next:before {
+    height: 60px;
+    width: 25px;
+    content: "\f054";
+    font-family: "FontAwesome";
+    color: #fff;
+    font-size: 16px;
+    line-height: 60px;
+  }
+  .partner__slider .slick-prev {
+    left: 0;
+    height: 60px;
+    width: 25px;
+    background-color: #24a9e1;
+    -webkit-border-radius: 4px;
+            border-radius: 4px;
+    -webkit-box-shadow: 0 4px 7px rgba(36, 169, 225, 0.37);
+            box-shadow: 0 4px 7px rgba(36, 169, 225, 0.37);
+  }
+  .partner__slider .slick-prev:before {
+    height: 60px;
+    width: 25px;
+    content: "\f053";
+    font-family: "FontAwesome";
+    color: #fff;
+    font-size: 16px;
+    line-height: 60px;
+  }
+}
+
 /* ---------------------------------------- */
 /* W O R T H    S T Y L E                   */
 /* ---------------------------------------- */
@@ -2077,4 +2216,25 @@
   .contact__info {
     margin-left: 10px;
   }
+}
+
+/* ---------------------------------------- */
+/* F O O T E R    S T Y L E                 */
+/* ---------------------------------------- */
+.footer {
+  padding: 20px 0 25px;
+  background-color: white;
+  -webkit-box-shadow: 1.5px -2.6px 50px rgba(0, 0, 0, 0.2);
+          box-shadow: 1.5px -2.6px 50px rgba(0, 0, 0, 0.2);
+}
+
+.footer__copy {
+  display: inline-block;
+  padding-top: 10px;
+  color: #2d2d2d;
+  font: 400 14px/18px "Constantia", sans-serif;
+}
+
+.footer__copy--number {
+  font: 400 14px/18px "TrajanPro3", sans-serif;
 }
