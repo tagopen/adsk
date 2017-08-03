@@ -42,7 +42,7 @@
     <!-- Font-Awesome CSS-->
     <link rel="stylesheet" href="css/font-awesome.css">
     <!-- Fancybox 3 CSS -->
-    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
     <!-- endbuild-->
@@ -815,7 +815,12 @@
       <div class="partner">
         <div class="container">
           <div class="row">
-            <div class="col-24 col-lg-20 offset-lg-2">
+            <div class="col-24 col-lg-17 col-xl-16 offset-lg-2">
+              <div class="heading partner__heading heading--border">
+                <div class="heading__text">Наши партнеры</div>
+              </div>
+            </div>
+            <div class="col-24 col-lg-22 offset-lg-1">
               <div class="partner__slider">
                 <div class="partner__item"><img class="img-fluid partner__image" src="img/partner1.png" alt="Партнер">
                   <div class="partner__title">СМ «пятёрочка»</div>
@@ -833,6 +838,41 @@
                   <div class="partner__title">СМ «пятёрочка»</div>
                   <div class="partner__text">Таким образом рамки и место обучения кадров требуют от нас анализа модели развития.</div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact">
+        <div class="container">
+          <div class="row">
+            <div class="col-24 col-lg-20 offset-lg-2">
+              <div class="heading partner__heading heading--border">
+                <div class="heading__text">Контактная информация</div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 offset-lg-2">
+              <div id="map">
+                <script>
+                  function initMap() {
+                    var uluru = {lat: 50.446137, lng: 30.518215};
+                    var map = new google.maps.Map(document.getElementById('map'), {
+                      zoom: 17,
+                      mapTypeControl: false,
+                      scrollwheel: false,
+                      streetViewControl: false,
+                      center: uluru
+                    });
+                    var marker = new google.maps.Marker({
+                      position: uluru,
+                      map: map,
+                      icon: 'img/marker.png'
+                    });
+                  }
+                </script>
+                <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMiE1FSNLDqeWHjoHH6cZBlhl6NITkw2w&amp;callback=initMap"></script>
               </div>
             </div>
           </div>

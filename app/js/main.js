@@ -153,11 +153,11 @@ $('.project__slider').slick({
 });
 
 
-$('[data-fancybox="images"]').fancybox({
+/*$('[data-fancybox="images"]').fancybox({
   thumbs : {
     autoStart : true
   }
-})
+})*/
 
 new Vue({
   el: '#example',

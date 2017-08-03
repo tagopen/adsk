@@ -1,7 +1,10 @@
 .partner
   .container
     .row
-      .col-24.col-lg-20.offset-lg-2
+      .col-24.col-lg-17.col-xl-16.offset-lg-2
+        .heading.partner__heading.heading--border
+          .heading__text!=content.index.partner.heading
+      .col-24.col-lg-22.offset-lg-1
         .partner__slider
            each item, i in content.index.partner.slides
             .partner__item
