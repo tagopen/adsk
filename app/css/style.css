@@ -673,6 +673,30 @@
   background: url(../img/sprite.png) -23px -153px no-repeat;
 }
 
+.ic--contact-1:before {
+  width: 12px;
+  height: 12px;
+  background: url(../img/sprite.png) -68px -153px no-repeat;
+}
+
+.ic--contact-2:before {
+  width: 12px;
+  height: 12px;
+  background: url(../img/sprite.png) -46px -153px no-repeat;
+}
+
+.ic--contact-3:before {
+  width: 11px;
+  height: 9px;
+  background: url(../img/sprite.png) -90px -153px no-repeat;
+}
+
+.ic--contact-4:before {
+  width: 9px;
+  height: 12px;
+  background: url(../img/sprite.png) -220px -125px no-repeat;
+}
+
 .ic--date:before {
   width: 40px;
   height: 40px;
@@ -778,13 +802,13 @@
 .ic--test-3:before {
   width: 16px;
   height: 16px;
-  background: url(../img/sprite.png) -194px -125px no-repeat;
+  background: url(../img/sprite.png) -168px -125px no-repeat;
 }
 
 .ic--zoom:before {
   width: 16px;
   height: 16px;
-  background: url(../img/sprite.png) -168px -125px no-repeat;
+  background: url(../img/sprite.png) -194px -125px no-repeat;
 }
 
 /* form */
@@ -1519,9 +1543,8 @@
   font: 700 16px/20px "Constantia", sans-serif;
 }
 
-.project__btn {
-  display: block;
-  margin: 15px auto 0;
+.project__btn .ic {
+  margin-right: 10px;
 }
 
 .slider__item {
@@ -1836,22 +1859,8 @@
   display: inline-block;
 }
 
-.fancybox-thumbs {
-  top: auto;
-  width: auto;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 95px;
-  padding: 10px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  background: rgba(0, 0, 0, 0.3);
-}
-
-.fancybox-show-thumbs .fancybox-inner {
-  right: 0;
-  bottom: 95px;
+.fancybox-skin {
+  padding: 0 !important;
 }
 
 /* ---------------------------------------- */
@@ -1884,13 +1893,154 @@
 }
 
 /* ---------------------------------------- */
+/* W O R T H    S T Y L E                   */
+/* ---------------------------------------- */
+.worth {
+  padding: 90px 0 25px;
+}
+
+.worth__box {
+  border: 5px solid #cfcfcf;
+  -webkit-box-shadow: 0 14px 18px rgba(34, 34, 34, 0.09);
+          box-shadow: 0 14px 18px rgba(34, 34, 34, 0.09);
+  padding: 25px;
+}
+
+.worth__title {
+  color: #2d2d2d;
+  font: 700 24px/30px "Constantia", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.worth__point {
+  color: #c00013;
+  font: 700 16px/20px "Constantia", sans-serif;
+  text-transform: uppercase;
+}
+
+.worth__radio-group {
+  display: inline-block;
+}
+
+.worth__radio-label {
+  outline: none;
+  margin: 0;
+}
+
+.worth__radio-input {
+  display: none;
+}
+
+.worth__radio-input:checked + .worth__radio-label .worth__radio-icon {
+  border: 2px solid #c00013;
+}
+
+.worth__radio-input:checked + .worth__radio-label .worth__radio-icon:before {
+  content: '';
+  position: absolute;
+  background: #c00013;
+  display: block;
+  left: 3px;
+  top: 3px;
+  color: #c00013;
+  width: 16px;
+  height: 16px;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+}
+
+.worth__radio-icon {
+  position: relative;
+  display: inline-block;
+  height: 26px;
+  width: 26px;
+  top: 4px;
+  margin-bottom: -4px;
+  margin-right: 3px;
+  background-color: transparent;
+  border: 2px solid #c00013;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+}
+
+/* ---------------------------------------- */
 /* C O N T A C T    S T Y L E               */
 /* ---------------------------------------- */
 .contact {
   padding: 60px 0 35px;
+  overflow: hidden;
+}
+
+.contact__info {
+  padding-top: 65px;
+}
+
+.contact__icon {
+  margin-right: 5px;
+}
+
+.contact__name {
+  display: inline-block;
+  color: #2d2d2d;
+  font: 400 16px/18px "Constantia", sans-serif;
+  margin-bottom: 5px;
+}
+
+.contact__text {
+  color: #2d2d2d;
+  font: 400 18px/20px "Constantia", sans-serif;
+  margin-bottom: 20px;
+}
+
+.contact__number {
+  font: 400 18px/20px "TrajanPro3", sans-serif;
+}
+
+.contact__link {
+  color: #2d2d2d;
+  font: 400 18px/20px "Constantia", sans-serif;
+}
+
+.contact__link--big {
+  font: 700 18px/20px "TrajanPro3", sans-serif;
+}
+
+.contact__link:hover, .contact__link:focus {
+  text-decoration: none;
+  color: #c00013;
 }
 
 #map {
   width: 100%;
   height: 400px;
+}
+
+@media only screen and (min-width: 992px) {
+  .contact__box {
+    position: relative;
+  }
+  .contact__box:before {
+    display: block;
+    content: '';
+    position: absolute;
+    left: -40px;
+    top: -30px;
+    height: 35px;
+    width: 1000px;
+    border-top: 5px solid #cfcfcf;
+    border-left: 5px solid #cfcfcf;
+  }
+  .contact__box:after {
+    display: block;
+    content: '';
+    position: absolute;
+    left: -40px;
+    bottom: -35px;
+    height: 35px;
+    width: 1000px;
+    border-bottom: 5px solid #cfcfcf;
+    border-left: 5px solid #cfcfcf;
+  }
 }

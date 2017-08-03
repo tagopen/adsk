@@ -158,6 +158,9 @@ $('.project__slider').slick({
     autoStart : true
   }
 })*/
+$(document).ready(function() {
+  $('.fancybox').fancybox();
+});
 
 new Vue({
   el: '#example',

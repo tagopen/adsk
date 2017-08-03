@@ -29,6 +29,9 @@
                         .project__elem
                           .project__elem--top!= item.name
                           .project__elem--bot!= item.value
+                    btn.btn.button.project__btn
+                      i.ic.ic--all
+                      !=content.index.project.btn         
         #example.hidden-md-down
           carousel-3d(:width="950",:height="600", :border="0", :clickable="false", :controls-visible="true", :perspective='0', :space='950', :display='3')
             each slide, i in content.index.project.slides
@@ -55,3 +58,6 @@
                             .project__elem
                               .project__elem--top!= item.name
                               .project__elem--bot!= item.value
+                        btn.btn.button.project__btn
+                          i.ic.ic--all
+                          !=content.index.project.btn    

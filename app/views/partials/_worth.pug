@@ -1,0 +1,31 @@
+.worth
+  .container
+    .row
+      .col-24.col-lg-20.offset-lg-2
+        .heading.worth__heading.heading--border
+          .heading__text!=content.index.worth.heading   
+    .row
+      .col-24.col-lg-20.offset-lg-2
+        .row
+          .col-24.col-lg-11
+            .worth__image
+              img.img-fluid(src="img/worth-1.png")
+          .col-24.col-lg-13
+            .worth__box
+              .worth__title!=content.index.worth.title
+                .worth__radio
+                  .worth__radio-group.radio-btn
+                    input#worth-btn-1.worth__radio-input(name='product_article[EA.01.101]', type='checkbox')
+                    label.worth__radio-label.worth__radio-label--check(for='worth-btn-1', tabindex='0') 
+                      span.worth__radio-icon
+                      span.worth__point Дешево
+                  .worth__radio-group.radio-btn
+                    input#worth-btn-2.worth__radio-input(name='product_article[EA.02.102]', type='checkbox')
+                    label.worth__radio-label.worth__radio-label--check(for='worth-btn-2', tabindex='0') 
+                      span.worth__radio-icon
+                      span.worth__point Качественно
+                  .worth__radio-group.radio-btn
+                    input#worth-btn-3.worth__radio-input(name='product_article[EA.02.102]', type='checkbox')
+                    label.worth__radio-label.worth__radio-label--check(for='worth-btn-3', tabindex='0')
+                      span.worth__radio-icon
+                      span.worth__point Быстро
