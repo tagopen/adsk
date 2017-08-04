@@ -3093,6 +3093,31 @@ input:checked + .round:before {
   text-transform: uppercase;
 }
 
+.worth__subtitle {
+  color: #c00013;
+  font: 700 18px/20px "Constantia", sans-serif;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.worth__details {
+  padding: 0 15px;
+}
+
+.worth__descr {
+  text-align: left;
+}
+
+.worth__descr--text {
+  color: #2d2d2d;
+  font: 400 14px/20px "Constantia", sans-serif;
+  margin-bottom: 15px;
+}
+
+.worth__radio {
+  margin-bottom: 30px;
+}
+
 .worth__radio-group {
   display: inline-block;
 }
