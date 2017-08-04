@@ -2132,6 +2132,14 @@
           border-radius: 3px;
 }
 
+.worth__img {
+  display: none;
+}
+
+.worth__img--active {
+  display: block;
+}
+
 /* ---------------------------------------- */
 /* C O N T A C T    S T Y L E               */
 /* ---------------------------------------- */
