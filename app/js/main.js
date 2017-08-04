@@ -6,7 +6,7 @@
       event.preventDefault();
       var id  = $(this).attr('href'),
       top = $(id).offset().top;
-      $('body,html').animate({scrollTop: top -$('.navbar').outerHeight()}, 1500);
+      $('body,html').animate({scrollTop: top -$('.navbar').outerHeight() +1}, 1500);
     });
   });
 
@@ -173,6 +173,12 @@ new Vue({
   }
 })
 
+$('.worth__size').matchHeight({
+      byRow: true,
+      property: 'height',
+      target: null,
+      remove: false
+    });
 
   if( $( window ).width() >= 992 ) {
 
@@ -241,5 +247,10 @@ new Vue({
       
     });
   });
+
+$(".js-example-basic-hide-search").select2({
+  minimumResultsForSearch: Infinity,
+  dropdownCssClass: "drop"
+});
 
 })(jQuery); // End of use strict

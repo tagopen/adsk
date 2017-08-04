@@ -71,8 +71,9 @@ gulp.task('scripts', () => {
     'node_modules/jquery/dist/jquery.js',
     'node_modules/slick-carousel/slick/slick.js',
     'node_modules/vue-carousel-3d/dist/vue-carousel-3d.min.js',
-    'node_modules/fancybox/dist/js/jquery.fancybox.js'
-
+    'node_modules/fancybox/dist/js/jquery.fancybox.js',
+    'node_modules/select2/dist/js/select2.full.js'
+    
   ])
   .pipe($.plumber())
   .pipe(gulp.dest(path.src.js));

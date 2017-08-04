@@ -1,0 +1,49 @@
+#cost.cost
+  .container
+    .row
+      .col-24.col-lg-20.offset-lg-2
+        .heading.cost__heading.heading--border
+          .heading__text!=content.index.cost.heading
+    .row
+      .col-24.col-lg-20.offset-lg-2
+        .cost__box
+          .row.flex-lg-row-reverse
+            .col-24.col-lg-10
+              .cost__calc
+                .cost__title!=content.index.cost.title
+                form.contactForm.cost__form(method='post', action='./mail/mail.php')
+                  .row
+                    .form-group.col-24
+                      .input__heading=content.index.cost.form.input1
+                      select.js-example-basic-hide-search.js-example-responsive(style="width:100%")
+                        option(value='AL') Alabama
+                        option(value='WY') Wyoming
+                    .form-group.col-24
+                      .input__heading=content.index.cost.form.input2
+                      input.form-control.form__input.form__name(aria-invalid='false', placeholder='Введите площадь', required, name='name', type='text')
+                    .form-group.col-24
+                      label.switch
+                        input.switch__input(type='checkbox')
+                        span.round(data-text="Новое строение", data-text-active="Реконструкция")
+                        span.switch__text.switch__text--left Новое строение  
+                        span.switch__text.switch__text--right Реконструкция     
+                    .col-15
+                      .input__res
+                        .input__heading=content.index.cost.form.input3
+                        .input__result 1000
+                          span.input__result--text РУБ.
+                    .col-9 
+                      .input__res
+                        .input__heading=content.index.cost.form.input4
+                        .input__result 1000
+                          span.input__result--text М
+                    .col-24    
+                      .text-center
+                        button.btn.button.cost__btn(name='form[навбар]', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...")!=content.index.cost.btn
+            .col-24.col-lg-14
+              .cost__image
+                img(src=content.index.cost.image)
+                button.btn.button.cost__btn--catalog
+                  i.ic.ic--cost.button__ic.hidden-sm-down
+                  i.ic.ic--costfff.button__ic.hidden-sm-down  
+                  !=content.index.cost.catalog            

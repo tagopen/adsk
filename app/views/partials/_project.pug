@@ -11,7 +11,7 @@
               .row
                 .col-24.col-lg-12
                   .slider__image
-                    img.img-fluid(src=slide.image.src, alt=slide.image.alt)
+                    img.img-fluid(src=slide.image.src, alt=slide.image.alt)  
                 .col-24.col-lg-12
                   .project__info
                     .project__name!= slide.heading
@@ -42,6 +42,14 @@
                     .col-12
                       .slider__image
                         img.img-fluid(src=slide.image.src, alt=slide.image.alt)
+                        .slider__thumb
+                          .row
+                            each elem in slide.thumb
+                              .col-8 
+                                .slider__preview
+                                  img.img-fluid(src=elem.src)
+                                  .slider__preview--hover
+                                    i.ic.ic--zoom  
                     .col-12
                       .project__info
                         .project__name!= slide.heading
@@ -59,6 +67,7 @@
                             .project__elem
                               .project__elem--top!= item.name
                               .project__elem--bot!= item.value
-                        btn.btn.button.project__btn
-                          i.ic.ic--all
-                          !=content.index.project.btn    
+                        .text-center      
+                          btn.btn.button.project__btn
+                            i.ic.ic--all
+                            !=content.index.project.btn    
