@@ -215,4 +215,31 @@ new Vue({
   ]
 });
 
+  $(function () {
+    var $items = $('.worth__radio-input'),
+        $images = $('.worth__img');
+    
+    $items.on('click, change', function() {
+      var $this = $(this),
+          activeNum = '';
+
+      $items.each(function() {
+        console.log($(this));
+        if ($(this).prop('checked')) {
+          activeNum += '1';
+        } else {
+          activeNum += '0';
+        }
+      });
+
+      if ($images.filter($('[data-switch=' + activeNum + ']')).length) {
+        $images
+          .removeClass('worth__img--active')
+          .filter($('[data-switch=' + activeNum + ']'))
+          .addClass('worth__img--active');
+      }
+      
+    });
+  });
+
 })(jQuery); // End of use strict

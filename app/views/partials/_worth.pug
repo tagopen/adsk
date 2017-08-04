@@ -9,23 +9,26 @@
         .row
           .col-24.col-lg-11
             .worth__image
-              img.img-fluid(src="img/worth-1.png")
+              img.img-fluid.worth__img.worth__img--active(src="img/worth-1.png", data-switch='110')
+              img.img-fluid.worth__img(src="img/worth-1.png", data-switch='101')
+              img.img-fluid.worth__img(src="img/worth-1.png", data-switch='011')
+              img.img-fluid.worth__img(src="img/worth-1.png", data-switch='111')
           .col-24.col-lg-13
             .worth__box
               .worth__title!=content.index.worth.title
                 .worth__radio
                   .worth__radio-group.radio-btn
                     input#worth-btn-1.worth__radio-input(name='product_article[EA.01.101]', type='checkbox')
-                    label.worth__radio-label.worth__radio-label--check(for='worth-btn-1', tabindex='0') 
+                    label.worth__radio-label.worth__radio-label--check(for='worth-btn-1', tabindex='-1') 
                       span.worth__radio-icon
                       span.worth__point Дешево
                   .worth__radio-group.radio-btn
                     input#worth-btn-2.worth__radio-input(name='product_article[EA.02.102]', type='checkbox')
-                    label.worth__radio-label.worth__radio-label--check(for='worth-btn-2', tabindex='0') 
+                    label.worth__radio-label.worth__radio-label--check(for='worth-btn-2', tabindex='-1') 
                       span.worth__radio-icon
                       span.worth__point Качественно
                   .worth__radio-group.radio-btn
                     input#worth-btn-3.worth__radio-input(name='product_article[EA.02.102]', type='checkbox')
-                    label.worth__radio-label.worth__radio-label--check(for='worth-btn-3', tabindex='0')
+                    label.worth__radio-label.worth__radio-label--check(for='worth-btn-3', tabindex='-1')
                       span.worth__radio-icon
                       span.worth__point Быстро
