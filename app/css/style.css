@@ -2143,6 +2143,18 @@
   display: block;
 }
 
+@media only screen and (min-width: 760px) {
+  .worth__radio {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+  }
+}
+
 /* ---------------------------------------- */
 /* C O N T A C T    S T Y L E               */
 /* ---------------------------------------- */
