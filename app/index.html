@@ -306,10 +306,10 @@
               <div class="project__slider slider hidden-lg-up">
                 <div class="slider__item">
                   <div class="row">
-                    <div class="col-12">
+                    <div class="col-24 col-lg-12">
                       <div class="slider__image"><img class="img-fluid" src="img/slider1main.jpg" alt="Слайд 1"></div>
                     </div>
-                    <div class="col-12">
+                    <div class="col-24 col-lg-12">
                       <div class="project__info">
                         <div class="project__name">Проект “Калифорния”</div>
                         <div class="project__box">
@@ -355,18 +355,20 @@
                             <div class="project__elem--bot">Имитация бруса с покраской</div>
                           </div>
                         </div>
-                        <btn class="btn button project__btn"><i class="ic ic--all"></i>Смотреть все объекты
-                        </btn>
+                        <div class="text-center">     
+                          <btn class="btn button project__btn"><i class="ic ic--all hidden-sm-down"></i>Смотреть все объекты
+                          </btn>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="slider__item">
                   <div class="row">
-                    <div class="col-12">
+                    <div class="col-24 col-lg-12">
                       <div class="slider__image"><img class="img-fluid" src="img/slider1main.jpg" alt="Слайд 1"></div>
                     </div>
-                    <div class="col-12">
+                    <div class="col-24 col-lg-12">
                       <div class="project__info">
                         <div class="project__name">Проект “Калифорния”</div>
                         <div class="project__box">
@@ -412,18 +414,20 @@
                             <div class="project__elem--bot">Имитация бруса с покраской</div>
                           </div>
                         </div>
-                        <btn class="btn button project__btn"><i class="ic ic--all"></i>Смотреть все объекты
-                        </btn>
+                        <div class="text-center">     
+                          <btn class="btn button project__btn"><i class="ic ic--all hidden-sm-down"></i>Смотреть все объекты
+                          </btn>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="slider__item">
                   <div class="row">
-                    <div class="col-12">
+                    <div class="col-24 col-lg-12">
                       <div class="slider__image"><img class="img-fluid" src="img/slider1main.jpg" alt="Слайд 1"></div>
                     </div>
-                    <div class="col-12">
+                    <div class="col-24 col-lg-12">
                       <div class="project__info">
                         <div class="project__name">Проект “Калифорния”</div>
                         <div class="project__box">
@@ -469,15 +473,17 @@
                             <div class="project__elem--bot">Имитация бруса с покраской</div>
                           </div>
                         </div>
-                        <btn class="btn button project__btn"><i class="ic ic--all"></i>Смотреть все объекты
-                        </btn>
+                        <div class="text-center">     
+                          <btn class="btn button project__btn"><i class="ic ic--all hidden-sm-down"></i>Смотреть все объекты
+                          </btn>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="hidden-md-down" id="example">
-                <carousel-3d :width="950" :height="600" :border="0" :clickable="false" :controls-visible="true" :perspective="0" :space="800" :display="3">
+                <carousel-3d :width="950" :height="610" :border="0" :clickable="false" :controls-visible="true" :perspective="0" :space="950" :display="3" :controls-width="40" :controls-height="80">
                   <slide :index="00">
                     <div class="slider__item">
                       <div class="row">
@@ -953,7 +959,21 @@
         </div>
       </div>
     </main>
-    <div class="footer"></div>
+    <footer class="footer">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-sm-10 col-lg-4 hidden-md-down">
+            <div class="logo logo logo--inside"><a class="logo__link" href="/"><img class="img-fluid logo__img" src="img/logo/logo.png"></a></div>
+          </div>
+          <div class="col-24 col-lg-6 text-center">
+            <div class="footer__copy">Все права защищены <span class="footer__copy--number">2017</span></div>
+          </div>
+          <div class="col-16 col-sm-9 col-md-8 col-lg-5 flex-lg-last hidden-md-down">
+            <div class="nav__contact ml-auto"><a class="nav__number">+38 (067) 664 31 77</a><a class="nav__btn call__btn"><i class="ic ic--call call__btn--icon"></i><span class="call__btn--text">Заказать звонок</span></a></div>
+          </div>
+        </div>
+      </div>
+    </footer>
     <!-- build:js js/bundle.min.js-->
     <!-- jQuery-->
     <script src="js/jquery.js"></script>

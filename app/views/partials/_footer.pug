@@ -1,1 +1,15 @@
-.footer
+footer.footer
+  .container
+    .row.justify-content-between
+      .col-sm-10.col-lg-4.hidden-md-down
+        .logo.logo.logo--inside
+          a.logo__link(href="/")
+            img.img-fluid.logo__img(src=content.site.logo.img.src, alt=content.site.logo.img.alt)
+      .col-24.col-lg-6.text-center
+        .footer__copy!=content.index.footer.copyright          
+      .col-16.col-sm-9.col-md-8.col-lg-5.flex-lg-last.hidden-md-down
+        .nav__contact.ml-auto
+          a.nav__number=content.site.nav.contact.text
+          a.nav__btn.call__btn
+            i.ic.ic--call.call__btn--icon
+            span.call__btn--text!=content.site.nav.btn.text   

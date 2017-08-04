@@ -436,10 +436,10 @@
   background: url(../img/projectbg.jpg) no-repeat
   background-size: cover
   &__info
-    padding: 40px 0 40px 
+    padding: 40px 0 0 
   &__name  
     color: $main-color
-    font: 700 30px/36px $font-constantia 
+    font: 700 18px/24px $font-constantia 
     text-transform: uppercase
     padding-left: 10px
     margin-bottom: 25px
@@ -451,7 +451,7 @@
     &--left
       position: relative
       color: $main-color
-      font: 700 18px/20px $font-constantia 
+      font: 700 14px/18px $font-constantia 
       .ic
         position: absolute
         left: -20px
@@ -459,7 +459,7 @@
     &--right
       text-align: right
       color: $main-color
-      font: 400 18px/20px $font-constantia 
+      font: 400 14px/18px $font-constantia 
   &__icon
     min-width: 20px    
   &__details
@@ -468,18 +468,19 @@
     margin-bottom: 15px
     &--top
       color: #727272    
-      font: 400 16px/20px $font-constantia 
+      font: 400 14px/16px $font-constantia 
     &--bot 
       color: $main-color 
-      font: 700 16px/20px $font-constantia
+      font: 700 14px/16px $font-constantia
   &__btn
     .ic
-      margin-right: 10px   
+      margin-right: 10px 
 .slider      
   &__item
     opacity: 0.8
+    padding-left: 10px
+    padding-right: 10px
     background: #fff
-    padding-left: 30px
     box-shadow: 0 9px 27px rgba(52, 60, 59, 0.2)
     border-radius: 5px
     &.slick-active
@@ -492,15 +493,89 @@
   &-controls
     a.prev,
     a.next
-      width: 40px !important 
-      height: 80px !important 
       span
-        width: 40px !important 
-        height: 80px !important
-        line-height: 80px !important
+        color: #fff
+        line-height: 65px !important  
+        text-align: center
+        display: block
+        width: 40px !important  
+        height: 80px !important  
         background-color: #24a9e1 !important  
         border-radius: 5px !important  
         box-shadow: 0 4px 7px rgba(36, 169, 225, 0.37) !important      
++rx(991)
+  .project
+    &__slider
+      .slick
+        &-disabled
+          display: none
+        &-next,
+        &-prev
+          top: auto
+          bottom: -30px
+          z-index: 20
+          &:hover
+            &:before
+              color: #c00013
+        &-next
+          right: 0
+          height: 60px
+          width: 25px
+          background-color: #24a9e1
+          border-radius: 4px
+          box-shadow: 0 4px 7px rgba(36, 169, 225, 0.37)
+          &:before
+            height: 60px
+            width: 25px
+            content: "\f054"
+            font-family: $font-awesome
+            color: #fff
+            font-size: 16px
+            line-height: 60px
+        &-prev
+          left: 0
+          height: 60px
+          width: 25px
+          background-color: #24a9e1
+          border-radius: 4px
+          box-shadow: 0 4px 7px rgba(36, 169, 225, 0.37)
+          &:before
+            height: 60px
+            width: 25px
+            content: "\f053"
+            font-family: $font-awesome
+            color: #fff
+            font-size: 16px
+            line-height: 60px   
++r(760)   
+  .project
+    &__name
+      font: 700 30px/36px $font-constantia 
+    &__data
+      &--left
+        font: 700 18px/20px $font-constantia 
+      &--right  
+        font: 400 18px/20px $font-constantia
+    &__elem
+      &--top
+        font: 400 16px/20px $font-constantia 
+      &--bot   
+        font: 700 16px/20px $font-constantia                   
+  .slider
+    &__item
+      padding-left: 30px
+      padding-right: 0
++r(992)
+  .project
+    &__info
+      padding: 40px 0      
++r(1200)
+  .carousel-3d
+    &-controls
+      a.prev
+        left: 75px !important 
+      a.next
+        right: 75px !important 
 +comment("scheme style")
 .scheme
   padding: 90px 0 160px
@@ -724,6 +799,50 @@
   &__text  
     color: $main-color 
     font: 400 12px/16px $font-constantia
++rx(992)    
+  .partner
+    &__slider
+      .slick
+        &-disabled
+          display: none
+        &-next,
+        &-prev
+          top: auto
+          bottom: -30px
+          z-index: 20
+          &:hover
+            &:before
+              color: #c00013
+        &-next
+          right: 0
+          height: 60px
+          width: 25px
+          background-color: #24a9e1
+          border-radius: 4px
+          box-shadow: 0 4px 7px rgba(36, 169, 225, 0.37)
+          &:before
+            height: 60px
+            width: 25px
+            content: "\f054"
+            font-family: $font-awesome
+            color: #fff
+            font-size: 16px
+            line-height: 60px
+        &-prev
+          left: 0
+          height: 60px
+          width: 25px
+          background-color: #24a9e1
+          border-radius: 4px
+          box-shadow: 0 4px 7px rgba(36, 169, 225, 0.37)
+          &:before
+            height: 60px
+            width: 25px
+            content: "\f053"
+            font-family: $font-awesome
+            color: #fff
+            font-size: 16px
+            line-height: 60px      
 +comment("worth style")
 .worth
   padding: 90px 0 25px      
@@ -829,4 +948,16 @@
   height: 400px
 +r(760)
   .contact__info
-    margin-left: 10px  
+    margin-left: 10px
++comment("footer style")       
+.footer
+  padding: 20px 0 25px
+  background-color: white
+  box-shadow: 1.5px -2.6px 50px rgba(0, 0, 0, 0.2)    
+  &__copy
+    display: inline-block
+    padding-top: 10px
+    color: $main-color
+    font: 400 14px/18px $font-constantia 
+    &--number
+      font: 400 14px/18px $font-trajan

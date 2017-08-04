@@ -9,10 +9,10 @@
           each slide in content.index.project.slides
             .slider__item
               .row
-                .col-12
+                .col-24.col-lg-12
                   .slider__image
                     img.img-fluid(src=slide.image.src, alt=slide.image.alt)
-                .col-12
+                .col-24.col-lg-12
                   .project__info
                     .project__name!= slide.heading
                     .project__box
@@ -29,11 +29,12 @@
                         .project__elem
                           .project__elem--top!= item.name
                           .project__elem--bot!= item.value
-                    btn.btn.button.project__btn
-                      i.ic.ic--all
-                      !=content.index.project.btn         
+                    .text-center      
+                      btn.btn.button.project__btn
+                        i.ic.ic--all.hidden-sm-down
+                        !=content.index.project.btn         
         #example.hidden-md-down
-          carousel-3d(:width="950",:height="600", :border="0", :clickable="false", :controls-visible="true", :perspective='0', :space='800', :display='3')
+          carousel-3d(:width="950",:height="610", :border="0", :clickable="false", :controls-visible="true", :perspective='0', :space='950', :display='3', :controls-width="40", :controls-height="80")
             each slide, i in content.index.project.slides
               slide(:index="0"+(i))
                 .slider__item
