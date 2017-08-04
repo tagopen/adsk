@@ -1048,7 +1048,10 @@
     padding-top: 0;
   }
   .navbar__row {
-    width: 100%;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
   }
 }
 
