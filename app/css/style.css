@@ -3205,6 +3205,14 @@ input:checked + .round:before {
           transform: scale(1.1);
 }
 
+.worth__info {
+  display: none;
+}
+
+.worth__info--active {
+  display: block;
+}
+
 @media only screen and (min-width: 760px) {
   .worth__radio {
     display: -webkit-box;

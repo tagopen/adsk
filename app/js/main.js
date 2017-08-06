@@ -224,14 +224,14 @@ $('.worth__size').matchHeight({
   // worth img switch
   $(function () {
     var $items = $('.worth__radio-input'),
-        $images = $('.worth__img');
+        $images = $('.worth__img'),
+        $info   = $('.worth__info');
     
     $items.on('click, change', function() {
       var $this = $(this),
           activeNum = '';
 
       $items.each(function() {
-        console.log($(this));
         if ($(this).prop('checked')) {
           activeNum += '1';
         } else {
@@ -244,6 +244,10 @@ $('.worth__size').matchHeight({
           .removeClass('worth__img--active')
           .filter($('[data-switch=' + activeNum + ']'))
           .addClass('worth__img--active');
+        $info
+          .removeClass('worth__info--active')
+          .filter($('[data-switch=' + activeNum + ']'))
+          .addClass('worth__info--active');
       }
       
     });

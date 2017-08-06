@@ -9,35 +9,25 @@
         .row
           .col-24.col-lg-11
             .worth__image.worth--size
-              img.img-fluid.worth--size.worth__img.worth__img--active(src="img/worth-1.png", data-switch='110')
-              img.img-fluid.worth--size.worth__img(src="img/worth-2.png", data-switch='101')
-              img.img-fluid.worth--size.worth__img(src="img/worth-3.png", data-switch='011')
-              img.img-fluid.worth--size.worth__img.worth__img--4(src="img/worth-4.png", data-switch='111')
+              each item, i in content.index.worth.items
+                img.img-fluid.worth--size.worth__img(class={'worth__img--active' : i === 0}, src=item.img.src, alt=item.img.alt, data-switch=item.switch)
           .col-24.col-lg-13
             .worth__box
               .worth__title!=content.index.worth.title
                 .worth__radio
-                  .worth__radio-group.radio-btn
-                    input#worth-btn-1.worth__radio-input(name='product_article[EA.01.101]', type='checkbox')
-                    label.worth__radio-label.worth__radio-label--check(for='worth-btn-1', tabindex='-1') 
-                      span.worth__radio-icon
-                      span.worth__point Дешево
-                  .worth__radio-group.radio-btn
-                    input#worth-btn-2.worth__radio-input(name='product_article[EA.02.102]', type='checkbox')
-                    label.worth__radio-label.worth__radio-label--check(for='worth-btn-2', tabindex='-1') 
-                      span.worth__radio-icon
-                      span.worth__point Качественно
-                  .worth__radio-group.radio-btn
-                    input#worth-btn-3.worth__radio-input(name='product_article[EA.02.102]', type='checkbox')
-                    label.worth__radio-label.worth__radio-label--check(for='worth-btn-3', tabindex='-1')
-                      span.worth__radio-icon
-                      span.worth__point Быстро
+                  each item, i in content.index.worth.control
+                    .worth__radio-group.radio-btn
+                      input.worth__radio-input(id='worth-btn-' + (i + 1), name='product_article[' + item.article + ']', type='checkbox')
+                      label.worth__radio-label.worth__radio-label--check(for='worth-btn-' + (i + 1), tabindex='-1') 
+                        span.worth__radio-icon
+                        span.worth__point item.title
                 .worth__details      
-                  .worth__info
-                    .worth__subtitle!=content.index.worth.subtitle1
-                    .worth__descr
-                      .worth__descr--text!=content.index.worth.text1 
-                      .worth__descr--text!=content.index.worth.text11   
+                  each item, i in content.index.worth.items
+                    .worth__info(class={'worth__info--active' : i === 0}, data-switch=item.switch)
+                      .worth__subtitle!=item.subtitle
+                      each text in item.text
+                        p.worth__descr.worth__descr--text!= text
+                     
                   //- .worth__info
                   //-   .worth__subtitle!=content.index.worth.subtitle2
                   //-   .worth__descr
