@@ -1342,163 +1342,169 @@
 .ic--all:before {
   width: 32px;
   height: 20px;
-  background: url(../img/sprite.png) -168px -32px no-repeat;
+  background: url(../img/sprite.png) -368px -279px no-repeat;
 }
 
 .ic--call:before {
   width: 13px;
   height: 13px;
-  background: url(../img/sprite.png) -71px -153px no-repeat;
+  background: url(../img/sprite.png) -499px -279px no-repeat;
+}
+
+.ic--car:before {
+  width: 646px;
+  height: 269px;
+  background: url(../img/sprite.png) 0px 0px no-repeat;
 }
 
 .ic--contact-1:before {
   width: 12px;
   height: 12px;
-  background: url(../img/sprite.png) -94px -153px no-repeat;
+  background: url(../img/sprite.png) -522px -279px no-repeat;
 }
 
 .ic--contact-2:before {
   width: 12px;
   height: 12px;
-  background: url(../img/sprite.png) -116px -153px no-repeat;
+  background: url(../img/sprite.png) -544px -279px no-repeat;
 }
 
 .ic--contact-3:before {
   width: 11px;
   height: 9px;
-  background: url(../img/sprite.png) -138px -153px no-repeat;
+  background: url(../img/sprite.png) -585px -279px no-repeat;
 }
 
 .ic--contact-4:before {
   width: 9px;
   height: 12px;
-  background: url(../img/sprite.png) -220px -125px no-repeat;
+  background: url(../img/sprite.png) -566px -279px no-repeat;
 }
 
 .ic--cost:before {
   width: 14px;
   height: 21px;
-  background: url(../img/sprite.png) -24px -153px no-repeat;
+  background: url(../img/sprite.png) -238px -337px no-repeat;
 }
 
 .ic--costfff:before {
   width: 14px;
   height: 21px;
-  background: url(../img/sprite.png) 0px -153px no-repeat;
+  background: url(../img/sprite.png) -214px -337px no-repeat;
 }
 
 .ic--date:before {
   width: 40px;
   height: 40px;
-  background: url(../img/sprite.png) -61px -58px no-repeat;
+  background: url(../img/sprite.png) -107px -337px no-repeat;
 }
 
 .ic--gift:before {
   width: 21px;
   height: 24px;
-  background: url(../img/sprite.png) -168px -62px no-repeat;
+  background: url(../img/sprite.png) -157px -337px no-repeat;
 }
 
 .ic--list:before {
   width: 16px;
   height: 22px;
-  background: url(../img/sprite.png) -122px -108px no-repeat;
+  background: url(../img/sprite.png) -188px -337px no-repeat;
 }
 
 .ic--question:before {
   width: 16px;
   height: 16px;
-  background: url(../img/sprite.png) -168px -125px no-repeat;
+  background: url(../img/sprite.png) -288px -337px no-repeat;
 }
 
 .ic--scheme-1:before {
   width: 48px;
   height: 48px;
-  background: url(../img/sprite.png) 0px 0px no-repeat;
+  background: url(../img/sprite.png) 0px -279px no-repeat;
 }
 
 .ic--scheme-2:before {
   width: 46px;
   height: 46px;
-  background: url(../img/sprite.png) -58px 0px no-repeat;
+  background: url(../img/sprite.png) -58px -279px no-repeat;
 }
 
 .ic--scheme-3:before {
   width: 53px;
   height: 35px;
-  background: url(../img/sprite.png) 0px -108px no-repeat;
+  background: url(../img/sprite.png) -175px -279px no-repeat;
 }
 
 .ic--scheme-4:before {
   width: 43px;
   height: 43px;
-  background: url(../img/sprite.png) -114px -54px no-repeat;
+  background: url(../img/sprite.png) -54px -337px no-repeat;
 }
 
 .ic--scheme-5:before {
   width: 61px;
   height: 22px;
-  background: url(../img/sprite.png) -168px 0px no-repeat;
+  background: url(../img/sprite.png) -297px -279px no-repeat;
 }
 
 .ic--scheme-6:before {
   width: 51px;
   height: 40px;
-  background: url(../img/sprite.png) 0px -58px no-repeat;
+  background: url(../img/sprite.png) -114px -279px no-repeat;
 }
 
 .ic--scheme-7:before {
   width: 44px;
   height: 44px;
-  background: url(../img/sprite.png) -114px 0px no-repeat;
+  background: url(../img/sprite.png) 0px -337px no-repeat;
 }
 
 .ic--scheme-8:before {
   width: 49px;
   height: 33px;
-  background: url(../img/sprite.png) -63px -108px no-repeat;
+  background: url(../img/sprite.png) -238px -279px no-repeat;
 }
 
 .ic--table1:before {
   width: 13px;
   height: 19px;
-  background: url(../img/sprite.png) -48px -153px no-repeat;
+  background: url(../img/sprite.png) 0px -391px no-repeat;
 }
 
 .ic--table2:before {
   width: 21px;
   height: 20px;
-  background: url(../img/sprite.png) -199px -62px no-repeat;
+  background: url(../img/sprite.png) -410px -279px no-repeat;
 }
 
 .ic--table3:before {
   width: 20px;
   height: 19px;
-  background: url(../img/sprite.png) -168px -96px no-repeat;
+  background: url(../img/sprite.png) -441px -279px no-repeat;
 }
 
 .ic--test-1:before {
   width: 18px;
   height: 15px;
-  background: url(../img/sprite.png) -210px -32px no-repeat;
+  background: url(../img/sprite.png) -471px -279px no-repeat;
 }
 
 .ic--test-2:before {
   width: 10px;
   height: 18px;
-  background: url(../img/sprite.png) -148px -108px no-repeat;
+  background: url(../img/sprite.png) -23px -391px no-repeat;
 }
 
 .ic--test-3:before {
   width: 16px;
   height: 16px;
-  background: url(../img/sprite.png) -198px -96px no-repeat;
+  background: url(../img/sprite.png) -262px -337px no-repeat;
 }
 
 .ic--zoom:before {
   width: 16px;
   height: 16px;
-  background: url(../img/sprite.png) -194px -125px no-repeat;
+  background: url(../img/sprite.png) -314px -337px no-repeat;
 }
 
 /* form */
@@ -2976,6 +2982,20 @@ input:checked + .round:before {
   .team__sert {
     margin-bottom: 0;
   }
+}
+
+/* ---------------------------------------- */
+/* Q U A L I T Y    S T Y L E               */
+/* ---------------------------------------- */
+.quality {
+  position: relative;
+  height: 400px;
+}
+
+.quality__box {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 /* ---------------------------------------- */
