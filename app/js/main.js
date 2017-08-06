@@ -253,6 +253,28 @@ $('.worth__size').matchHeight({
     });
   });
 
+  // ThubmbNail
+  $(function () {
+    $('.slider__preview').on('click', function(e) {
+      var $this = $(this),
+          $parent = $this.closest('.slider__image'),
+          bigImageSrc = $this.data('thumbnail'),
+          bigImageAlt = $this.data('thumbnail-alt'),
+          $bigImage = $parent.find('.slider__img--big'),
+          $controls = $parent.find('.slider__preview');
+      
+      $controls
+        .removeClass('slider__preview--active')
+        .filter($this)
+        .addClass('slider__preview--active');
+
+      $bigImage.attr('src', bigImageSrc);
+      $bigImage.attr('alt', bigImageAlt);
+
+      e.preventDefault();
+    });
+  });
+
   // sroll animate car
   $(function () {
     var windowTopPrev = 0;

@@ -41,12 +41,12 @@
                   .row
                     .col-12
                       .slider__image
-                        img.img-fluid(src=slide.image.src, alt=slide.image.alt)
+                        img.img-fluid.slider__img.slider__img--big(src=slide.image.src, alt=slide.image.alt)
                         .slider__thumb
                           .row
                             each elem in slide.thumb
                               .col-8 
-                                .slider__preview
+                                .slider__preview(data-thumbnail=elem.imgBig.src, data-thumbnail-alt=elem.imgBig.alt)
                                   img.img-fluid(src=elem.src)
                                   .slider__preview--hover
                                     i.ic.ic--zoom  
