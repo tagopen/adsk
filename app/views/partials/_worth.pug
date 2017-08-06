@@ -20,7 +20,7 @@
                       input.worth__radio-input(id='worth-btn-' + (i + 1), name='product_article[' + item.article + ']', type='checkbox')
                       label.worth__radio-label.worth__radio-label--check(for='worth-btn-' + (i + 1), tabindex='-1') 
                         span.worth__radio-icon
-                        span.worth__point item.title
+                        span.worth__point!= item.title
                 .worth__details      
                   each item, i in content.index.worth.items
                     .worth__info(class={'worth__info--active' : i === 0}, data-switch=item.switch)
