@@ -3005,6 +3005,16 @@ input:checked + .round:before {
   overflow: hidden;
 }
 
+.quality__text {
+  color: #24a9e1;
+  font: 700 26px/30px "Constantia", sans-serif;
+  text-transform: uppercase;
+  position: absolute;
+  left: -150%;
+  width: 190%;
+  top: 40%;
+}
+
 .quality__box {
   position: absolute;
   top: 0;
