@@ -3024,8 +3024,6 @@ input:checked + .round:before {
   position: fixed;
   top: 100px;
   left: -100%;
-  -webkit-transition: all .3s linear;
-  transition: all .3s linear;
   z-index: -1;
 }
 

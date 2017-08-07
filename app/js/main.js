@@ -278,7 +278,6 @@ $('.worth__size').matchHeight({
   // sroll animate car
   $(function () {
     var windowScrollTopPrev = 0;
-    $('.quality').css({background: "red"})
     $(document).on('scroll', function() {
       var windowHeight = $(window).height(),
           windowScrollTop = $(window).scrollTop(),
