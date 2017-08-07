@@ -288,7 +288,7 @@ $('.worth__size').matchHeight({
           $qualityIcon = $('.quality__box'),
           qualityIconHeight = $qualityIcon.height(),
           qualityIconWidth = $qualityIcon.width(),
-          scrollHeight = qualityHeight + windowHeight,
+          scrollHeight = qualityHeight + 2 * qualityIconHeight,
           scrollWidth = 2 * qualityIconWidth + qualityWidth,
           carPosTop = 0,
           carPosLeft = 0;
@@ -299,8 +299,8 @@ $('.worth__size').matchHeight({
         $qualityIcon.addClass('quality__icon--right');
       }
 
-      if ((windowScrollTop > (qualityTop - windowHeight)) && (windowScrollTop < (qualityTop + qualityHeight))) {
-        carPosLeft = (windowScrollTop - (qualityTop - windowHeight)) *  scrollWidth / scrollHeight;
+      if ((windowScrollTop > (qualityTop - windowHeight - qualityIconHeight)) && (windowScrollTop < (qualityTop + qualityHeight + qualityIconHeight))) {
+        carPosLeft = (windowScrollTop - (qualityTop - qualityIconHeight)) *  scrollWidth / scrollHeight;
         $qualityIcon.css({transform: 'translateX(' + carPosLeft + 'px)'});
         console.log((windowScrollTop - (qualityTop - windowHeight)), scrollWidth, scrollHeight, scrollWidth / scrollHeight);
       }
