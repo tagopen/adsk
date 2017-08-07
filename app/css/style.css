@@ -2990,12 +2990,21 @@ input:checked + .round:before {
 .quality {
   position: relative;
   height: 400px;
+  overflow: hidden;
 }
 
 .quality__box {
   position: absolute;
   top: 0;
   left: 0;
+  -webkit-transition: all .6s ease-out;
+  transition: all .6s ease-out;
+}
+
+.quality__box--right .quality__icon {
+  -webkit-transform: scaleX(-1);
+      -ms-transform: scaleX(-1);
+          transform: scaleX(-1);
 }
 
 /* ---------------------------------------- */

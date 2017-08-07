@@ -277,38 +277,34 @@ $('.worth__size').matchHeight({
 
   // sroll animate car
   $(function () {
-    var windowTopPrev = 0;
-    $('.quality').css({background: "red"})
+    var windowScrollTopPrev = 0;
     $(document).on('scroll', function() {
       var windowHeight = $(window).height(),
-          windowTop = $(window).scrollTop(),
+          windowScrollTop = $(window).scrollTop(),
           navbarHeight = $('.navbar').height(),
           qualityTop = $('.quality').offset().top,
-          $qualityIcon = $('.quality__box'),
+          qualityWidth = $('.quality').width(),
           qualityHeight = $('.quality').height(),
+          $qualityIcon = $('.quality__box'),
           qualityIconHeight = $qualityIcon.height(),
-          scrollHeight = qualityTop + qualityHeight - navbarHeight - qualityIconHeight,
+          qualityIconWidth = $qualityIcon.width(),
+          scrollHeight = qualityHeight,
           carPosTop = 0,
           carPosLeft = 0;
 
-      if (windowTop > windowTopPrev) {
-        $qualityIcon.removeClass('quality__icon--right');
+      if (windowScrollTop > windowScrollTopPrev) {
+        $qualityIcon.removeClass('quality__box--right');
       } else {
-        $qualityIcon.addClass('quality__icon--right');
+        $qualityIcon.addClass('quality__box--right');
       }
 
-      if ((windowTop > (qualityTop - windowHeight)) && (windowTop < scrollHeight)) {
-        carPosTop = (windowTop + windowHeight - qualityTop) * (qualityHeight - qualityIconHeight) / scrollHeight;
-        console.log("carPosTop", carPosTop);
-        $qualityIcon.css({top: carPosTop + 'px'});
-        console.log("top", windowTop + windowHeight - qualityTop);
+      if ((windowScrollTop > (qualityTop - windowHeight)) && (windowScrollTop < (qualityTop + scrollHeight))) {
+        carPosLeft = (windowScrollTop + windowHeight - qualityTop - qualityIconHeight) *  (2 * qualityIconWidth + qualityWidth) / scrollHeight;
+        carPosTop = (windowScrollTop + windowHeight - qualityTop - qualityIconHeight) *  (qualityHeight - qualityIconHeight) / scrollHeight;
+        $qualityIcon.css({left: carPosLeft + 'px', top: carPosTop + "px"});
       }
 
-      console.log(windowTop + windowHeight, qualityTop);
-      console.log(windowTop, scrollHeight);
-      console.log((windowTop > (qualityTop - windowHeight)) && (windowTop < scrollHeight));
-
-      windowTopPrev = windowTop;
+      windowScrollTopPrev = windowScrollTop;
     });
   });
 
