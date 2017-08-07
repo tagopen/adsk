@@ -1738,7 +1738,7 @@
 
 @media only screen and (min-width: 760px) {
   .navbar {
-    padding: 25px 0;
+    padding: 20px 0;
   }
   .navbar-nav {
     padding-top: 0;
@@ -1765,7 +1765,7 @@
 /* ---------------------------------------- */
 .header {
   margin-top: 65px;
-  padding: 30px 0 70px;
+  padding: 30px 0 60px;
   background: url(../img/headerbg320.jpg) no-repeat;
   background-size: cover;
   overflow: hidden;
@@ -1778,7 +1778,7 @@
 .header__text {
   font: 400 16px/25px "Constantia", sans-serif;
   color: #fff;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   text-align: center;
 }
 
@@ -1794,8 +1794,8 @@
 
 @media only screen and (min-width: 760px) {
   .header {
-    padding: 100px 0 70px;
-    margin-top: 98px;
+    padding: 70px 0 60px;
+    margin-top: 88px;
     background: url(../img/headerbg.jpg) no-repeat;
     background-size: cover;
   }
@@ -2057,13 +2057,13 @@
 .test__title {
   color: #2d2d2d;
   font: 400 18px/20px "Constantia", sans-serif;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .test__point {
   position: relative;
   padding-left: 30px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .test__icon {
@@ -2074,7 +2074,7 @@
 
 .test__text {
   color: #2d2d2d;
-  font: 700 italic 18px/20px "Constantia", sans-serif;
+  font: 700 italic 16px/20px "Constantia", sans-serif;
 }
 
 .test__btn {
@@ -2150,23 +2150,23 @@
     margin-bottom: 60px;
   }
   .garant__text {
-    font: 400 37px/44px "Constantia", sans-serif;
+    font: 400 34px/42px "Constantia", sans-serif;
   }
   .garant__subtext {
     font: 400 italic 18px/20px "Constantia", sans-serif;
   }
   .garant__info:before {
     top: -50px;
-    left: -60px;
+    left: -50px;
   }
   .garant__info:after {
     bottom: -50px;
-    right: -10px;
+    right: 10px;
   }
   .garant__img {
     margin: 0;
     left: auto;
-    right: -10px;
+    right: 30px;
     bottom: 0;
     max-height: none;
   }
@@ -2181,8 +2181,12 @@
   background-size: cover;
 }
 
+.project__heading {
+  margin-bottom: 30px;
+}
+
 .project__info {
-  padding: 40px 0 0;
+  padding: 25px 0 0;
 }
 
 .project__name {
@@ -2190,7 +2194,7 @@
   font: 700 18px/24px "Constantia", sans-serif;
   text-transform: uppercase;
   padding-left: 10px;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 
 .project__box {
@@ -2408,7 +2412,7 @@
 
 @media only screen and (min-width: 992px) {
   .project__info {
-    padding: 40px 0;
+    padding: 25px 0;
   }
 }
 
@@ -2425,7 +2429,7 @@
 /* S C H E M E    S T Y L E                 */
 /* ---------------------------------------- */
 .scheme {
-  padding: 90px 0 160px;
+  padding: 70px 0 140px;
   background: url(../img/schemebg.jpg) no-repeat;
   background-size: cover;
 }
@@ -2452,7 +2456,7 @@
 
 .item {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 }
 
 .item__box {
