@@ -995,17 +995,18 @@ input:checked
   height: 400px
   overflow: hidden
   &__text
+    display: inline-block
+    vertical-align: top
     color: #24a9e1
     font: 700 26px/30px $font-constantia
     text-transform: uppercase
-    position: absolute
     left: -150%
     width: 190%
     top: 40%
   &__box
     position: fixed
     top: 100px
-    left: 0
+    left: -100%
     transition: all .3s linear
     z-index: -1
     &--right

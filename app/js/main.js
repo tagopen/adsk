@@ -278,32 +278,32 @@ $('.worth__size').matchHeight({
   // sroll animate car
   $(function () {
     var windowScrollTopPrev = 0;
+    $('.quality').css({background: "red"})
     $(document).on('scroll', function() {
       var windowHeight = $(window).height(),
           windowScrollTop = $(window).scrollTop(),
           navbarHeight = $('.navbar').height(),
+          qualityTop = $('.quality').offset().top,
           qualityWidth = $('.quality').width(),
+          qualityHeight = $('.quality').height(),
           $qualityIcon = $('.quality__box'),
-          qualityIconWidth = $qualityIcon.width(),
           qualityIconHeight = $qualityIcon.height(),
-          qualityTop = $('.team').offset().top + navbarHeight - windowHeight - qualityIconHeight,
-          qualityDown = $('.worth').offset().top + windowHeight - navbarHeight + qualityIconHeight,
-          scrollHeight = qualityDown - qualityTop,
+          qualityIconWidth = $qualityIcon.width(),
+          scrollHeight = qualityHeight + windowHeight,
           scrollWidth = 2 * qualityIconWidth + qualityWidth,
           carPosTop = 0,
           carPosLeft = 0;
 
       if (windowScrollTop > windowScrollTopPrev) {
-        $qualityIcon.removeClass('quality__box--right');
+        $qualityIcon.removeClass('quality__icon--right');
       } else {
-        $qualityIcon.addClass('quality__box--right');
+        $qualityIcon.addClass('quality__icon--right');
       }
 
-      if ((windowScrollTop > qualityTop) && (windowScrollTop < qualityDown)) {
-        carPosLeft = (windowScrollTop - qualityTop + navbarHeight) * scrollWidth / scrollHeight;
-        $qualityIcon.css({
-          left: carPosLeft + 'px'
-        });
+      if ((windowScrollTop > (qualityTop - windowHeight)) && (windowScrollTop < (qualityTop + qualityHeight))) {
+        carPosLeft = (windowScrollTop - (qualityTop - windowHeight)) *  scrollWidth / scrollHeight;
+        $qualityIcon.css({transform: 'translateX(' + carPosLeft + 'px)'});
+        console.log((windowScrollTop - (qualityTop - windowHeight)), scrollWidth, scrollHeight, scrollWidth / scrollHeight);
       }
 
       windowScrollTopPrev = windowScrollTop;

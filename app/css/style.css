@@ -3006,10 +3006,11 @@ input:checked + .round:before {
 }
 
 .quality__text {
+  display: inline-block;
+  vertical-align: top;
   color: #24a9e1;
   font: 700 26px/30px "Constantia", sans-serif;
   text-transform: uppercase;
-  position: absolute;
   left: -150%;
   width: 190%;
   top: 40%;
@@ -3018,7 +3019,7 @@ input:checked + .round:before {
 .quality__box {
   position: fixed;
   top: 100px;
-  left: 0;
+  left: -100%;
   -webkit-transition: all .3s linear;
   transition: all .3s linear;
   z-index: -1;
