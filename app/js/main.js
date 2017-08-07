@@ -299,9 +299,10 @@ $('.worth__size').matchHeight({
       }
 
       if ((windowScrollTop > (qualityTop - windowHeight)) && (windowScrollTop < (qualityTop + scrollHeight))) {
-        carPosLeft = (windowScrollTop + windowHeight - qualityTop - qualityIconHeight) *  (2 * qualityIconWidth + qualityWidth) / scrollHeight;
-        carPosTop = (windowScrollTop + windowHeight - qualityTop - qualityIconHeight) *  (qualityHeight - qualityIconHeight) / scrollHeight;
-        $qualityIcon.css({left: carPosLeft + 'px', top: carPosTop + "px"});
+        carPosLeft = (windowScrollTop + windowHeight - qualityTop - qualityIconHeight) *  (qualityWidth) / scrollHeight;
+        //carPosTop = (windowScrollTop + windowHeight - qualityTop) *  (qualityHeight) / scrollHeight;
+        $qualityIcon.css({left: carPosLeft + 'px'});
+        console.log('true');
       }
 
       windowScrollTopPrev = windowScrollTop;

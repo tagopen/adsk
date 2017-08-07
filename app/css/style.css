@@ -2285,6 +2285,18 @@
 
 .slider__preview--hover {
   position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   left: 0;
   bottom: 100%;
   width: 100%;
@@ -2997,8 +3009,8 @@ input:checked + .round:before {
   position: absolute;
   top: 0;
   left: 0;
-  -webkit-transition: all .6s ease-out;
-  transition: all .6s ease-out;
+  -webkit-transition: all 1.2s ease-out;
+  transition: all 1.2s ease-out;
 }
 
 .quality__box--right .quality__icon {
