@@ -2081,6 +2081,18 @@
   margin-top: 20px;
 }
 
+@media only screen and (min-width: 992px) {
+  .test {
+    background-position: -200px top;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .test {
+    background-position: left top;
+  }
+}
+
 /* ---------------------------------------- */
 /* G A R A N T    S T Y L E                 */
 /* ---------------------------------------- */
@@ -2147,7 +2159,7 @@
 
 @media only screen and (min-width: 992px) {
   .garant__heading {
-    margin-bottom: 60px;
+    margin-bottom: 95px;
   }
   .garant__text {
     font: 400 34px/42px "Constantia", sans-serif;
@@ -2161,7 +2173,7 @@
   }
   .garant__info:after {
     bottom: -50px;
-    right: 10px;
+    right: 30px;
   }
   .garant__img {
     margin: 0;
