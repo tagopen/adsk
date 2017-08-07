@@ -282,13 +282,14 @@ $('.worth__size').matchHeight({
       var windowHeight = $(window).height(),
           windowScrollTop = $(window).scrollTop(),
           navbarHeight = $('.navbar').height(),
-          qualityTop = $('.quality').offset().top,
           qualityWidth = $('.quality').width(),
-          qualityHeight = $('.quality').height(),
           $qualityIcon = $('.quality__box'),
-          qualityIconHeight = $qualityIcon.height(),
           qualityIconWidth = $qualityIcon.width(),
-          scrollHeight = qualityHeight,
+          qualityIconHeight = $qualityIcon.height(),
+          qualityTop = $('.team').offset().top + navbarHeight - windowHeight - qualityIconHeight,
+          qualityDown = $('.worth').offset().top + windowHeight - navbarHeight + qualityIconHeight,
+          scrollHeight = qualityDown - qualityTop,
+          scrollWidth = 2 * qualityIconWidth + qualityWidth,
           carPosTop = 0,
           carPosLeft = 0;
 
@@ -298,11 +299,11 @@ $('.worth__size').matchHeight({
         $qualityIcon.addClass('quality__box--right');
       }
 
-      if ((windowScrollTop > (qualityTop - windowHeight)) && (windowScrollTop < (qualityTop + scrollHeight))) {
-        carPosLeft = (windowScrollTop + windowHeight - qualityTop - qualityIconHeight) *  (qualityWidth) / scrollHeight;
-        //carPosTop = (windowScrollTop + windowHeight - qualityTop) *  (qualityHeight) / scrollHeight;
-        $qualityIcon.css({left: carPosLeft + 'px'});
-        console.log('true');
+      if ((windowScrollTop > qualityTop) && (windowScrollTop < qualityDown)) {
+        carPosLeft = (windowScrollTop - qualityTop + navbarHeight) * scrollWidth / scrollHeight;
+        $qualityIcon.css({
+          left: carPosLeft + 'px'
+        });
       }
 
       windowScrollTopPrev = windowScrollTop;

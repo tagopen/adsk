@@ -3016,11 +3016,12 @@ input:checked + .round:before {
 }
 
 .quality__box {
-  position: absolute;
-  top: 0;
+  position: fixed;
+  top: 100px;
   left: 0;
-  -webkit-transition: all 1.2s ease-out;
-  transition: all 1.2s ease-out;
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+  z-index: -1;
 }
 
 .quality__box--right .quality__icon {
