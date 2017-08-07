@@ -961,6 +961,8 @@ input:checked
       margin-top: -25px    
 +comment("team style")     
 .team
+  position: relative
+  z-index: 5
   padding: 80px 0
   &__row
     margin-bottom: 60px
@@ -994,7 +996,7 @@ input:checked
 +comment("quality style")   
 .quality
   position: relative
-  height: 400px
+  height: 500px
   overflow: hidden
   &__text
     display: inline-block
@@ -1002,14 +1004,11 @@ input:checked
     color: #24a9e1
     font: 700 26px/30px $font-constantia
     text-transform: uppercase
-    left: -150%
-    width: 190%
-    top: 40%
   &__box
     position: fixed
     top: 100px
     left: -100%
-    z-index: -1
+    z-index: 1
     &--right
       .quality__icon
         transform: scaleX(-1)
@@ -1033,6 +1032,8 @@ input:checked
 +rx(992)    
   .partner
     &__slider
+      position: relative
+      z-index: 5
       .slick
         &-disabled
           display: none

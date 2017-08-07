@@ -2949,6 +2949,8 @@ input:checked + .round:before {
 /* T E A M    S T Y L E                     */
 /* ---------------------------------------- */
 .team {
+  position: relative;
+  z-index: 5;
   padding: 80px 0;
 }
 
@@ -3005,7 +3007,7 @@ input:checked + .round:before {
 /* ---------------------------------------- */
 .quality {
   position: relative;
-  height: 400px;
+  height: 500px;
   overflow: hidden;
 }
 
@@ -3015,16 +3017,13 @@ input:checked + .round:before {
   color: #24a9e1;
   font: 700 26px/30px "Constantia", sans-serif;
   text-transform: uppercase;
-  left: -150%;
-  width: 190%;
-  top: 40%;
 }
 
 .quality__box {
   position: fixed;
   top: 100px;
   left: -100%;
-  z-index: -1;
+  z-index: 1;
 }
 
 .quality__box--right .quality__icon {
@@ -3063,6 +3062,10 @@ input:checked + .round:before {
 }
 
 @media only screen and (max-width: 992px) {
+  .partner__slider {
+    position: relative;
+    z-index: 5;
+  }
   .partner__slider .slick-disabled {
     display: none;
   }
