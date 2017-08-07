@@ -3019,7 +3019,7 @@ input:checked + .round:before {
 /* ---------------------------------------- */
 .quality {
   position: relative;
-  height: 500px;
+  height: 700px;
   overflow: hidden;
 }
 
@@ -3032,9 +3032,17 @@ input:checked + .round:before {
 }
 
 .quality__box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: fixed;
   top: 100px;
-  left: -100%;
+  left: -170%;
   z-index: 1;
 }
 
@@ -3042,6 +3050,12 @@ input:checked + .round:before {
   -webkit-transform: scaleX(-1);
       -ms-transform: scaleX(-1);
           transform: scaleX(-1);
+}
+
+@media only screen and (min-width: 1600px) {
+  .quality__box {
+    left: -100%;
+  }
 }
 
 /* ---------------------------------------- */

@@ -1002,7 +1002,7 @@ input:checked
 +comment("quality style")   
 .quality
   position: relative
-  height: 500px
+  height: 700px
   overflow: hidden
   &__text
     display: inline-block
@@ -1011,13 +1011,19 @@ input:checked
     font: 700 26px/30px $font-constantia
     text-transform: uppercase
   &__box
+    display: flex
+    align-items: center
     position: fixed
     top: 100px
-    left: -100%
+    left: -170%
     z-index: 1
     &--right
       .quality__icon
         transform: scaleX(-1)
++r(1600)        
+  .quality
+    &__box
+      left: -100%
 +comment("partner style")
 .partner  
   padding: 80px 0 50px 
