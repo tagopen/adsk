@@ -294,9 +294,9 @@ $('.worth__size').matchHeight({
           carPosLeft = 0;
 
       if (windowScrollTop > windowScrollTopPrev) {
-        $qualityIcon.removeClass('quality__icon--right');
+        $qualityIcon.removeClass('quality__box--right');
       } else {
-        $qualityIcon.addClass('quality__icon--right');
+        $qualityIcon.addClass('quality__box--right');
       }
 
       if ((windowScrollTop > (qualityTop - windowHeight - qualityIconHeight)) && (windowScrollTop < (qualityTop + qualityHeight + qualityIconHeight))) {
