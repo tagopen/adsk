@@ -10,7 +10,26 @@
         meta: {
           charset: "utf-8",
           favicon: "favicon.png",
-          appleTouchIcon: "apple-touch-icon.png"
+          appleTouchIcon: "apple-touch-icon.png",
+          description: "",
+          keywords: "",
+          title: "Workflow",
+          openGraph: {
+            title: "Site name",
+            description: "Описание сайта",
+            type: "website",
+            locale: "ru_RU",
+            image:  hostname + "img/logo/microformat.png",
+            "image:type": "image/png",
+            url: hostname
+          },
+          twitter: {
+            card: "summary",
+            site: "@flickr",
+            title: "My Site",
+            description: "My Site is cool",
+            image: hostname + "img/logo/microformat.png"
+          }
         },
         logo: {
           img: {
@@ -21,7 +40,7 @@
         nav: {
           links: [
             {
-              href: "/link1",
+              href: "/",
               name: "Главная"
             },
             {
@@ -33,11 +52,11 @@
               name: "Стоимость"
             },
             {
-              href: "/link2",
+              href: "#question",
               name: "Вопросы"
             },
             {
-              href: "/link2",
+              href: "#contact",
               name: "Контакты"
             }
           ],
@@ -50,16 +69,6 @@
             text: "Заказать звонок"
           }
         },
-        navRight: {
-          phone: {
-            href: "",
-            text: ""
-          },
-          button: {
-            href: "",
-            text: ""
-          }
-        }
       }, //- site
       index: {
         hostname: "index.html",
@@ -69,12 +78,11 @@
           keywords: "",
           openGraph: {
             title: "Site name",
-            siteName: "Site name",
             description: "Описание сайта",
             type: "website",
             locale: "ru_RU",
-            image: "microformat.png",
-            imageType: "image/png",
+            image:  hostname + "img/logo/microformat.png",
+            "image:type": "image/png",
             url: hostname
           },
           twitter: {
@@ -82,7 +90,7 @@
             site: "@flickr",
             title: "My Site",
             description: "My Site is cool",
-            image: hostname + "/img/logo/microformat.png"
+            image: hostname + "img/logo/microformat.png"
           }
         },
         header: {

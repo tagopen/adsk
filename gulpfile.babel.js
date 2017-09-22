@@ -33,35 +33,38 @@ const path = {
     sass:           dirs.src + '/sass/',
     pug:            dirs.src + '/views/',
     fonts:          dirs.src + '/fonts/',
-    sprite:         dirs.src + '/sass/utils'
+    sprite:         dirs.src + '/sass/utils/',
+    svgTemplate:    dirs.src + '/sass/utils/_sprite-svg-template.scss',
   },
   watch: {
     html:           dirs.src + '/*.html',
     js:             dirs.src + '/js/**/*.js',
-    style:          dirs.src + '/sass/**/*.+(scss|sass)',
-    template:       dirs.src + '/views/**/*.pug',
-    pug:            dirs.src + '/views/*.pug',
+    sass:           dirs.src + '/sass/**/*.+(scss|sass)',
+    template:       dirs.src + '/views/**/*',
+    pug:            dirs.src + '/views/**/[^_]*.pug',
     img:            dirs.src + '/img/**/*.*',
     spritePng:      dirs.src + '/img/icons/**/*.png',
+    spriteSvg:      dirs.src + '/img/icons/svg/**/*.svg',
     fonts:          dirs.src + '/fonts/**/*.{woff,woff2}',
     mail:           dirs.src + '/mail/**/*'
   },
   clean:            dirs.dest,
-  ftp:              dirs.dest + '**/*'
+  ftp:              dirs.dest + '**/*',
+  outputDir:        dirs.src
 };
 
 gulp.task('sass', () => {
- return gulp.src([path.watch.style])
-   .pipe($.plumber())
-   .pipe($.sass({
-     css:           path.src.css,
-     sass:          path.src.sass,
-     image:         path.src.img,
-     outputStyle:   'expanded'
-   }))
-   .pipe($.autoprefixer(['last 15 versions', '>1%', 'ie 10'], {cascade: true}))
-   .pipe(gulp.dest(path.src.css))
-   .pipe(browserSync.reload({stream: true}));
+  return gulp.src([path.watch.sass])
+    .pipe($.plumber())
+    .pipe($.sass({
+      css:           path.src.css,
+      sass:          path.src.sass,
+      image:         path.src.img,
+      outputStyle:   'expanded'
+    }))
+    .pipe($.autoprefixer(['last 15 versions', '>1%', 'ie 10'], {cascade: true}))
+    .pipe(gulp.dest(path.src.css))
+    .pipe(browserSync.stream());
 });
 
 gulp.task('scripts', () => {
@@ -70,9 +73,19 @@ gulp.task('scripts', () => {
     'node_modules/bootstrap/dist/js/bootstrap.js',
     'node_modules/jquery/dist/jquery.js',
     'node_modules/slick-carousel/slick/slick.js',
+    'node_modules/vue/dist/vue.js',
     'node_modules/vue-carousel-3d/dist/vue-carousel-3d.min.js',
     'node_modules/fancybox/dist/js/jquery.fancybox.js',
-    'node_modules/select2/dist/js/select2.js'
+    'node_modules/select2/dist/js/select2.full.js',
+    'node_modules/jquery-match-height/jquery.matchHeight.js',
+    //'node_modules/onepage-scroll/jquery.onepage-scroll.js',
+    //'node_modules/jquery.cookie/jquery.cookie.js',
+    //'node_modules/bootstrap-slider/dist/bootstrap-slider.js',
+    //'node_modules/slick-carousel/slick/slick.js',
+    //'node_modules/select2/dist/js/select2.js',
+    //'node_modules/jquery-tags-input/src/jquery.tagsinput.js',
+    //'node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.js',
+    //'node_modules/bootstrap-datepicker/dist/locales/*'
   ])
   .pipe($.plumber())
   .pipe(gulp.dest(path.src.js));
@@ -87,11 +100,17 @@ gulp.task('pug', () => {
    }
  }))
  .pipe($.pug({
-   basedir:     dirs.src,
+   basedir:     path.src.pug,
    pretty:      true
  }))
- .pipe(gulp.dest(path.src.html))
- .pipe(browserSync.reload({stream: true}));
+ .pipe(gulp.dest(path.src.html));
+});
+
+// create a task that ensures the `js` task is complete before
+// reloading browsers
+gulp.task('pug:watch', ['pug'], function (done) {
+    browserSync.reload();
+    done();
 });
 
 gulp.task('fonts', () => {
@@ -102,6 +121,10 @@ gulp.task('fonts', () => {
    .pipe(browserSync.stream());
 });
 
+gulp.task('bower', () => {
+  return $.bower();
+});
+
 gulp.task('sprite', function() {
  gulp.src(path.watch.spritePng)
    .pipe($.plumber())
@@ -109,7 +132,6 @@ gulp.task('sprite', function() {
      imgName: 'sprite.png',
      //retinaSrcFilter: ['app/img/icons/*@2x.png'],
      //retinaImgName: 'sprite@2x.png',
-     //retinaDest: 'app/img/sprite@2x.png',
      cssName: '_sprite.sass',
      cssFormat: 'sass',
      padding: 10
@@ -123,44 +145,67 @@ gulp.task('sprite', function() {
    ));
 });
 
-//  return gulp.src('app/img/icons/**/*.svg')
-//    .pipe($.svgmin({
-//      js2svg: {
-//        pretty: true
-//      }
-//    }))
-//    .pipe($.cheerio({
-//      run: function ($) {
-//        $('[fill]').removeAttr('fill');
-//        $('[stroke]').removeAttr('stroke');
-//        $('[style]').removeAttr('style');
-//      },
-//      parserOptions: {xmlMode: true}
-//    }))
-//    .pipe($.replace('&gt;', '>'))
-//    // build svg sprite
-//    .pipe($.svgSprites({
-//      preview: false,
-//      selector: "ic--%f",
-//      mode: {
-//        symbol: {
-//          sprite: "../sprite.svg",
-//          render: {
-//            scss: {
-//              dest:'../../../sass/_sprite.scss',
-//              template: '../sass/base/_sprite_template.scss'
-//            }
-//          }
-//        }
-//      }
-//    }))
-//    .pipe(gulp.dest('app/img'));
-//});
+gulp.task('svg', function () {
+ return gulp.src(path.watch.spriteSvg)
+    .pipe($.plumber())
+    .pipe($.svgmin({
+      js2svg: {
+        pretty: true
+      }
+    }))
+    .pipe($.cheerio({
+      run: function ($) {
+        $('[fill]').removeAttr('fill');
+        $('[stroke]').removeAttr('stroke');
+        $('[style]').removeAttr('style');
+      },
+      parserOptions: {xmlMode: true}
+    }))
+    .pipe($.replace('&gt;', '>'))
+    // build svg sprite
+   .pipe($.svgSprite({
+    shape: {
+      spacing: {
+        padding: 0,
+      },
+      dimension   : {     // Set maximum dimensions
+        maxWidth  : 32,
+        maxHeight : 32,
+      },
+    },
+    mode: {
+      view: {
+        render: {
+          scss  : true
+        },
+      },
+      symbol: {
+        dest: "./",
+        layout: "packed",
+        sprite: "sprite.svg",
+        bust: false,
+        render: {
+          scss: {
+            dest: "../sass/utils/_spriteSvg.scss",
+            template: path.src.svgTemplate
+          }
+        }
+      },
+      inline: true,
+    },
+    variables: {
+      mapname: "icons"
+    }
+  }))
+   .pipe(gulp.dest(path.src.img));
+});
 
-gulp.task('browser-sync',  ['pug', 'sass'], function() {
+gulp.task('server', function() {
   browserSync({
     server: {
-      baseDir: dirs.src
+      baseDir: dirs.src,
+      reloadDelay: 2000,
+      browser: "google chrome"
     },
     notify: false
   });
@@ -169,7 +214,7 @@ gulp.task('browser-sync',  ['pug', 'sass'], function() {
 // Generate & Inline Critical-path CSS
 gulp.task('critical', function () {
  return gulp.src(path.build.html)
-   .pipe(critical({
+   .pipe(critical.stream({
      base: 'dist/', 
      inline: true, 
      dimensions: [{
@@ -182,7 +227,7 @@ gulp.task('critical', function () {
        width: 1280,
        height: 960
      }],
-       css: [path.dest.critical],
+       css: [path.build.critical],
        minify: true,
        extract: false,
        ignore: ['font-face']
@@ -231,12 +276,33 @@ gulp.task('test', () => {
   console.log($);
 });
 
-gulp.task('watch', ['browser-sync', 'pug', 'fonts', 'sprite', 'sass',  'scripts'], () => {
-  gulp.watch(path.watch.spritePng, ['sprite']);
-  gulp.watch(path.watch.style, ['sass']);
-  gulp.watch(path.watch.template, ['pug']);
-  gulp.watch(path.watch.fonts, ['fonts']);
-  gulp.watch(path.watch.js, browserSync.reload);
+// watch
+gulp.task('watch', function(){
+
+    $.watch([path.watch.spritePng], function(event, cb) {
+        gulp.start('sprite');
+    });
+
+    $.watch([path.watch.spriteSvg], function(event, cb) {
+        gulp.start('svg');
+    });
+
+    $.watch([path.watch.sass], function(event, cb) {
+        gulp.start('sass');
+    });
+
+    $.watch([path.watch.template], function(event, cb) {
+        gulp.start('pug:watch');
+    });
+
+    $.watch([path.watch.fonts], function(event, cb) {
+        gulp.start('fonts');
+    });
+
+     //билдим js в случае изменения
+    $.watch([path.watch.js], function(event, cb) {
+      browserSync.reload;
+    });
 });
 
 //gulp.task('build', ['clean', 'pug', 'img', 'scripts', 'sass'], function() {
@@ -309,3 +375,15 @@ gulp.task('dev', ['clean', 'pug', 'fonts', 'sprite', 'img', 'sass', 'scripts'], 
     ))
    .pipe(gulp.dest(dirs.dest));
 });
+
+gulp.task('build', [
+    'sprite',
+    'svg',
+    'scripts',
+    'pug',
+    'sass',
+    'fonts',
+    //'img',
+]);
+
+gulp.task('default', ['build', 'watch', 'server']);
