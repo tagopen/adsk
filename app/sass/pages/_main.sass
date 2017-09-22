@@ -24,6 +24,84 @@
 .modal
   -webkit-overflow-scrolling: touch
   transform: translateZ(0)
+  &__size
+    margin-left: auto
+    margin-right: auto
+  &__content
+    position: relative
+    padding: 40px 15px
+    border-radius: 0
+    overflow: hidden
+    .ic
+      position: absolute
+      &--modalic1
+        left: 0
+        top: 0
+      &--modalic2
+        right: 0  
+        top: 0
+  &__heading
+    color: $main-color
+    font: 700 30px/32px $font-constantia
+    text-align: center
+    margin-bottom: 25px
+    z-index: 25
+  &__subheading 
+    color: $main-color
+    font: 400 18px/27px $font-constantia 
+    margin-bottom: 20px
+    text-align: center
+    z-index: 25
+  &__access
+    color: #a0a0a0 
+    font: 400 14px/18px $font-constantia
+    text-align: center
+    margin-top: 15px
+  &__link
+    color: #a0a0a0  
+    text-decoration: underline
+    &:hover,
+    &:focus
+      color: #019cdc
+  &__input
+    +placeholder
+      font: 700 16px/18px $font-trajan !important
+      color: $main-color
+  &__close
+    display: inline-block
+    width: 30px
+    height: 30px
+    position: absolute
+    right: 15px
+    top: 15px   
+    z-index: 25 
+    opacity: 1
+    outline: none
+    &:hover,
+    &:focus
+      opacity: 1
+      svg
+        fill: rgba(192, 0, 19, 0.6)
+  &__big
+    max-width: none
+    width: 100%  
+    .modal__close
+      right: 15px
+      top: 15px    
++r(760)
+  .modal
+    &__size
+      max-width: none
+      width: 560px   
+    &__content
+      padding: 70px 50px
+    &__close
+      right: -30px
+      top: -30px   
++r(992)
+  .modal
+    &__big
+      width: 900px      
 .body
   display: flex
   flex-direction: column

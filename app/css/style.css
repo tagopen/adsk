@@ -1342,13 +1342,13 @@
 .ic--all:before {
   width: 32px;
   height: 20px;
-  background: url(../img/sprite.png) -656px -157px no-repeat;
+  background: url(../img/sprite.png) -755px -188px no-repeat;
 }
 
 .ic--call:before {
   width: 13px;
   height: 13px;
-  background: url(../img/sprite.png) -686px -251px no-repeat;
+  background: url(../img/sprite.png) -770px -407px no-repeat;
 }
 
 .ic--car-left:before {
@@ -1366,151 +1366,163 @@
 .ic--contact-1:before {
   width: 12px;
   height: 12px;
-  background: url(../img/sprite.png) -682px -369px no-repeat;
+  background: url(../img/sprite.png) -678px -538px no-repeat;
 }
 
 .ic--contact-2:before {
   width: 12px;
   height: 12px;
-  background: url(../img/sprite.png) -656px -395px no-repeat;
+  background: url(../img/sprite.png) -656px -538px no-repeat;
 }
 
 .ic--contact-3:before {
   width: 11px;
   height: 9px;
-  background: url(../img/sprite.png) -656px -417px no-repeat;
+  background: url(../img/sprite.png) -719px -538px no-repeat;
 }
 
 .ic--contact-4:before {
   width: 9px;
   height: 12px;
-  background: url(../img/sprite.png) -678px -395px no-repeat;
+  background: url(../img/sprite.png) -700px -538px no-repeat;
 }
 
 .ic--cost:before {
   width: 14px;
   height: 21px;
-  background: url(../img/sprite.png) -656px -312px no-repeat;
+  background: url(../img/sprite.png) -770px -376px no-repeat;
 }
 
 .ic--costfff:before {
   width: 14px;
   height: 21px;
-  background: url(../img/sprite.png) -682px -280px no-repeat;
+  background: url(../img/sprite.png) -755px -343px no-repeat;
 }
 
 .ic--date:before {
   width: 40px;
   height: 40px;
-  background: url(../img/sprite.png) -656px -107px no-repeat;
+  background: url(../img/sprite.png) 0px -604px no-repeat;
 }
 
 .ic--gift:before {
   width: 21px;
   height: 24px;
-  background: url(../img/sprite.png) -656px -187px no-repeat;
+  background: url(../img/sprite.png) -755px -218px no-repeat;
 }
 
 .ic--list:before {
   width: 16px;
   height: 22px;
-  background: url(../img/sprite.png) -656px -280px no-repeat;
+  background: url(../img/sprite.png) -755px -311px no-repeat;
+}
+
+.ic--modalic1:before {
+  width: 131px;
+  height: 178px;
+  background: url(../img/sprite.png) -656px 0px no-repeat;
+}
+
+.ic--modalic2:before {
+  width: 89px;
+  height: 178px;
+  background: url(../img/sprite.png) -656px -188px no-repeat;
 }
 
 .ic--question:before {
   width: 16px;
   height: 16px;
-  background: url(../img/sprite.png) -682px -343px no-repeat;
+  background: url(../img/sprite.png) -156px -561px no-repeat;
 }
 
 .ic--scheme-1:before {
   width: 48px;
   height: 48px;
-  background: url(../img/sprite.png) 0px -561px no-repeat;
+  background: url(../img/sprite.png) -656px -376px no-repeat;
 }
 
 .ic--scheme-2:before {
   width: 46px;
   height: 46px;
-  background: url(../img/sprite.png) -58px -561px no-repeat;
+  background: url(../img/sprite.png) -714px -376px no-repeat;
 }
 
 .ic--scheme-3:before {
   width: 53px;
   height: 35px;
-  background: url(../img/sprite.png) -175px -561px no-repeat;
+  background: url(../img/sprite.png) -717px -434px no-repeat;
 }
 
 .ic--scheme-4:before {
   width: 43px;
   height: 43px;
-  background: url(../img/sprite.png) -656px -54px no-repeat;
+  background: url(../img/sprite.png) -710px -484px no-repeat;
 }
 
 .ic--scheme-5:before {
   width: 61px;
   height: 22px;
-  background: url(../img/sprite.png) -297px -561px no-repeat;
+  background: url(../img/sprite.png) -59px -561px no-repeat;
 }
 
 .ic--scheme-6:before {
   width: 51px;
   height: 40px;
-  background: url(../img/sprite.png) -114px -561px no-repeat;
+  background: url(../img/sprite.png) -656px -434px no-repeat;
 }
 
 .ic--scheme-7:before {
   width: 44px;
   height: 44px;
-  background: url(../img/sprite.png) -656px 0px no-repeat;
+  background: url(../img/sprite.png) -656px -484px no-repeat;
 }
 
 .ic--scheme-8:before {
   width: 49px;
   height: 33px;
-  background: url(../img/sprite.png) -238px -561px no-repeat;
+  background: url(../img/sprite.png) 0px -561px no-repeat;
 }
 
 .ic--table1:before {
   width: 13px;
   height: 19px;
-  background: url(../img/sprite.png) -687px -187px no-repeat;
+  background: url(../img/sprite.png) -50px -604px no-repeat;
 }
 
 .ic--table2:before {
   width: 21px;
   height: 20px;
-  background: url(../img/sprite.png) -656px -221px no-repeat;
+  background: url(../img/sprite.png) -755px -252px no-repeat;
 }
 
 .ic--table3:before {
   width: 20px;
   height: 19px;
-  background: url(../img/sprite.png) -656px -251px no-repeat;
+  background: url(../img/sprite.png) -755px -282px no-repeat;
 }
 
 .ic--test-1:before {
   width: 18px;
   height: 15px;
-  background: url(../img/sprite.png) -680px -312px no-repeat;
+  background: url(../img/sprite.png) -763px -484px no-repeat;
 }
 
 .ic--test-2:before {
   width: 10px;
   height: 18px;
-  background: url(../img/sprite.png) -687px -221px no-repeat;
+  background: url(../img/sprite.png) -73px -604px no-repeat;
 }
 
 .ic--test-3:before {
   width: 16px;
   height: 16px;
-  background: url(../img/sprite.png) -656px -369px no-repeat;
+  background: url(../img/sprite.png) -130px -561px no-repeat;
 }
 
 .ic--zoom:before {
   width: 16px;
   height: 16px;
-  background: url(../img/sprite.png) -656px -343px no-repeat;
+  background: url(../img/sprite.png) -763px -509px no-repeat;
 }
 
 /* form */
@@ -1554,6 +1566,135 @@
   -webkit-overflow-scrolling: touch;
   -webkit-transform: translateZ(0);
           transform: translateZ(0);
+}
+
+.modal__size {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.modal__content {
+  position: relative;
+  padding: 40px 15px;
+  -webkit-border-radius: 0;
+          border-radius: 0;
+  overflow: hidden;
+}
+
+.modal__content .ic {
+  position: absolute;
+}
+
+.modal__content .ic--modalic1 {
+  left: 0;
+  top: 0;
+}
+
+.modal__content .ic--modalic2 {
+  right: 0;
+  top: 0;
+}
+
+.modal__heading {
+  color: #2d2d2d;
+  font: 700 30px/32px "Constantia", sans-serif;
+  text-align: center;
+  margin-bottom: 25px;
+  z-index: 25;
+}
+
+.modal__subheading {
+  color: #2d2d2d;
+  font: 400 18px/27px "Constantia", sans-serif;
+  margin-bottom: 20px;
+  text-align: center;
+  z-index: 25;
+}
+
+.modal__access {
+  color: #a0a0a0;
+  font: 400 14px/18px "Constantia", sans-serif;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.modal__link {
+  color: #a0a0a0;
+  text-decoration: underline;
+}
+
+.modal__link:hover, .modal__link:focus {
+  color: #019cdc;
+}
+
+.modal__input:-ms-input-placeholder {
+  font: 700 16px/18px "TrajanPro3", sans-serif !important;
+  color: #2d2d2d;
+}
+
+.modal__input::-moz-placeholder {
+  font: 700 16px/18px "TrajanPro3", sans-serif !important;
+  color: #2d2d2d;
+}
+
+.modal__input::-webkit-input-placeholder {
+  font: 700 16px/18px "TrajanPro3", sans-serif !important;
+  color: #2d2d2d;
+}
+
+.modal__input::placeholder {
+  font: 700 16px/18px "TrajanPro3", sans-serif !important;
+  color: #2d2d2d;
+}
+
+.modal__close {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  z-index: 25;
+  opacity: 1;
+  outline: none;
+}
+
+.modal__close:hover, .modal__close:focus {
+  opacity: 1;
+}
+
+.modal__close:hover svg, .modal__close:focus svg {
+  fill: rgba(192, 0, 19, 0.6);
+}
+
+.modal__big {
+  max-width: none;
+  width: 100%;
+}
+
+.modal__big .modal__close {
+  right: 15px;
+  top: 15px;
+}
+
+@media only screen and (min-width: 760px) {
+  .modal__size {
+    max-width: none;
+    width: 560px;
+  }
+  .modal__content {
+    padding: 70px 50px;
+  }
+  .modal__close {
+    right: -30px;
+    top: -30px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .modal__big {
+    width: 900px;
+  }
 }
 
 .body {

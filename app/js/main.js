@@ -49,6 +49,14 @@
         }
     });
 
+  var firstModalOpen = $("body").hasClass("modal-open");
+
+  $("#modal__confident").on('hidden.bs.modal', function()
+  {
+    if (!firstModalOpen)
+      $("body").addClass("modal-open");
+  });
+
     $(function () {
       $('[data-toggle="tooltip"]').tooltip();
     });
@@ -58,6 +66,11 @@
     $('.build__col').removeClass('build__col--hidden');
     $('.build__btn').hide();
   }); 
+
+  // Masked phone
+  $(function($){
+    $(".form__input--phone").mask("+38 (999) 999-99-99");
+  });
 
   // Today date
   $(function () {

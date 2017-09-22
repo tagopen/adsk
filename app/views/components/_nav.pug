@@ -11,7 +11,7 @@ nav#mainNav.navbar.navbar-toggleable-sm.navbar-light
       .col-16.col-sm-9.col-md-8.col-lg-5.flex-lg-last
         .nav__contact.ml-auto
           a.nav__number=content.site.nav.contact.text
-          a.nav__btn.call__btn
+          a.nav__btn.call__btn(data-toggle="modal" href="#modal__call")
             i.ic.ic--call.call__btn--icon
             span.call__btn--text!=content.site.nav.btn.text
       .hidden-md-up.w-100
