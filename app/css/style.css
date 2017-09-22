@@ -1581,6 +1581,10 @@
   overflow: hidden;
 }
 
+.modal__content--small {
+  padding: 0;
+}
+
 .modal__content .ic {
   position: absolute;
 }
@@ -1595,6 +1599,10 @@
   top: 0;
 }
 
+.modal__box {
+  padding: 0 15px 40px;
+}
+
 .modal__heading {
   color: #2d2d2d;
   font: 700 30px/32px "Constantia", sans-serif;
@@ -1603,12 +1611,23 @@
   z-index: 25;
 }
 
+.modal__heading--white {
+  padding: 35px 0 30px;
+  color: #fff;
+  background: url(../img/modalbg.jpg) no-repeat;
+  background-size: cover;
+}
+
 .modal__subheading {
   color: #2d2d2d;
   font: 400 18px/27px "Constantia", sans-serif;
   margin-bottom: 20px;
   text-align: center;
   z-index: 25;
+}
+
+.modal__subheading--span {
+  font: 700 18px/27px "Constantia", sans-serif;
 }
 
 .modal__access {
@@ -1654,7 +1673,7 @@
   position: absolute;
   right: 15px;
   top: 15px;
-  z-index: 25;
+  z-index: 30;
   opacity: 1;
   outline: none;
 }
@@ -1677,13 +1696,38 @@
   top: 15px;
 }
 
+.modal.show {
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal-dialog {
+  position: relative;
+  margin: auto;
+}
+
 @media only screen and (min-width: 760px) {
   .modal__size {
     max-width: none;
-    width: 560px;
+    width: 556px;
   }
   .modal__content {
     padding: 70px 50px;
+  }
+  .modal__content--small {
+    padding: 0;
+  }
+  .modal__box {
+    padding: 0 50px 70px;
+  }
+  .modal__heading--white {
+    padding: 40px 75px;
   }
   .modal__close {
     right: -30px;
@@ -3590,4 +3634,43 @@ input:checked + .round:before {
 
 .footer__copy--number {
   font: 400 14px/18px "TrajanPro3", sans-serif;
+}
+
+/* ---------------------------------------- */
+/* S U C C E S S    S T Y L E               */
+/* ---------------------------------------- */
+.header--success {
+  padding: 0;
+  margin: 0;
+  background: #f1f2f4;
+}
+
+.title--black {
+  color: #2d2d2d;
+}
+
+.row--success {
+  height: 100vh;
+}
+
+.success__heading {
+  display: block;
+  font: 700 40px/50px "Constantia", sans-serif;
+}
+
+.success__text {
+  font: 700 20px/35px "Constantia", sans-serif;
+  color: #2d2d2d;
+  margin-top: 50px;
+  text-align: center;
+}
+
+@media only screen and (min-width: 760px) {
+  .success__heading {
+    font: 700 70px/80px "Constantia", sans-serif;
+  }
+  .success__text {
+    font: 700 28px/40px "Constantia", sans-serif;
+    text-align: left;
+  }
 }

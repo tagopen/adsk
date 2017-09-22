@@ -89,7 +89,7 @@
             <div class="header__info">
               <p class="header__text">Мы подготовим прогнозную стоимость <span class="header__text--span">в течении <span class="header__text--number">48</span> часов</span></p>
               <p class="header__text">Заполните заявку для расчета прогнозной стоимости Вашего объекта, и Вы получите ее <span class="header__text--span">совершенно бесплатно</span></p>
-              <button class="btn button button--size"><i class="ic ic--gift button__ic"></i>Заявка на получение прогнозной стоимости
+              <button class="btn button button--size" data-toggle="modal" data-target="#modal__header"><i class="ic ic--gift button__ic"></i>Заявка на получение прогнозной стоимости
               </button>
             </div>
           </div>
@@ -1155,7 +1155,7 @@
                 </div>
               </div>
               <div class="col-24">    
-                <button class="btn button button--size" name="form" value="модалка в шапке" type="submit" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется...">
+                <button class="btn button button--size" name="form" value="Обратный звонок" type="submit" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется...">
                   <div class="modal__btn--text">Заказать просчет сметы бесплатно</div>
                 </button>
                 <div class="success"></div>
@@ -1166,6 +1166,49 @@
               </div>
             </div>
           </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal__header" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal__size">
+        <button class="close modal__close" type="button" data-dismiss="modal" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewbox="0 0 30 30">
+            <metadata>
+              <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
+                <rdf:rdf xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                  <rdf:description rdf:about=""></rdf:description>
+                </rdf:rdf>
+              </x:xmpmeta>
+            </metadata>
+            <defs></defs>
+            <path class="modal__close--icon" d="M1199.01,185.281l-0.72.732L1184,171.37l-14.29,14.643-0.72-.732,14.3-14.644-13.58-13.911,0.71-.732L1184,169.905l13.58-13.911,0.71,0.732-13.58,13.911Z" transform="translate(-1169 -156)"></path>
+          </svg>
+        </button>
+        <div class="modal-content modal__content modal__content--small">
+          <div class="modal__heading modal__heading--white">Обратная связь с компанией “АДСК”</div>
+          <div class="modal__box"> 
+            <div class="modal__subheading">Оставьте свои контакты, чтобы мы вам перезвонили <span class="modal__subheading--span">или звоните по номеру +38 (097) 345-45-45</span></div>
+            <form class="contact__form contactForm contactForm--modal" method="post" action="./mail/mail.php">
+              <div class="row">
+                <div class="col-24"> 
+                  <div>
+                    <input class="form-control form__input modal__input form__input--phone form__phone" aria-invalid="false" placeholder="+38 (___) ___-__-__" name="phone" type="tel" data-error="Введите телефон" required>
+                    <p class="help-block with-errors"></p>
+                  </div>
+                </div>
+                <div class="col-24">    
+                  <button class="btn button button--size" name="form" value="Хедер модалка" type="submit" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется...">
+                    <div class="modal__btn--text">Заказать просчет сметы бесплатно</div>
+                  </button>
+                  <div class="success"></div>
+                </div>
+                <div class="col-24">
+                  <div class="modal__access">Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с <a class="modal__link" data-toggle="modal" href="#modal__confident">Политикой конфиденциальности</a>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>

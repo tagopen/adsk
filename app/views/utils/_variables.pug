@@ -70,6 +70,34 @@
           }
         },
       }, //- site
+      success: {
+        hostname: "success.html",
+        title: "Спасибо за заявку",
+        meta: {
+          description: "",
+          keywords: "",
+          openGraph: {
+            title: "Site name",
+            description: "Описание сайта",
+            type: "website",
+            locale: "ru_RU",
+            image:  hostname + "img/logo/microformat.png",
+            "image:type": "image/png",
+            url: hostname
+          },
+          twitter: {
+            card: "summary",
+            site: "@flickr",
+            title: "My Site",
+            description: "My Site is cool",
+            image: hostname + "img/logo/microformat.png"
+          }
+        },
+        header: {
+          heading: "<span class=\"success__heading\">Спасибо,</span> что обратились к нам!",
+          text: "Скоро мы с Вами свяжемся для обсуждения деталей проекта."
+        }
+      },
       index: {
         hostname: "index.html",
         title: "Главная страница",
@@ -94,9 +122,17 @@
           }
         },
         modal: {
-          header: {
+          nav: {
             heading: "Получите смету по Вашему проекту за 48 часов",
             subheading: "Оставьте свои контакты, чтобы мы с Вами связались и уточнили детали вашего проекта. После этого мы сможем составить смету по проекту!",
+            btn: "Заказать просчет сметы бесплатно",
+            access: {
+              text: "Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с <a class=\"modal__link\" data-toggle=\"modal\" href=\"#modal__confident\">Политикой конфиденциальности</a>"
+            }
+          },
+          header: {
+            heading: "Обратная связь с компанией “АДСК”",
+            subheading: "Оставьте свои контакты, чтобы мы вам перезвонили <span class=\"modal__subheading--span\">или звоните по номеру +38 (097) 345-45-45</span>",
             btn: "Заказать просчет сметы бесплатно",
             access: {
               text: "Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с <a class=\"modal__link\" data-toggle=\"modal\" href=\"#modal__confident\">Политикой конфиденциальности</a>"

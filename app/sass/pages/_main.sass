@@ -32,6 +32,8 @@
     padding: 40px 15px
     border-radius: 0
     overflow: hidden
+    &--small
+      padding: 0
     .ic
       position: absolute
       &--modalic1
@@ -40,18 +42,27 @@
       &--modalic2
         right: 0  
         top: 0
+  &__box   
+    padding: 0 15px 40px  
   &__heading
     color: $main-color
     font: 700 30px/32px $font-constantia
     text-align: center
     margin-bottom: 25px
     z-index: 25
+    &--white
+      padding: 35px 0 30px
+      color: #fff
+      background: url(../img/modalbg.jpg) no-repeat
+      background-size: cover
   &__subheading 
     color: $main-color
     font: 400 18px/27px $font-constantia 
     margin-bottom: 20px
     text-align: center
     z-index: 25
+    &--span
+      font: 700 18px/27px $font-constantia 
   &__access
     color: #a0a0a0 
     font: 400 14px/18px $font-constantia
@@ -74,7 +85,7 @@
     position: absolute
     right: 15px
     top: 15px   
-    z-index: 25 
+    z-index: 30 
     opacity: 1
     outline: none
     &:hover,
@@ -87,14 +98,27 @@
     width: 100%  
     .modal__close
       right: 15px
-      top: 15px    
+      top: 15px
+.modal.show 
+  display: flex !important
+  align-items: center
+.modal-dialog
+  position: relative
+  margin: auto          
 +r(760)
   .modal
     &__size
       max-width: none
-      width: 560px   
+      width: 556px    
     &__content
       padding: 70px 50px
+      &--small
+        padding: 0
+    &__box
+      padding: 0 50px 70px  
+    &__heading
+      &--white
+         padding: 40px 75px   
     &__close
       right: -30px
       top: -30px   
@@ -1352,3 +1376,31 @@ input:checked
     font: 400 14px/18px $font-constantia 
     &--number
       font: 400 14px/18px $font-trajan
++comment("success style") 
+.header
+  &--success
+    padding: 0
+    margin: 0
+    background: #f1f2f4
+.title
+  &--black
+    color: $main-color    
+.row
+  &--success
+    height: 100vh    
+.success
+  &__heading
+    display: block
+    font: 700 40px/50px $font-constantia
+  &__text
+    font: 700 20px/35px $font-constantia
+    color: $main-color
+    margin-top: 50px
+    text-align: center
++r(760)
+  .success
+    &__heading 
+      font: 700 70px/80px $font-constantia 
+    &__text
+      font: 700 28px/40px $font-constantia
+      text-align: left
