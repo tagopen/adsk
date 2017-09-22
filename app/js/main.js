@@ -288,15 +288,10 @@ $('.worth__size').matchHeight({
           $qualityIcon = $('.quality__box'),
           qualityIconHeight = $qualityIcon.height(),
           qualityIconWidth = $qualityIcon.width(),
-          scrollHeight = qualityHeight + 2 * qualityIconHeight,
+          scrollHeight = qualityHeight + 2 * qualityIconHeight + windowHeight,
           scrollWidth = 2 * qualityIconWidth + qualityWidth,
           carPosTop = 0,
           carPosLeft = 0;
-
-      console.log('qualityTop', qualityTop);
-      console.log('windowScrollTop', windowScrollTop);
-      console.log('begin', qualityTop - windowHeight);
-      console.log('end', qualityTop + qualityHeight - qualityIconHeight );
 
       if (windowScrollTop > windowScrollTopPrev) {
         $qualityIcon.removeClass('quality__box--right');
@@ -304,13 +299,10 @@ $('.worth__size').matchHeight({
         $qualityIcon.addClass('quality__box--right');
       }
 
-      if ((windowScrollTop > (qualityTop - windowHeight)) && 
-          (windowScrollTop < (qualityTop + qualityHeight - qualityIconHeight))) {
-        carPosLeft = (windowScrollTop + windowHeight - (qualityTop)) * scrollWidth / scrollHeight;
-        carPosLeft = (windowScrollTop + windowHeight - (qualityTop)) * windowHeight / scrollHeight;
+      if ((windowScrollTop > (qualityTop - windowHeight - qualityIconHeight)) && 
+          (windowScrollTop < (qualityTop + qualityHeight + windowHeight - qualityIconHeight))) {
+        carPosLeft = (windowScrollTop + windowHeight - qualityTop) * scrollWidth / scrollHeight;
         $qualityIcon.css({transform: 'translateX(' + carPosLeft + 'px)'});
-        $qualityIcon.css({bottom: carPosLeft + 'px'});
-        //console.log((windowScrollTop - (qualityTop - windowHeight)), scrollWidth, scrollHeight, scrollWidth / scrollHeight);
       }
 
       windowScrollTopPrev = windowScrollTop;

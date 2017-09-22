@@ -2350,7 +2350,7 @@ input:checked + .round:before {
 /* ---------------------------------------- */
 .quality {
   position: relative;
-  height: 450px;
+  height: 400px;
   overflow: hidden;
 }
 
@@ -2371,9 +2371,9 @@ input:checked + .round:before {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  position: fixed;
-  top: 100px;
-  left: -170%;
+  position: absolute;
+  top: 50%;
+  left: -100%;
   z-index: 1;
 }
 
