@@ -293,25 +293,34 @@ $('.worth__size').matchHeight({
           carPosTop = 0,
           carPosLeft = 0;
 
+      console.log('qualityTop', qualityTop);
+      console.log('windowScrollTop', windowScrollTop);
+      console.log('begin', qualityTop - windowHeight);
+      console.log('end', qualityTop + qualityHeight - qualityIconHeight );
+
       if (windowScrollTop > windowScrollTopPrev) {
         $qualityIcon.removeClass('quality__box--right');
       } else {
         $qualityIcon.addClass('quality__box--right');
       }
 
-      if ((windowScrollTop > (qualityTop - windowHeight - qualityIconHeight)) && (windowScrollTop < (qualityTop + qualityHeight + qualityIconHeight))) {
-        carPosLeft = (windowScrollTop - (qualityTop - qualityIconHeight)) *  scrollWidth / scrollHeight;
+      if ((windowScrollTop > (qualityTop - windowHeight)) && 
+          (windowScrollTop < (qualityTop + qualityHeight - qualityIconHeight))) {
+        carPosLeft = (windowScrollTop + windowHeight - (qualityTop)) * scrollWidth / scrollHeight;
+        carPosLeft = (windowScrollTop + windowHeight - (qualityTop)) * windowHeight / scrollHeight;
         $qualityIcon.css({transform: 'translateX(' + carPosLeft + 'px)'});
-        console.log((windowScrollTop - (qualityTop - windowHeight)), scrollWidth, scrollHeight, scrollWidth / scrollHeight);
+        $qualityIcon.css({bottom: carPosLeft + 'px'});
+        //console.log((windowScrollTop - (qualityTop - windowHeight)), scrollWidth, scrollHeight, scrollWidth / scrollHeight);
       }
 
       windowScrollTopPrev = windowScrollTop;
     });
   });
-
-  $(".js-example-basic-hide-search").select2({
-    minimumResultsForSearch: Infinity,
-    dropdownCssClass: "drop"
-  });
+  if ($(".js-example-basic-hide-search").length) {
+    $(".js-example-basic-hide-search").select2({
+      minimumResultsForSearch: Infinity,
+      dropdownCssClass: "drop"
+    });
+  }
 
 })(jQuery); // End of use strict
