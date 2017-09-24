@@ -306,6 +306,13 @@ $('.worth__size').matchHeight({
           carPosLeft = 0,
           carPosBottom = 0;
 
+      $('.quality__icon').addClass('quality__icon--rotate');
+
+      clearTimeout($.data(this, 'scrollTimer'));
+      $.data(this, 'scrollTimer', setTimeout(function() {
+        $('.quality__icon').removeClass('quality__icon--rotate');
+      }, 50));
+
       if (windowScrollTop > windowScrollTopPrev) {
         $qualityIcon.removeClass('quality__box--right');
       } else {

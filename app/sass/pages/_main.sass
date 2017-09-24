@@ -1157,8 +1157,48 @@ input:checked
         &--left
           display: block
   &__icon
+    position: relative
+    &:before,
+    &:after
+      content: ''
+      position: absolute
+      display: block
+      background-repeat: no-repeat
+    &:before
+      width: 85px
+      height: 79px
+      background-image: url("../img/icons/wheel-front.png")
+      top: 190px
+      left: 516px
+    &:after
+      width: 78px
+      height: 80px
+      background-image: url("../img/icons/wheel-back.png")
+      top: 184px
+      left: 92px
     &--left
       display: none
+      &:before,
+      &:after
+        animation-direction: reverse
+      &:after
+        top: 185px
+        left: 478px
+      &:before
+        top: 190px
+        left: 45px
+
+
+    &--rotate
+      &:before,
+      &:after
+        animation: spin .3s infinite linear
+
+@keyframes spin
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)
 +comment("partner style")
 .partner  
   padding: 80px 0 50px 
