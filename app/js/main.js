@@ -302,7 +302,7 @@ $('.worth__size').matchHeight({
           qualityIconHeight = $qualityIcon.height(),
           qualityIconWidth = $qualityIcon.width(),
           scrollHeight = qualityHeight + 2 * qualityIconHeight + windowHeight,
-          scrollWidth = 2 * qualityIconWidth + qualityWidth,
+          scrollWidth = 3 * qualityIconWidth + qualityWidth,
           carPosLeft = 0,
           carPosBottom = 0;
 
@@ -316,7 +316,14 @@ $('.worth__size').matchHeight({
           (windowScrollTop < (qualityTop + qualityHeight + windowHeight - qualityIconHeight))) {
         carPosLeft = (windowScrollTop + windowHeight - qualityTop) * scrollWidth / scrollHeight;
         carPosBottom = (windowScrollTop + windowHeight - qualityTop) * (windowHeight - navbarHeight) / scrollHeight ;
-        $qualityIcon.css({transform: 'translate(' + carPosLeft + 'px, ' + (-carPosBottom) + 'px)'});
+        $qualityIcon.css({"margin-left":  + carPosLeft + 'px'});
+        $qualityIcon.css({"margin-bottom":  + carPosBottom + 'px'});
+      } else {
+        if (windowScrollTop > windowScrollTopPrev) {
+          $qualityIcon.css({"margin-left": qualityIconWidth + qualityWidth});
+        } else {
+          $qualityIcon.css({"margin-left": "0"});
+        }
       }
 
       windowScrollTopPrev = windowScrollTop;

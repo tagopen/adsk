@@ -3277,8 +3277,12 @@ input:checked + .round:before {
           align-items: center;
   bottom: 0;
   left: 0;
-  margin-left: -50%;
+  -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%);
   z-index: 1;
+  -webkit-transition: all linear;
+  transition: all linear;
 }
 
 .quality__box--right {
