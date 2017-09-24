@@ -3267,7 +3267,6 @@ input:checked + .round:before {
 
 .quality__box {
   position: fixed;
-  top: 200px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3276,7 +3275,9 @@ input:checked + .round:before {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  left: -100%;
+  bottom: 0;
+  left: 0;
+  margin-left: -646px;
   z-index: 1;
 }
 
@@ -3298,12 +3299,6 @@ input:checked + .round:before {
 
 .quality__icon--left {
   display: none;
-}
-
-@media only screen and (min-width: 1600px) {
-  .quality__box {
-    left: -100%;
-  }
 }
 
 /* ---------------------------------------- */

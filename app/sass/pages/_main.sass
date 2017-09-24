@@ -1143,10 +1143,11 @@ input:checked
     text-transform: uppercase
   &__box
     position: fixed
-    top: 200px
     display: flex
     align-items: center
-    left: -100%
+    bottom: 0
+    left: 0
+    margin-left: -646px
     z-index: 1
     &--right
       flex-direction: row-reverse
@@ -1157,10 +1158,6 @@ input:checked
   &__icon
     &--left
       display: none
-+r(1600)        
-  .quality
-    &__box
-      left: -100%
 +comment("partner style")
 .partner  
   padding: 80px 0 50px 
