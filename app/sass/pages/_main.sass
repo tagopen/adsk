@@ -239,8 +239,9 @@
     color: $main-color !important
     font: 400 16px/16px $font-constantia
     text-transform: uppercase
-    &.active
-      color: #bb0e1e !important //- Привет от верстальщика
+    &:hover,
+    &:focus
+      color: #bb0e1e !important
   &__number
     color: #402e00
     font: 400 16px/18px $font-trajan   
@@ -533,7 +534,13 @@
     bottom: 101%
     left: 50%
     margin-left: -103px
-    max-height: 260px
+    max-height: 290px
++r(760)
+  .garant
+    &__heading
+      margin-bottom: 380px
+    &__img
+      max-height: 400px      
 +r(992)
   .garant
     &__heading
@@ -554,7 +561,7 @@
       left: auto
       right: 30px
       bottom: 0
-      max-height: none 
+      max-height: 460px 
 +comment("project style")  
 .project
   padding: 75px 0 70px
@@ -563,7 +570,7 @@
   &__heading
     margin-bottom: 30px
   &__info
-    padding: 25px 0 0 
+    padding: 25px 10px 0 
   &__name  
     color: $main-color
     font: 700 18px/24px $font-constantia 
@@ -704,6 +711,8 @@
             line-height: 60px   
 +r(760)   
   .project
+    &__info
+      padding: 25px 0 0
     &__name
       font: 700 30px/36px $font-constantia 
     &__data
@@ -1068,6 +1077,7 @@ input:checked
     margin-bottom: 20px !important      
 +comment("exp style")  
 .exp
+  padding-bottom: 70px
   &__box
     text-align: center
   &__heading

@@ -11,15 +11,14 @@
               img.img-fluid(src=content.index.team.image.src, alt=content.index.team.image.alt)
           .col-24.col-md-10  
             .team__info
-              .team__title!=content.index.team.title
               each item, i in content.index.team.info
                 .team__text!= item.text
-        .row
-          each item, i in content.index.team.sert
-            .col-12.col-lg-6
-              .team__sert
-                a.team__link.fancybox(rel="group", data-fancybox="images", href=item.src)
-                  img.img-fluid(src=item.src)
+        //- .row
+        //-   each item, i in content.index.team.sert
+        //-     .col-12.col-lg-6
+        //-       .team__sert
+        //-         a.team__link.fancybox(rel="group", data-fancybox="images", href=item.src)
+        //-           img.img-fluid(src=item.src)
 
 
 

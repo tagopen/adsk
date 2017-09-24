@@ -29,12 +29,8 @@
                         .project__elem
                           .project__elem--top!= item.name
                           .project__elem--bot!= item.value
-                    .text-center      
-                      btn.btn.button.project__btn
-                        i.ic.ic--all.hidden-sm-down
-                        !=content.index.project.btn         
         #example.hidden-md-down
-          carousel-3d(:width="950",:height="585", :border="0", :clickable="false", :controls-visible="true", :perspective='0', :space='950', :display='3', :controls-width="40", :controls-height="80")
+          carousel-3d(:width="950",:height="525", :border="0", :clickable="false", :controls-visible="true", :perspective='0', :space='950', :display='3', :controls-width="40", :controls-height="80")
             each slide, i in content.index.project.slides
               slide(:index="0"+(i))
                 .slider__item
@@ -66,8 +62,4 @@
                           each item in slide.options
                             .project__elem
                               .project__elem--top!= item.name
-                              .project__elem--bot!= item.value
-                        .text-center      
-                          btn.btn.button.project__btn
-                            i.ic.ic--all
-                            !=content.index.project.btn    
+                              .project__elem--bot!= item.value  

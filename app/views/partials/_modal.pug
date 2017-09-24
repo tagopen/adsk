@@ -8,6 +8,33 @@
               rdf:description(rdf:about='')
         defs
         path.modal__close--icon(d='M1199.01,185.281l-0.72.732L1184,171.37l-14.29,14.643-0.72-.732,14.3-14.644-13.58-13.911,0.71-.732L1184,169.905l13.58-13.911,0.71,0.732-13.58,13.911Z', transform='translate(-1169 -156)')
+    .modal-content.modal__content.modal__content--small
+      .modal__heading.modal__heading--white!=content.index.modal.header.heading
+      .modal__box 
+        .modal__subheading!=content.index.modal.header.subheading 
+        form.contact__form.contactForm.contactForm--modal(method='post', action='./mail/mail.php')
+          .row
+            .col-24 
+              div
+                input.form-control.form__input.modal__input.form__input--phone.form__phone(aria-invalid='false', placeholder="+38 (___) ___-__-__", name='phone', type='tel', data-error='Введите телефон', required)
+                p.help-block.with-errors
+            .col-24     
+              button.btn.button.button--size(name='form', value='Хедер модалка', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...")
+                .modal__btn--text!=content.index.modal.header.btn  
+              .success
+            .col-24
+              .modal__access
+                !=content.index.modal.header.access.text                
+#modal__header.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog.modal__size
+    button.close.modal__close(type='button', data-dismiss='modal', aria-hidden='true')
+      svg(xmlns='http://www.w3.org/2000/svg', width='30', height='30', viewbox='0 0 30 30')
+        metadata
+          x:xmpmeta(xmlns:x='adobe:ns:meta/', x:xmptk='Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ')
+            rdf:rdf(xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#')
+              rdf:description(rdf:about='')
+        defs
+        path.modal__close--icon(d='M1199.01,185.281l-0.72.732L1184,171.37l-14.29,14.643-0.72-.732,14.3-14.644-13.58-13.911,0.71-.732L1184,169.905l13.58-13.911,0.71,0.732-13.58,13.911Z', transform='translate(-1169 -156)')
     .modal-content.modal__content
       i.ic.ic--modalic1.hidden-sm-down
       i.ic.ic--modalic2.hidden-sm-down      
@@ -25,34 +52,7 @@
             .success
           .col-24
             .modal__access
-              !=content.index.modal.nav.access.text
-#modal__header.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
-  .modal-dialog.modal__size
-    button.close.modal__close(type='button', data-dismiss='modal', aria-hidden='true')
-      svg(xmlns='http://www.w3.org/2000/svg', width='30', height='30', viewbox='0 0 30 30')
-        metadata
-          x:xmpmeta(xmlns:x='adobe:ns:meta/', x:xmptk='Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ')
-            rdf:rdf(xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#')
-              rdf:description(rdf:about='')
-        defs
-        path.modal__close--icon(d='M1199.01,185.281l-0.72.732L1184,171.37l-14.29,14.643-0.72-.732,14.3-14.644-13.58-13.911,0.71-.732L1184,169.905l13.58-13.911,0.71,0.732-13.58,13.911Z', transform='translate(-1169 -156)')
-    .modal-content.modal__content.modal__content--small
-      .modal__heading.modal__heading--white!=content.index.modal.header.heading
-      .modal__box 
-        .modal__subheading!=content.index.modal.header.subheading 
-        form.contact__form.contactForm.contactForm--modal(method='post', action='./mail/mail.php')
-          .row
-            .col-24 
-              div
-                input.form-control.form__input.modal__input.form__input--phone.form__phone(aria-invalid='false', placeholder="+38 (___) ___-__-__", name='phone', type='tel', data-error='Введите телефон', required)
-                p.help-block.with-errors
-            .col-24     
-              button.btn.button.button--size(name='form', value='Хедер модалка', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...")
-                .modal__btn--text!=content.index.modal.header.btn  
-              .success
-            .col-24
-              .modal__access
-                !=content.index.modal.header.access.text            
+              !=content.index.modal.nav.access.text            
 #modal__confident.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
   .modal-dialog.modal__big
     button.close.modal__close(type='button', data-dismiss='modal', aria-hidden='true')

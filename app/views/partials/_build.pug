@@ -18,7 +18,8 @@ mixin personalCols(count)
         .row.justify-content-center
           each item, i in content.index.build.info.content
             +personalCols(i)
-              a.build__item.fancybox(rel="group1", data-fancybox="images1", href=item.img.src)
+              div.build__item(rel="group1", data-fancybox="images1", href=item.img.src)
+                //- Поменять div на a и добавить класс fancybox для работы галереи
                 .build__image(class='build__image--' + (i + 1)) 
                 .build__overlay.align-items-center.d-flex
                   .row
@@ -27,7 +28,7 @@ mixin personalCols(count)
                     .col-24  
                       .build__address!= item.address
                 .build__hover
-                  i.ic.ic--zoom.build__icon   
+                  //- i.ic.ic--zoom.build__icon   
         .row.justify-content-center          
           button.btn.button.build__btn
             i.ic.ic--all.button__ic
