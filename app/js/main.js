@@ -193,7 +193,7 @@ new Vue({
     'carousel-3d': Carousel3d.Carousel3d,
     'slide': Carousel3d.Slide
   }
-})
+});
 
 $('.worth__size').matchHeight({
       byRow: true,
