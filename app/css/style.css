@@ -400,7 +400,7 @@
   z-index: 99992;
 }
 
-/* Make sure that the first one is on the top */
+/* Make sure that the first one is on the top  */
 .fancybox-bg {
   position: absolute;
   top: 0;
@@ -3054,11 +3054,27 @@ li.fancybox-thumbs-loading {
   bottom: 10px;
   left: 0;
   right: 0;
-  height: 80px;
+  height: 105px;
   background: transparent;
 }
 
+.fancybox-thumbs > ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow-x: scroll;
+}
+
 .fancybox-thumbs > ul > li {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
   border-color: transparent;
 }
 

@@ -672,10 +672,15 @@
   bottom: 10px
   left: 0
   right: 0
-  height: 80px
+  height: 105px
   background: transparent
-  > ul > li
-    border-color: transparent
+  > ul
+    display: flex
+    justify-content: center
+    overflow-x: scroll;
+    > li
+      flex: 1 0 auto
+      border-color: transparent
 
 .fancybox-container--thumbs
   .fancybox-caption-wrap, .fancybox-controls, .fancybox-slider-wrap
