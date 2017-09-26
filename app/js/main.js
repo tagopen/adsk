@@ -171,20 +171,16 @@
     autoStart : true
   }
 })*/
-$(document).ready(function() {
-  $('.fancybox').fancybox();
-});
 
-
-$(document).ready(function() {
-  $(".slider__fancybox").fancybox({
+ 
+  $('[data-fancybox="images"]').fancybox({
     loop : false,
     thumbs : {
-      showOnStart : true
-    }
+      autoStart : true
+    },
+    margin : [ 44, 0, 90, 0 ]
   });
-});
-
+    
 new Vue({
   el: '#example',
   data: {

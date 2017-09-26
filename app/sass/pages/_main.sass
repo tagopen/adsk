@@ -610,6 +610,7 @@
     display: inline-block
     .ic
       margin-right: 10px 
+
 .slider      
   &__item
     opacity: 0.8
@@ -664,7 +665,29 @@
         height: 80px !important  
         background-color: #24a9e1 !important  
         border-radius: 5px !important  
-        box-shadow: 0 4px 7px rgba(36, 169, 225, 0.37) !important      
+        box-shadow: 0 4px 7px rgba(36, 169, 225, 0.37) !important   
+.fancybox-thumbs
+  top: auto
+  width: auto
+  bottom: 10px
+  left: 0
+  right: 0
+  height: 80px
+  background: transparent
+  > ul > li
+    border-color: transparent
+
+.fancybox-container--thumbs
+  .fancybox-caption-wrap, .fancybox-controls, .fancybox-slider-wrap
+    right: 0
+    bottom: 0
+
++rx(800)
+  .fancybox-thumbs
+    display: none !important
+  .fancybox-container--thumbs
+    .fancybox-controls, .fancybox-slider-wrap, .fancybox-caption-wrap
+      bottom: 0
 +rx(991)
   .project
     &__slider

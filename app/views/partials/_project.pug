@@ -37,7 +37,11 @@
                   .row
                     .col-12
                       .slider__image
-                        a.slider__link.slider__fancybox(rel="fancybox-thumb", data-fancybox="images1", href=slide.image.src)
+                        a.slider__link.slider__fancybox(data-fancybox="images" + i, href=slide.image.src)
+                          img.img-fluid.slider__img.slider__img--big(src=slide.image.src, alt=slide.image.alt)
+                        a.hidden-md-up.hidden-md-down.slider__link.slider__fancybox(data-fancybox="images" + i, href=slide.image.src)
+                          img.img-fluid.slider__img.slider__img--big(src=slide.image.src, alt=slide.image.alt)
+                        a.hidden-md-up.hidden-md-down.slider__link.slider__fancybox(data-fancybox="images" + i, href=slide.image.src)
                           img.img-fluid.slider__img.slider__img--big(src=slide.image.src, alt=slide.image.alt)
                         .slider__thumb
                           button.btn.button.button--size!=content.index.project.btn                    
