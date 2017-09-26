@@ -175,6 +175,9 @@
  
   $('[data-fancybox="images"]').fancybox({
     loop : false,
+    fullScreen : {
+      autoStart : false,
+    },
     thumbs : {
       autoStart : true
     },
