@@ -37,15 +37,17 @@
                   .row
                     .col-12
                       .slider__image
-                        img.img-fluid.slider__img.slider__img--big(src=slide.image.src, alt=slide.image.alt)
+                        a.slider__link.slider__fancybox(rel="fancybox-thumb", data-fancybox="images1", href=slide.image.src)
+                          img.img-fluid.slider__img.slider__img--big(src=slide.image.src, alt=slide.image.alt)
                         .slider__thumb
-                          .row
-                            each elem in slide.thumb
-                              .col-8 
-                                .slider__preview(data-thumbnail=elem.imgBig.src, data-thumbnail-alt=elem.imgBig.alt)
-                                  img.img-fluid(src=elem.src)
-                                  .slider__preview--hover
-                                    i.ic.ic--zoom  
+                          button.btn.button.button--size!=content.index.project.btn                    
+                          //- .row
+                          //-   each elem in slide.thumb
+                          //-     .col-8 
+                          //-       .slider__preview(data-thumbnail=elem.imgBig.src, data-thumbnail-alt=elem.imgBig.alt)
+                          //-         img.img-fluid(src=elem.src)
+                          //-         .slider__preview--hover
+                          //-           i.ic.ic--zoom  
                     .col-12
                       .project__info
                         .project__name!= slide.heading

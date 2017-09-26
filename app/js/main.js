@@ -175,6 +175,16 @@ $(document).ready(function() {
   $('.fancybox').fancybox();
 });
 
+
+$(document).ready(function() {
+  $(".slider__fancybox").fancybox({
+    loop : false,
+    thumbs : {
+      showOnStart : true
+    }
+  });
+});
+
 new Vue({
   el: '#example',
   data: {
@@ -267,7 +277,7 @@ $('.worth__size').matchHeight({
   });
 
   // ThubmbNail
-  $(function () {
+  /*$(function () {
     $('.slider__preview').on('click', function(e) {
       var $this = $(this),
           $parent = $this.closest('.slider__image'),
@@ -286,7 +296,7 @@ $('.worth__size').matchHeight({
 
       e.preventDefault();
     });
-  });
+  });*/
 
   // sroll animate car
   $(function () {
