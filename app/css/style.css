@@ -942,7 +942,7 @@
 }
 
 /* Styling for Small-Screen Devices */
-@media all and (max-width: 800px) {
+@media all and (max-width: 700px) {
   .fancybox-controls {
     text-align: left;
   }
@@ -3027,10 +3027,20 @@ li.fancybox-thumbs-loading {
 
 .slider__image {
   padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.slider__image img {
+  display: inline-block;
 }
 
 .carousel-3d-slide {
-  opacity: 0.8 !important;
+  background: none !important;
+}
+
+.carousel-3d-slide.current .slider__item {
+  opacity: 1;
 }
 
 .carousel-3d-controls a.prev span,
@@ -3085,7 +3095,7 @@ li.fancybox-thumbs-loading {
 
 @media only screen and (max-width: 800px) {
   .fancybox-thumbs {
-    display: none !important;
+    display: block !important;
   }
   .fancybox-container--thumbs .fancybox-controls, .fancybox-container--thumbs .fancybox-slider-wrap, .fancybox-container--thumbs .fancybox-caption-wrap {
     bottom: 0;
@@ -3097,8 +3107,8 @@ li.fancybox-thumbs-loading {
     display: none;
   }
   .project__slider .slick-next, .project__slider .slick-prev {
-    top: auto;
-    bottom: -30px;
+    top: 50%;
+    margin-top: -30px;
     z-index: 20;
   }
   .project__slider .slick-next:hover:before, .project__slider .slick-prev:hover:before {
@@ -3165,7 +3175,7 @@ li.fancybox-thumbs-loading {
   }
   .slider__item {
     padding-left: 30px;
-    padding-right: 0;
+    padding-right: 30px;
   }
 }
 
@@ -3173,9 +3183,22 @@ li.fancybox-thumbs-loading {
   .project__info {
     padding: 25px 0;
   }
+  .project__box {
+    padding-right: 20px;
+  }
+  .carousel-3d-controls a.prev {
+    left: 0 !important;
+  }
+  .carousel-3d-controls a.next {
+    right: 0 !important;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
+  .carousel-3d-controls {
+    top: 220px !important;
+    margin: 0;
+  }
   .carousel-3d-controls a.prev {
     left: 75px !important;
   }

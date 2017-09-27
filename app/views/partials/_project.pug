@@ -11,7 +11,13 @@
               .row
                 .col-24.col-lg-12
                   .slider__image
-                    img.img-fluid(src=slide.image.src, alt=slide.image.alt)  
+                    a.slider__link.slider__fancybox(data-fancybox="images" + i, href=slide.image.src)
+                      img.img-fluid.slider__img.slider__img--big(src=slide.image.src, alt=slide.image.alt)
+                    each item in slide.gallery   
+                      a.hidden-md-up.hidden-md-down.slider__link.slider__fancybox(data-fancybox="images" + i, href=item.src)
+                        img.img-fluid.slider__img.slider__img--big(src=item.src, alt="Картинка")
+                    .slider__thumb
+                      button.btn.button.button--size!=content.index.project.btn
                 .col-24.col-lg-12
                   .project__info
                     .project__name!= slide.heading
@@ -30,7 +36,7 @@
                           .project__elem--top!= item.name
                           .project__elem--bot!= item.value
         #example.hidden-md-down
-          carousel-3d(:width="950",:height="525", :border="0", :clickable="false", :controls-visible="true", :perspective='0', :space='950', :display='3', :controls-width="40", :controls-height="80")
+          carousel-3d(:width="950",:height="585", :border="0", :clickable="false", :controls-visible="true", :perspective='0', :space='950', :display='3', :controls-width="40", :controls-height="80")
             each slide, i in content.index.project.slides
               slide(:index="0"+(i))
                 .slider__item
@@ -39,75 +45,11 @@
                       .slider__image
                         a.slider__link.slider__fancybox(data-fancybox="images" + i, href=slide.image.src)
                           img.img-fluid.slider__img.slider__img--big(src=slide.image.src, alt=slide.image.alt)
-                        a.hidden-md-up.hidden-md-down.slider__link.slider__fancybox(data-fancybox="images" + i, href=slide.image.src)
-                          img.img-fluid.slider__img.slider__img--big(src=slide.image.src, alt=slide.image.alt)
-                        a.hidden-md-up.hidden-md-down.slider__link.slider__fancybox(data-fancybox="images" + i, href=slide.image.src)
-                          img.img-fluid.slider__img.slider__img--big(src=slide.image.src, alt=slide.image.alt)
-                        a.hidden-md-up.hidden-md-down.slider__link.slider__fancybox(data-fancybox="images" + i, href=slide.image.src)
-                          img.img-fluid.slider__img.slider__img--big(src=slide.image.src, alt=slide.image.alt)
-                        a.hidden-md-up.hidden-md-down.slider__link.slider__fancybox(data-fancybox="images" + i, href=slide.image.src)
-                          img.img-fluid.slider__img.slider__img--big(src=slide.image.src, alt=slide.image.alt)
-                        a.hidden-md-up.hidden-md-down.slider__link.slider__fancybox(data-fancybox="images" + i, href=slide.image.src)
-                          img.img-fluid.slider__img.slider__img--big(src=slide.image.src, alt=slide.image.alt)
-                        a.hidden-md-up.hidden-md-down.slider__link.slider__fancybox(data-fancybox="images" + i, href=slide.image.src)
-                          img.img-fluid.slider__img.slider__img--big(src=slide.image.src, alt=slide.image.alt)
-                        a.hidden-md-up.hidden-md-down.slider__link.slider__fancybox(data-fancybox="images" + i, href=slide.image.src)
-                          img.img-fluid.slider__img.slider__img--big(src=slide.image.src, alt=slide.image.alt)
-                        a.hidden-md-up.hidden-md-down.slider__link.slider__fancybox(data-fancybox="images" + i, href=slide.image.src)
-                          img.img-fluid.slider__img.slider__img--big(src=slide.image.src, alt=slide.image.alt)
-                        a.hidden-md-up.hidden-md-down.slider__link.slider__fancybox(data-fancybox="images" + i, href=slide.image.src)
-                          img.img-fluid.slider__img.slider__img--big(src=slide.image.src, alt=slide.image.alt)
-                        a.hidden-md-up.hidden-md-down.slider__link.slider__fancybox(data-fancybox="images" + i, href=slide.image.src)
-                          img.img-fluid.slider__img.slider__img--big(src=slide.image.src, alt=slide.image.alt)
-                        a.hidden-md-up.hidden-md-down.slider__link.slider__fancybox(data-fancybox="images" + i, href=slide.image.src)
-                          img.img-fluid.slider__img.slider__img--big(src=slide.image.src, alt=slide.image.alt)
-                        a.hidden-md-up.hidden-md-down.slider__link.slider__fancybox(data-fancybox="images" + i, href=slide.image.src)
-                          img.img-fluid.slider__img.slider__img--big(src=slide.image.src, alt=slide.image.alt)
-                        a.hidden-md-up.hidden-md-down.slider__link.slider__fancybox(data-fancybox="images" + i, href=slide.image.src)
-                          img.img-fluid.slider__img.slider__img--big(src=slide.image.src, alt=slide.image.alt)
-                        a.hidden-md-up.hidden-md-down.slider__link.slider__fancybox(data-fancybox="images" + i, href=slide.image.src)
-                          img.img-fluid.slider__img.slider__img--big(src=slide.image.src, alt=slide.image.alt)
-                        a.hidden-md-up.hidden-md-down.slider__link.slider__fancybox(data-fancybox="images" + i, href=slide.image.src)
-                          img.img-fluid.slider__img.slider__img--big(src=slide.image.src, alt=slide.image.alt)
-                        a.hidden-md-up.hidden-md-down.slider__link.slider__fancybox(data-fancybox="images" + i, href=slide.image.src)
-                          img.img-fluid.slider__img.slider__img--big(src=slide.image.src, alt=slide.image.alt)
-                        a.hidden-md-up.hidden-md-down.slider__link.slider__fancybox(data-fancybox="images" + i, href=slide.image.src)
-                          img.img-fluid.slider__img.slider__img--big(src=slide.image.src, alt=slide.image.alt)
-                        a.hidden-md-up.hidden-md-down.slider__link.slider__fancybox(data-fancybox="images" + i, href=slide.image.src)
-                          img.img-fluid.slider__img.slider__img--big(src=slide.image.src, alt=slide.image.alt)
-                        a.hidden-md-up.hidden-md-down.slider__link.slider__fancybox(data-fancybox="images" + i, href=slide.image.src)
-                          img.img-fluid.slider__img.slider__img--big(src=slide.image.src, alt=slide.image.alt)
-                        a.hidden-md-up.hidden-md-down.slider__link.slider__fancybox(data-fancybox="images" + i, href=slide.image.src)
-                          img.img-fluid.slider__img.slider__img--big(src=slide.image.src, alt=slide.image.alt)
-                        a.hidden-md-up.hidden-md-down.slider__link.slider__fancybox(data-fancybox="images" + i, href=slide.image.src)
-                          img.img-fluid.slider__img.slider__img--big(src=slide.image.src, alt=slide.image.alt)
-                        a.hidden-md-up.hidden-md-down.slider__link.slider__fancybox(data-fancybox="images" + i, href=slide.image.src)
-                          img.img-fluid.slider__img.slider__img--big(src=slide.image.src, alt=slide.image.alt)
-                        a.hidden-md-up.hidden-md-down.slider__link.slider__fancybox(data-fancybox="images" + i, href=slide.image.src)
-                          img.img-fluid.slider__img.slider__img--big(src=slide.image.src, alt=slide.image.alt)
-                        a.hidden-md-up.hidden-md-down.slider__link.slider__fancybox(data-fancybox="images" + i, href=slide.image.src)
-                          img.img-fluid.slider__img.slider__img--big(src=slide.image.src, alt=slide.image.alt)
-                        a.hidden-md-up.hidden-md-down.slider__link.slider__fancybox(data-fancybox="images" + i, href=slide.image.src)
-                          img.img-fluid.slider__img.slider__img--big(src=slide.image.src, alt=slide.image.alt)
-                        a.hidden-md-up.hidden-md-down.slider__link.slider__fancybox(data-fancybox="images" + i, href=slide.image.src)
-                          img.img-fluid.slider__img.slider__img--big(src=slide.image.src, alt=slide.image.alt)
-                        a.hidden-md-up.hidden-md-down.slider__link.slider__fancybox(data-fancybox="images" + i, href=slide.image.src)
-                          img.img-fluid.slider__img.slider__img--big(src=slide.image.src, alt=slide.image.alt)
-                        a.hidden-md-up.hidden-md-down.slider__link.slider__fancybox(data-fancybox="images" + i, href=slide.image.src)
-                          img.img-fluid.slider__img.slider__img--big(src=slide.image.src, alt=slide.image.alt)
-                        a.hidden-md-up.hidden-md-down.slider__link.slider__fancybox(data-fancybox="images" + i, href=slide.image.src)
-                          img.img-fluid.slider__img.slider__img--big(src=slide.image.src, alt=slide.image.alt)
-                        a.hidden-md-up.hidden-md-down.slider__link.slider__fancybox(data-fancybox="images" + i, href=slide.image.src)
-                          img.img-fluid.slider__img.slider__img--big(src=slide.image.src, alt=slide.image.alt)
+                        each item in slide.gallery   
+                          a.hidden-md-up.hidden-md-down.slider__link.slider__fancybox(data-fancybox="images" + i, href=item.src)
+                            img.img-fluid.slider__img.slider__img--big(src=item.src, alt="Картинка")
                         .slider__thumb
-                          button.btn.button.button--size!=content.index.project.btn                    
-                          //- .row
-                          //-   each elem in slide.thumb
-                          //-     .col-8 
-                          //-       .slider__preview(data-thumbnail=elem.imgBig.src, data-thumbnail-alt=elem.imgBig.alt)
-                          //-         img.img-fluid(src=elem.src)
-                          //-         .slider__preview--hover
-                          //-           i.ic.ic--zoom  
+                          button.btn.button.button--size!=content.index.project.btn
                     .col-12
                       .project__info
                         .project__name!= slide.heading

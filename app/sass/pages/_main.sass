@@ -610,7 +610,6 @@
     display: inline-block
     .ic
       margin-right: 10px 
-
 .slider      
   &__item
     opacity: 0.8
@@ -649,10 +648,17 @@
       visibility: hidden  
       transition: all .3s ease
   &__image
-    padding-top: 30px    
+    padding-top: 30px  
+    padding-bottom: 30px  
+    text-align: center
+    img
+      display: inline-block
 .carousel-3d
   &-slide
-    opacity: 0.8 !important  
+    background: none !important  
+    &.current
+      .slider__item
+        opacity: 1
   &-controls
     a.prev,
     a.next
@@ -689,7 +695,7 @@
 
 +rx(800)
   .fancybox-thumbs
-    display: none !important
+    display: block !important
   .fancybox-container--thumbs
     .fancybox-controls, .fancybox-slider-wrap, .fancybox-caption-wrap
       bottom: 0
@@ -701,8 +707,8 @@
           display: none
         &-next,
         &-prev
-          top: auto
-          bottom: -30px
+          top: 50%
+          margin-top: -30px
           z-index: 20
           &:hover
             &:before
@@ -756,14 +762,24 @@
   .slider
     &__item
       padding-left: 30px
-      padding-right: 0
+      padding-right: 30px
 +r(992)
   .project
     &__info
-      padding: 25px 0      
+      padding: 25px 0   
+    &__box
+      padding-right: 20px  
+  .carousel-3d
+    &-controls
+      a.prev
+        left: 0 !important 
+      a.next
+        right: 0 !important          
 +r(1200)
   .carousel-3d
     &-controls
+      top: 220px !important
+      margin: 0
       a.prev
         left: 75px !important 
       a.next

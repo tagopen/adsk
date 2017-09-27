@@ -165,26 +165,7 @@
     ]
   });
 
-
-/*$('[data-fancybox="images"]').fancybox({
-  thumbs : {
-    autoStart : true
-  }
-})*/
-
- 
-  $('[data-fancybox="images"]').fancybox({
-    loop : false,
-    fullScreen : {
-      autoStart : false,
-    },
-    thumbs : {
-      autoStart : true
-    },
-    margin : [ 44, 0, 90, 0 ]
-  });
-    
-new Vue({
+  new Vue({
   el: '#example',
   data: {
     slides: 3
@@ -194,6 +175,19 @@ new Vue({
     'slide': Carousel3d.Slide
   }
 });
+
+ 
+  $('.slider__fancybox').fancybox({
+    loop : false,
+    fullScreen : {
+      autoStart : false,
+    },
+    thumbs : {
+      autoStart : true,
+      showOnStart : true
+    },
+    margin : [ 44, 0, 90, 0 ]
+  });
 
 $('.worth__size').matchHeight({
       byRow: true,

@@ -18,8 +18,7 @@ mixin personalCols(count)
         .row.justify-content-center
           each item, i in content.index.build.info.content
             +personalCols(i)
-              div.build__item(rel="group1", data-fancybox="images1", href=item.img.src)
-                //- Поменять div на a и добавить класс fancybox для работы галереи
+              div.build__item
                 .build__image(class='build__image--' + (i + 1)) 
                 .build__overlay.align-items-center.d-flex
                   .row
