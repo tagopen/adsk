@@ -346,4 +346,10 @@ $('.worth__size').matchHeight({
     });
   }
 
+  $(function() {
+    $(".js-fancybox").on('click', function() {
+      $(this).closest('.slider__thumb').siblings('.slider__link').eq(0).click();
+    });
+  });
+
 })(jQuery); // End of use strict

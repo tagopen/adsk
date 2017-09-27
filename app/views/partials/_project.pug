@@ -17,7 +17,7 @@
                       a.hidden-md-up.hidden-md-down.slider__link.slider__fancybox(data-fancybox="images" + i, href=item.src)
                         img.img-fluid.slider__img.slider__img--big(src=item.src, alt="Картинка")
                     .slider__thumb
-                      button.btn.button.button--size!=content.index.project.btn
+                      button.btn.button.button--size.js-fancybox!=content.index.project.btn
                 .col-24.col-lg-12
                   .project__info
                     .project__name!= slide.heading
@@ -49,7 +49,7 @@
                           a.hidden-md-up.hidden-md-down.slider__link.slider__fancybox(data-fancybox="images" + i, href=item.src)
                             img.img-fluid.slider__img.slider__img--big(src=item.src, alt="Картинка")
                         .slider__thumb
-                          button.btn.button.button--size!=content.index.project.btn
+                          button.btn.button.button--size.js-fancybox!=content.index.project.btn
                     .col-12
                       .project__info
                         .project__name!= slide.heading
