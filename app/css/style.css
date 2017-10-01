@@ -3941,6 +3941,16 @@ input:checked + .round:before {
   margin-bottom: 10px;
 }
 
+.partner__title a {
+  color: #2d2d2d;
+  font: 700 16px/20px "Constantia", sans-serif;
+}
+
+.partner__title a:hover, .partner__title a:focus {
+  color: #c00013;
+  text-decoration: none;
+}
+
 .partner__text {
   color: #2d2d2d;
   font: 400 12px/16px "Constantia", sans-serif;

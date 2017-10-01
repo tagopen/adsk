@@ -38,7 +38,7 @@
         #example.hidden-md-down
           carousel-3d(:width="950",:height="585", :border="0", :clickable="false", :controls-visible="true", :perspective='0', :space='950', :display='3', :controls-width="40", :controls-height="80")
             each slide, i in content.index.project.slides
-              slide(:index="0"+(i))
+              slide(:index=(i))
                 .slider__item
                   .row
                     .col-12

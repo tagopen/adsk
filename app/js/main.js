@@ -204,11 +204,19 @@ $('.worth__size').matchHeight({
       target: null,
       remove: false
     });
+
+    $('.partner__image').matchHeight({
+      byRow: true,
+      property: 'height',
+      target: null,
+      remove: false
+    });
+
   }
 
 
   $('.partner__slider').slick({
-    slidesToShow: 4,
+    slidesToShow: 3,
     slidesToScroll: 1,
     arrows: true,
     dots: false,
@@ -220,7 +228,7 @@ $('.worth__size').matchHeight({
       {
         breakpoint: 992,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 1,
           infinite: false
         }
