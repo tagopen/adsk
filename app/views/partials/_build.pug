@@ -21,10 +21,8 @@ mixin personalCols(count)
               div.build__item
                 .build__image(class='build__image--' + (i + 1)) 
                 .build__overlay.align-items-center.d-flex
-                  .row
-                    .col-24
-                      .build__name!= item.name
-                    .col-24  
+                  .row.build__row
+                    .col-24.text-center  
                       .build__address!= item.address
                 .build__hover
                   //- i.ic.ic--zoom.build__icon   

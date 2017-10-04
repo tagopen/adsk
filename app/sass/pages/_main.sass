@@ -386,6 +386,9 @@
       visibility: visible
       opacity: 0
       display: none
+  &__row
+    width: 100%
+    margin: 0    
   &__item
     display: block
     position: relative
@@ -931,7 +934,7 @@
       top: 95px
       left: 100px
       width: 850px
-      height: 53%
+      height: 262px
       border: 2px dashed rgb(36, 169, 225)
       border-left: 0 
   .item
@@ -939,11 +942,43 @@
       font: 700 16px/20px $font-constantia
     &__box
       &:before
-        display: none 
+        display: none   
+      &:after
+        content: ''
+        position: absolute
+        top: 50%
+        left: 170%
+        margin-top: -7px
+        display: inline-block
+        background: url(../img/tri.png) no-repeat
+        height: 16px
+        width: 9px  
+      &--first
+        &-4
+          &:after
+            transform: rotate(90deg)   
+            top: 185px
+            left: 160px
+      &--second
+        &-1
+          &:after
+            display: none    
+      &--second
+        &-2,
+        &-3,
+        &-4
+          &:after
+            transform: rotate(180deg)  
 +r(1200)
   .scheme
     &__border
       width: 1040px  
+  .item
+    &__box
+      &--first
+        &-4
+          &:after
+            left: 167px    
 +comment("cost style")   
 .cost
   padding: 90px 0 70px
@@ -1250,9 +1285,11 @@ input:checked
   &__item
     text-align: center
     padding: 0 50px
+  &__link
+    display: block
+    margin-bottom: 30px  
   &__image
     display: inline-block !important    
-    margin-bottom: 30px
   &__title
     color: $main-color 
     font: 700 16px/20px $font-constantia  

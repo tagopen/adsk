@@ -2616,6 +2616,11 @@ li.fancybox-thumbs-loading {
   display: none;
 }
 
+.build__row {
+  width: 100%;
+  margin: 0;
+}
+
 .build__item {
   display: block;
   position: relative;
@@ -3413,7 +3418,7 @@ li.fancybox-thumbs-loading {
     top: 95px;
     left: 100px;
     width: 850px;
-    height: 53%;
+    height: 262px;
     border: 2px dashed #24a9e1;
     border-left: 0;
   }
@@ -3423,11 +3428,40 @@ li.fancybox-thumbs-loading {
   .item__box:before {
     display: none;
   }
+  .item__box:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 170%;
+    margin-top: -7px;
+    display: inline-block;
+    background: url(../img/tri.png) no-repeat;
+    height: 16px;
+    width: 9px;
+  }
+  .item__box--first-4:after {
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+    top: 185px;
+    left: 160px;
+  }
+  .item__box--second-1:after {
+    display: none;
+  }
+  .item__box--second-2:after, .item__box--second-3:after, .item__box--second-4:after {
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
 }
 
 @media only screen and (min-width: 1200px) {
   .scheme__border {
     width: 1040px;
+  }
+  .item__box--first-4:after {
+    left: 167px;
   }
 }
 
@@ -3930,9 +3964,13 @@ input:checked + .round:before {
   padding: 0 50px;
 }
 
+.partner__link {
+  display: block;
+  margin-bottom: 30px;
+}
+
 .partner__image {
   display: inline-block !important;
-  margin-bottom: 30px;
 }
 
 .partner__title {
