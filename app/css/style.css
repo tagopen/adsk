@@ -3030,10 +3030,25 @@ li.fancybox-thumbs-loading {
   transition: all .3s ease;
 }
 
+.slider__link {
+  display: block;
+}
+
 .slider__image {
+  position: relative;
   padding-top: 30px;
   padding-bottom: 30px;
   text-align: center;
+}
+
+.slider__image:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 30;
 }
 
 .slider__image img {
@@ -3042,6 +3057,10 @@ li.fancybox-thumbs-loading {
 
 .carousel-3d-slide {
   background: none !important;
+}
+
+.carousel-3d-slide.current .slider__image:before {
+  content: none;
 }
 
 .carousel-3d-slide.current .slider__item {
