@@ -2914,6 +2914,10 @@ li.fancybox-thumbs-loading {
   margin-bottom: 15px;
 }
 
+.project__name--span {
+  margin-right: 5px;
+}
+
 .project__box {
   padding-right: 40px;
   padding-left: 30px;
