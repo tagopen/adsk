@@ -2697,7 +2697,17 @@ li.fancybox-thumbs-loading {
 }
 
 .build__image--7 {
-  background: url(../img/build3.jpg) no-repeat;
+  background: url(../img/build7.jpg) no-repeat;
+  background-size: cover;
+}
+
+.build__image--8 {
+  background: url(../img/build8.jpg) no-repeat;
+  background-size: cover;
+}
+
+.build__image--9 {
+  background: url(../img/build9.jpg) no-repeat;
   background-size: cover;
 }
 
