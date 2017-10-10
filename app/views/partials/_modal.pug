@@ -230,10 +230,10 @@
 - var test = content.site.modal.test1
 mixin progressbar(i)
   - var items = test.tabs.items.length
-  if ( i >= items )
+  if ( i < items )
     .progressbar
       .progressbar__status
-        span.progressbar__value(class={"progressbar__value--hidden" : i === 0})!= ~~(100 / (items - 1) * i) + "%"
+        span.progressbar__value!= ~~(100 / (items - 1) * i) + "%"
 mixin navigate(item, toggle)
   if (item)
     .button-group.text-center
@@ -307,25 +307,26 @@ mixin submit(form)
           .col-24.col-lg-6
             .tabs.test__tabs(data-tabs=test.tabs.id)
               each item, i in test.tabs.items
-                .tabs__item(class={"tabs__item--active" : i === 0})
-                  .card
-                    - var card = test.card
-                    .card__head
-                      - var profile = card.profile
-                      .profile
-                        .profile__col.profile__col--left
-                          img(src=profile.img.src, alt=profile.img.alt)
-                        .profile__col.profile__col--right
-                          .profile__name!= profile.name
-                          .profile__descr!= profile.descr
-                          .tab-question
-                            != card.question.text
-                            span.tab-question__current!= (i + 1)
-                            != card.question.delimeter
-                            span.tab-question__total!= test.tabs.items.length
-                    .card__body
-                      each text in card.items[i].text
-                        p.card__text!= text
-                    .card__footer
-                      +navigate(item.btns, test.tabs.id)
+                if ( i < test.tabs.items.length - 1)
+                  .tabs__item(class={"tabs__item--active" : i === 0})
+                    .card
+                      - var card = test.card
+                      .card__head
+                        - var profile = card.profile
+                        .profile
+                          .profile__col.profile__col--left
+                            img(src=profile.img.src, alt=profile.img.alt)
+                          .profile__col.profile__col--right
+                            .profile__name!= profile.name
+                            .profile__descr!= profile.descr
+                            .tab-question
+                              != card.question.text
+                              span.tab-question__current!= (i + 1)
+                              != card.question.delimeter
+                              span.tab-question__total!= test.tabs.items.length
+                      .card__body
+                        each text in card.items[i].text
+                          p.card__text!= text
+                      .card__footer
+                        +navigate(item.btns, test.tabs.id)
 
