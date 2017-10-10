@@ -31,6 +31,144 @@
             image: hostname + "img/logo/microformat.png"
           }
         },
+        modal: {
+          test1: {
+            tabs: {
+              items: [
+                {
+                  heading: "Чертеж для откатных ворот бесплатно?",
+                  descr: "Вы получите точный до миллиметра чертеж, указав размер ворот. Успейте до окончания таймера и чертеж достанется Вам совершенно бесплатно. Через 5 минут его стоимость составит 398 грн. Спешите!",
+                  btns: {
+                    next: {
+                      text: "Указать размер ворот и получить чертеж",
+                      icon: "ic ic--start"
+                    }
+                  }
+                },
+                {
+                  heading: "Какой проем ворот (длина)?",
+                  icon: "ic ic--length",
+                  slides: {
+                    id: "range1",
+                    info: {
+                      icon: "ic ic--info",
+                      text: "Перемещайте ползунок, чтобы выбрать подходящую Вам длину. Наиболее распространенный проем ворот - 4 метра."
+                    },
+                    name: "range1"
+                  },
+                  btns: {
+                    prev: {
+                      class: "test__btn--prev",
+                      text: "Назад"
+                    },
+                    next: {
+                      class: "test__btn--next",
+                      text: "Далее"
+                    }
+                  }
+                },
+                {
+                  heading: "Какая высота от земли?",
+                  icon: "ic ic--height",
+                  slides: {
+                    info: {
+                      icon: "ic ic--info",
+                      text: "Перемещайте ползунок, чтобы выбрать подходящую Вам высоту. Наиболее распространенная высота ворот  от 1,5 до 2 метров."
+                    },
+                    id: "range2",
+                    name: "range2"
+                  },
+                  btns: {
+                    prev: {
+                      class: "test__btn--prev",
+                      text: "Назад"
+                    },
+                    next: {
+                      class: "test__btn--next",
+                      text: "Далее"
+                    }
+                  }
+                },
+                {
+                  heading: "Чем планируете зашивать?",
+                  radiobtns: [
+                    {
+                      img: {
+                        src: "img/item-1.jpg",
+                        alt: "Профнастил"
+                      },
+                      name: "material[]",
+                      value: "Профнастил"
+                    },
+                    {
+                      img: {
+                        src: "img/item-2.jpg",
+                        alt: "Дерево"
+                      },
+                      name: "material[]",
+                      value: "Дерево"
+                    },
+                    {
+                      img: {
+                        src: "img/item-3.jpg",
+                        alt: "Ковка"
+                      },
+                      name: "material[]",
+                      value: "Ковка"
+                    },
+                  ],
+                  btns: {
+                    prev: {
+                      class: "test__btn--prev",
+                      text: "Назад"
+                    },
+                    next: {
+                      class: "test__btn--next",
+                      text: "Далее"
+                    }
+                  }
+                },
+                {
+                  heading: "куда высылать чертеж?",
+                  descr: "Оставьте свой телефон и мы вышлем точный до миллиметра чертеж под Ваши ворота. Никаких звонков! Чертеж придет в удобный Вам мессенджер: Viber, Telegram, Messenger или WhatsApp.",
+                  formGroup: {
+                    select: {
+                      name: "method",
+                      options: [
+                        {
+                          text: "viber",
+                          icon: "ic ic--viber"
+                        },
+                        {
+                          text: "whatsapp",
+                          icon: "ic ic--mail"
+                        },
+                        {
+                          text: "messenger",
+                          icon: "ic ic--massenger"
+                        },
+                        {
+                          text: "telegram",
+                          icon: "ic ic--telegram"
+                        },
+                      ]
+                    },
+                    inputs: [
+                      {
+                        name: "phone",
+                        placeholder: "Телефон"
+                      }
+                    ],
+                    submit: {
+                      text: "Получить чертеж",
+                      icon: "ic ic--apple"
+                    }
+                  }
+                },
+              ],
+            }
+          }
+        },
         logo: {
           img: {
             src: "img/logo/logo.png",

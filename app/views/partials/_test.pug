@@ -11,6 +11,6 @@
             .test__point
               i.ic.test__icon(class="ic--test-"+(i+1))
               .test__text!= item.text         
-        button.btn.button.test__btn
+        button.btn.button.test__btn(data-toggle="modal" data-target="#test__modal")
           i.ic.ic--list.button__ic
           !=content.index.test.btn            

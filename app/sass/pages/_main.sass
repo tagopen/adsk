@@ -1562,3 +1562,20 @@ input:checked
     &__text
       font: 700 28px/40px $font-constantia
       text-align: left
++comment("modals style")
+.modal
+  &__size
+    max-width: none
+    width: 100%
+    margin-left: auto
+    margin-right: auto
+.tabs
+  &__item
+    position: relative
+    display: none
+    &--active
+      display: block
++r(1024)
+  .modal
+    &__size
+      width: 1000px      

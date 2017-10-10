@@ -226,3 +226,79 @@
           | 9.3. Все предложения или вопросы по настоящей Политике конфиденциальности следует адресовать на электронный адрес: bg.delovaya@gmail.com
         p.confident__text
           | 9.4. Действующая Политика конфиденциальности размещена на странице по адресу delovaya.com.ua              
+#test__modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myLargeModalLabel', aria-hidden='true')
+  .modal-dialog.modal__size
+    .modal-content
+      button.close.modal__close(type='button', data-dismiss='modal', aria-hidden='true')
+        svg(xmlns='http://www.w3.org/2000/svg', width='30', height='30', viewbox='0 0 30 30')
+          metadata
+            x:xmpmeta(xmlns:x='adobe:ns:meta/', x:xmptk='Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ')
+              rdf:rdf(xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#')
+                rdf:description(rdf:about='')
+          defs
+          path.modal__close--icon(d='M1199.01,185.281l-0.72.732L1184,171.37l-14.29,14.643-0.72-.732,14.3-14.644-13.58-13.911,0.71-.732L1184,169.905l13.58-13.911,0.71,0.732-13.58,13.911Z', transform='translate(-1169 -156)')
+      .test
+        .row.justify-content-center.align-items-stretch
+          .col-24
+            form.contactForm(method="POST", action="mail/mail.php")
+              .tabs.test__tabs
+                each item, i in content.site.modal.test1.tabs.items
+                  .tabs__item(class={"tabs__item--active" : i === 0})
+                    if (item.icon)
+                      i(class=item.icon)
+                    h2.test__heading!= item.heading
+                    .progressbar
+                      .progressbar__status
+                        span.progressbar__value(class={"progressbar__value--hidden" : i === 0})!= ~~(100 / (content.site.modal.test1.tabs.items.length - 1) * i) + "%"
+
+                    if (item.slides)
+                      .slides
+                        p.slides__info.info
+                          i.info__icon(class=item.slides.info.icon)
+                          != item.slides.info.text
+                        .slides__item
+                          input.slides__control(id=item.slides.id, type="text", name=item.slides.name)
+                    if (item.descr)
+                      .tabs__text!= item.descr
+                    if (item.radiobtns)
+                      .row
+                        each radio, j in item.radiobtns
+                          .col-8.text-center
+                            label(for="radio" + (j + 1))
+                              img.radiobtns__img.img-fluid(src=radio.img.src, alt=radio.img.alt)
+                            .radiobtns
+                              if (j === 0)
+                                input.radiobtns__control(id="radio" + (j + 1), type="radio", name=radio.name, value=radio.value, checked)
+                              else
+                                input.radiobtns__control(id="radio" + (j + 1), type="radio", name=radio.name, value=radio.value)
+                              label.radiobtns__label(for="radio" + (j + 1))
+                                span.radiobtns__check
+                                != radio.value  
+                    if (item.btns)
+                      .button-group.text-center
+                        if (item.btns.prev)
+                          if (i > 0)
+                            button.button.test__btn(class=item.btns.prev.class, href="#", data-tabs-control="prev")
+                              .test__btn--text!= item.btns.prev.text
+                              if (item.btns.prev.icon)
+                                i(class=item.btns.prev.icon)
+                        if (item.btns.next)
+                          button.button.test__btn(class=item.btns.next.class, href="#", data-tabs-control="next")
+                            .test__btn--text!= item.btns.next.text
+                            if (item.btns.next.icon)
+                              i(class=item.btns.next.icon)
+                    if (item.formGroup)
+                      .row
+                        if (item.formGroup.inputs)
+                          .form-group.form-group--relative.col-21.offset-3.col-md-11.offset-md-1
+                            i.ic.ic--arrowvniz
+                            if (item.formGroup.select)
+                              select.select.select--dropdown(name=item.formGroup.select.name)
+                                each option in item.formGroup.select.options
+                                  option(value=option.text, data-content='<i class="' + option.icon + '"></i><span class="select2__info">'+ option.text +'</span>')!= option.text
+                            each input in item.formGroup.inputs
+                              input.form-control.form__input.form__phone.form__input--phone(type=input.type,  name=input.name, placeholder="+38 (___) ___-__-__", data-error="Введите телефон", required)
+                        if (item.formGroup.submit)
+                          .form-group.col-24.col-md-12
+                            button.test__btn.form__btn.test__btn--submit(type="submit", name='form', value='Чертеж')!= item.formGroup.submit.text
+                              i(class=item.formGroup.submit.icon)          

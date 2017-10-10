@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="ru" prefix="og: http://ogp.me/ns#">
   <head>
+    <!-- Google Tag Manager-->
+    <script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-NLBV7NB');
+    </script>
+    <!-- End Google Tag Manager-->
     <title>Главная страница</title>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
     <!-- Meta SEO - Description, Keywords, Title-->
@@ -51,6 +60,11 @@
 <![endif]-->
   </head>
   <body class="body">
+    <!-- Google Tag Manager (noscript)-->
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NLBV7NB" height="0" width="0" style="display:none;visibility:hidden;"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript)-->
     <nav class="navbar navbar-toggleable-sm navbar-light" id="mainNav">
       <div class="container navbar__container">
         <div class="row justify-content-between justify-content-md-start navbar__row align-items-center">
@@ -282,7 +296,7 @@
                   <div class="test__text">Подарок за экономию нашего времени</div>
                 </div>
               </div>
-              <button class="btn button test__btn"><i class="ic ic--list button__ic"></i>Пройдите тест прямо сейчас
+              <button class="btn button test__btn" data-toggle="modal" data-target="#test__modal"><i class="ic ic--list button__ic"></i>Пройдите тест прямо сейчас
               </button>
             </div>
           </div>
@@ -1818,6 +1832,150 @@
             </p>
             <p class="confident__text">9.3. Все предложения или вопросы по настоящей Политике конфиденциальности следует адресовать на электронный адрес: bg.delovaya@gmail.com</p>
             <p class="confident__text">9.4. Действующая Политика конфиденциальности размещена на странице по адресу delovaya.com.ua              </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="test__modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal__size">
+        <div class="modal-content">
+          <button class="close modal__close" type="button" data-dismiss="modal" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewbox="0 0 30 30">
+              <metadata>
+                <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
+                  <rdf:rdf xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                    <rdf:description rdf:about=""></rdf:description>
+                  </rdf:rdf>
+                </x:xmpmeta>
+              </metadata>
+              <defs></defs>
+              <path class="modal__close--icon" d="M1199.01,185.281l-0.72.732L1184,171.37l-14.29,14.643-0.72-.732,14.3-14.644-13.58-13.911,0.71-.732L1184,169.905l13.58-13.911,0.71,0.732-13.58,13.911Z" transform="translate(-1169 -156)"></path>
+            </svg>
+          </button>
+          <div class="test">
+            <div class="row justify-content-center align-items-stretch">
+              <div class="col-24">
+                <form class="contactForm" method="POST" action="mail/mail.php">
+                  <div class="tabs test__tabs">
+                    <div class="tabs__item tabs__item--active">
+                      <h2 class="test__heading">Чертеж для откатных ворот бесплатно?</h2>
+                      <div class="progressbar">
+                        <div class="progressbar__status"><span class="progressbar__value progressbar__value--hidden">0%</span></div>
+                      </div>
+                      <div class="tabs__text">Вы получите точный до миллиметра чертеж, указав размер ворот. Успейте до окончания таймера и чертеж достанется Вам совершенно бесплатно. Через 5 минут его стоимость составит 398 грн. Спешите!</div>
+                      <div class="button-group text-center">
+                        <button class="button test__btn" href="#" data-tabs-control="next">
+                          <div class="test__btn--text">Указать размер ворот и получить чертеж</div><i class="ic ic--start"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="tabs__item"><i class="ic ic--length"></i>
+                      <h2 class="test__heading">Какой проем ворот (длина)?</h2>
+                      <div class="progressbar">
+                        <div class="progressbar__status"><span class="progressbar__value">25%</span></div>
+                      </div>
+                      <div class="slides">
+                        <p class="slides__info info"><i class="info__icon ic ic--info"></i>Перемещайте ползунок, чтобы выбрать подходящую Вам длину. Наиболее распространенный проем ворот - 4 метра.
+                        </p>
+                        <div class="slides__item">
+                          <input class="slides__control" id="range1" type="text" name="range1">
+                        </div>
+                      </div>
+                      <div class="button-group text-center">
+                        <button class="button test__btn test__btn--prev" href="#" data-tabs-control="prev">
+                          <div class="test__btn--text">Назад</div>
+                        </button>
+                        <button class="button test__btn test__btn--next" href="#" data-tabs-control="next">
+                          <div class="test__btn--text">Далее</div>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="tabs__item"><i class="ic ic--height"></i>
+                      <h2 class="test__heading">Какая высота от земли?</h2>
+                      <div class="progressbar">
+                        <div class="progressbar__status"><span class="progressbar__value">50%</span></div>
+                      </div>
+                      <div class="slides">
+                        <p class="slides__info info"><i class="info__icon ic ic--info"></i>Перемещайте ползунок, чтобы выбрать подходящую Вам высоту. Наиболее распространенная высота ворот  от 1,5 до 2 метров.
+                        </p>
+                        <div class="slides__item">
+                          <input class="slides__control" id="range2" type="text" name="range2">
+                        </div>
+                      </div>
+                      <div class="button-group text-center">
+                        <button class="button test__btn test__btn--prev" href="#" data-tabs-control="prev">
+                          <div class="test__btn--text">Назад</div>
+                        </button>
+                        <button class="button test__btn test__btn--next" href="#" data-tabs-control="next">
+                          <div class="test__btn--text">Далее</div>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="tabs__item">
+                      <h2 class="test__heading">Чем планируете зашивать?</h2>
+                      <div class="progressbar">
+                        <div class="progressbar__status"><span class="progressbar__value">75%</span></div>
+                      </div>
+                      <div class="row">
+                        <div class="col-8 text-center">
+                          <label for="radio1"><img class="radiobtns__img img-fluid" src="img/item-1.jpg" alt="Профнастил"></label>
+                          <div class="radiobtns">
+                            <input class="radiobtns__control" id="radio1" type="radio" name="material[]" value="Профнастил" checked>
+                            <label class="radiobtns__label" for="radio1"><span class="radiobtns__check"></span>Профнастил
+                            </label>
+                          </div>
+                        </div>
+                        <div class="col-8 text-center">
+                          <label for="radio2"><img class="radiobtns__img img-fluid" src="img/item-2.jpg" alt="Дерево"></label>
+                          <div class="radiobtns">
+                            <input class="radiobtns__control" id="radio2" type="radio" name="material[]" value="Дерево">
+                            <label class="radiobtns__label" for="radio2"><span class="radiobtns__check"></span>Дерево
+                            </label>
+                          </div>
+                        </div>
+                        <div class="col-8 text-center">
+                          <label for="radio3"><img class="radiobtns__img img-fluid" src="img/item-3.jpg" alt="Ковка"></label>
+                          <div class="radiobtns">
+                            <input class="radiobtns__control" id="radio3" type="radio" name="material[]" value="Ковка">
+                            <label class="radiobtns__label" for="radio3"><span class="radiobtns__check"></span>Ковка
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="button-group text-center">
+                        <button class="button test__btn test__btn--prev" href="#" data-tabs-control="prev">
+                          <div class="test__btn--text">Назад</div>
+                        </button>
+                        <button class="button test__btn test__btn--next" href="#" data-tabs-control="next">
+                          <div class="test__btn--text">Далее</div>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="tabs__item">
+                      <h2 class="test__heading">куда высылать чертеж?</h2>
+                      <div class="progressbar">
+                        <div class="progressbar__status"><span class="progressbar__value">100%</span></div>
+                      </div>
+                      <div class="tabs__text">Оставьте свой телефон и мы вышлем точный до миллиметра чертеж под Ваши ворота. Никаких звонков! Чертеж придет в удобный Вам мессенджер: Viber, Telegram, Messenger или WhatsApp.</div>
+                      <div class="row">
+                        <div class="form-group form-group--relative col-21 offset-3 col-md-11 offset-md-1"><i class="ic ic--arrowvniz"></i>
+                          <select class="select select--dropdown" name="method">
+                            <option value="viber" data-content="&lt;i class=&quot;ic ic--viber&quot;&gt;&lt;/i&gt;&lt;span class=&quot;select2__info&quot;&gt;viber&lt;/span&gt;">viber</option>
+                            <option value="whatsapp" data-content="&lt;i class=&quot;ic ic--mail&quot;&gt;&lt;/i&gt;&lt;span class=&quot;select2__info&quot;&gt;whatsapp&lt;/span&gt;">whatsapp</option>
+                            <option value="messenger" data-content="&lt;i class=&quot;ic ic--massenger&quot;&gt;&lt;/i&gt;&lt;span class=&quot;select2__info&quot;&gt;messenger&lt;/span&gt;">messenger</option>
+                            <option value="telegram" data-content="&lt;i class=&quot;ic ic--telegram&quot;&gt;&lt;/i&gt;&lt;span class=&quot;select2__info&quot;&gt;telegram&lt;/span&gt;">telegram</option>
+                          </select>
+                          <input class="form-control form__input form__phone form__input--phone" name="phone" placeholder="+38 (___) ___-__-__" data-error="Введите телефон" required>
+                        </div>
+                        <div class="form-group col-24 col-md-12">
+                          <button class="test__btn form__btn test__btn--submit" type="submit" name="form" value="Чертеж">Получить чертеж<i class="ic ic--apple">         </i></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
       </div>
