@@ -2037,6 +2037,18 @@ li.fancybox-thumbs-loading {
   }
 }
 
+a,
+button {
+  outline: none;
+}
+
+a:hover, a:focus, a:active,
+button:hover,
+button:focus,
+button:active {
+  outline: none;
+}
+
 /* modal */
 .modal {
   -webkit-overflow-scrolling: touch;

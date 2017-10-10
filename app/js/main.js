@@ -363,24 +363,28 @@ $('.worth__size').matchHeight({
   $(function() {
     $("[data-tabs-control]").on('click', function(e) {
       var control = $(this).data('tabs-control'),
-          $tabs = $(this).closest('.tabs'),
-          $item = $tabs.find('.tabs__item'),
-          $currentItem = $(this).closest('.tabs__item'),
-          activeItem = $currentItem.index(),
-          $progressbarStatus = $tabs.find('.progressbar__status');
+          target = $(this).data('tabs-toggle'),
+          $tabs = $("[data-tabs=" + target + "]");
 
-      if (control === 'prev') {
-        $progressbarStatus.css({
-          width: (100 - ~~(100 / ($item.length - 1) * (activeItem - 1))) + "%"
-        });
-        $item.removeClass('tabs__item--active').eq(activeItem - 1).addClass('tabs__item--active');
-      } else if (control === 'next') {
-        $progressbarStatus.css({
-          width: (100 - ~~(100 / ($item.length - 1) * (activeItem + 1))) + "%"
-        });
-        $item.removeClass('tabs__item--active').eq(activeItem + 1).addClass('tabs__item--active');
+      for (var i = 0; $tabs.length; i++) {
+        var  $item = $tabs[i].find('.tabs__item'),
+             $currentItem = $item.closest('.tabs__item'),
+             activeItem = $currentItem.index(),
+             $progressbarStatus = $tabs.find('.progressbar__status');
+        if (control === 'prev') {
+          $progressbarStatus.css({
+            width: (100 - ~~(100 / ($item.length - 1) * (activeItem - 1))) + "%"
+          });
+          $item.removeClass('tabs__item--active').eq(activeItem - 1).addClass('tabs__item--active');
+        } else if (control === 'next') {
+          $progressbarStatus.css({
+            width: (100 - ~~(100 / ($item.length - 1) * (activeItem + 1))) + "%"
+          });
+          $item.removeClass('tabs__item--active').eq(activeItem + 1).addClass('tabs__item--active');
 
+        }
       }
+
     e.preventDefault();
     });
   });

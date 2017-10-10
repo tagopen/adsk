@@ -20,6 +20,13 @@
     background-position: 40px 0
   to
     background-position: 0 0
+a,
+button
+  outline: none
+  &:hover,
+  &:focus,
+  &:active
+    outline: none
 +cm('modal')
 .modal
   -webkit-overflow-scrolling: touch
@@ -1575,6 +1582,7 @@ input:checked
     display: none
     &--active
       display: block
+.card
 +r(1024)
   .modal
     &__size
