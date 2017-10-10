@@ -254,11 +254,14 @@ mixin radiobtns(item)
     .row
       each radio, i in item.items
         - var id = "radio-" + item.id + "-" + (i + 1)
-        .col-8.text-center
+        - var dependence = (radio.dependence) ? radio.dependence : undefined
+        - var slave = (radio.slave) ? radio.slave : undefined
+        - var checked = (i === 0) ? true : undefined
+        .col-8.text-center.js-slave
           label(for=id)
             img.radiobtns__img.img-fluid(src=radio.img.src, alt=radio.img.alt)
           .radiobtns
-            input.radiobtns__control(id=id, type="radio", name=item.name, value=radio.value)
+            input.radiobtns__control(id=id, type="radio", name=item.name, value=radio.value, data-dependence=dependence, data-slave=slave, checked=checked)
             label.radiobtns__label(for=id)
               span.radiobtns__check!= radio.value 
 mixin submit(form)
@@ -304,24 +307,25 @@ mixin submit(form)
           .col-24.col-lg-6
             .tabs.test__tabs(data-tabs=test.tabs.id)
               each item, i in test.tabs.items
-                .tabs__item.card(class={"tabs__item--active" : i === 0})
-                  - var card = test.card
-                  .card__head
-                    - var profile = card.profile
-                    .profile
-                      .profile__col.profile__col--left
-                        img(src=profile.img.src, alt=profile.img.alt)
-                      .profile__col.profile__col--right
-                        .profile__name!= profile.name
-                        .profile__descr!= profile.descr
-                        .tab-question
-                          != card.question.text
-                          span.tab-question__current!= (i + 1)
-                          != card.question.delimeter
-                          span.tab-question__total!= test.tabs.items.length
-                  .card__body
-                    each text in card.items[i].text
-                      p.card__text!= text
-                  .card__footer
-                    +navigate(item.btns, test.tabs.id)
+                .tabs__item(class={"tabs__item--active" : i === 0})
+                  .card
+                    - var card = test.card
+                    .card__head
+                      - var profile = card.profile
+                      .profile
+                        .profile__col.profile__col--left
+                          img(src=profile.img.src, alt=profile.img.alt)
+                        .profile__col.profile__col--right
+                          .profile__name!= profile.name
+                          .profile__descr!= profile.descr
+                          .tab-question
+                            != card.question.text
+                            span.tab-question__current!= (i + 1)
+                            != card.question.delimeter
+                            span.tab-question__total!= test.tabs.items.length
+                    .card__body
+                      each text in card.items[i].text
+                        p.card__text!= text
+                    .card__footer
+                      +navigate(item.btns, test.tabs.id)
 

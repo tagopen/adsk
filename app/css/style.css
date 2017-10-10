@@ -4414,6 +4414,42 @@ input:checked + .round:before {
   display: block;
 }
 
+.tabs__item--active.tabs__item--flip {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.tabs__item--active.tabs__item--flip + .tabs__item {
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+}
+
+.tabs__item--flip {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  position: relative;
+}
+
+.tabs__item--flip .card {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  background-color: #fff;
+}
+
+.radio-group--hidden {
+  display: none;
+}
+
 @media only screen and (min-width: 1024px) {
   .modal__size {
     width: 1000px;

@@ -6,7 +6,7 @@
       event.preventDefault();
       var id  = $(this).attr('href'),
       top = $(id).offset().top;
-      $('body,html').animate({scrollTop: top -$('.navbar').outerHeight() +1}, 1500);
+      $('body,html').animate({scrollTop: top - $('.navbar').outerHeight() +1}, 1500);
     });
   });
 
@@ -366,11 +366,11 @@ $('.worth__size').matchHeight({
           target = $(this).data('tabs-toggle'),
           $tabs = $("[data-tabs=" + target + "]");
 
-      for (var i = 0; $tabs.length; i++) {
-        var  $item = $tabs[i].find('.tabs__item'),
-             $currentItem = $item.closest('.tabs__item'),
+      $tabs.each(function() {
+        var  $item = $(this).find('.tabs__item'),
+             $currentItem = $item.filter('.tabs__item--active').closest('.tabs__item'),
              activeItem = $currentItem.index(),
-             $progressbarStatus = $tabs.find('.progressbar__status');
+             $progressbarStatus = $(this).find('.progressbar__status');
         if (control === 'prev') {
           $progressbarStatus.css({
             width: (100 - ~~(100 / ($item.length - 1) * (activeItem - 1))) + "%"
@@ -381,12 +381,25 @@ $('.worth__size').matchHeight({
             width: (100 - ~~(100 / ($item.length - 1) * (activeItem + 1))) + "%"
           });
           $item.removeClass('tabs__item--active').eq(activeItem + 1).addClass('tabs__item--active');
-
         }
-      }
-
+      });
     e.preventDefault();
     });
+  });
+
+  $(function() {
+    $('[data-dependence]').on('change, click', function() {
+      var $input = $(this),
+      target = $input.data('dependence'),
+      $checkboxes = $('[data-slave=' + target + ']'),
+      hiddenClass = 'hidden-md-up hidden-md-down';
+
+      $('[data-slave]').closest('.js-slave').addClass(hiddenClass);
+
+      var $group = $checkboxes.closest('.js-slave');
+      $group.removeClass(hiddenClass);
+    });
+    $('[data-dependence]:checked').triggerHandler('click');
   });
   
 })(jQuery); // End of use strict
