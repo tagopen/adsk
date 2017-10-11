@@ -373,12 +373,12 @@ $('.worth__size').matchHeight({
              $progressbarStatus = $(this).find('.progressbar__status');
         if (control === 'prev') {
           $progressbarStatus.css({
-            width: (100 - ~~(100 / ($item.length - 1) * (activeItem - 1))) + "%"
+            width: (~~(100 / ($item.length - 1) * (activeItem - 1))) + "%"
           });
           $item.removeClass('tabs__item--active').eq(activeItem - 1).addClass('tabs__item--active');
         } else if (control === 'next') {
           $progressbarStatus.css({
-            width: (100 - ~~(100 / ($item.length - 1) * (activeItem + 1))) + "%"
+            width: (~~(100 / ($item.length - 1) * (activeItem + 1))) + "%"
           });
           $item.removeClass('tabs__item--active').eq(activeItem + 1).addClass('tabs__item--active');
         }
