@@ -401,5 +401,43 @@ $('.worth__size').matchHeight({
     });
     $('[data-dependence]:checked').triggerHandler('click');
   });
+
+  // range nouislider
+  $(function() {
+    var ranges = ["control-range1","control-range2","control-range3","control-range4","control-range5","control-range6","control-range7","control-range8","control-range9",];
+    var format = wNumb({ decimals: 0, suffix: 'м²' });
+
+    for (var i = 0; i < ranges.length; i++) {
+
+      var range = document.getElementById(ranges[i]);
+      var target = $(range).data('slides');
+      $("#" + target).hide();
+
+      noUiSlider.create(range, {
+        start: 150,
+        step: 10,
+        tooltips: format,
+        range: {
+          'min': 10,
+          'max': 1000
+        },
+        pips: {
+          mode: 'values',
+          values: [10, 1000],
+          density: -1,
+          format: format
+        }
+      });
+
+      range.noUiSlider.on('update', function( values, handle ) {
+        var value = values[handle],
+            target = range.getAttribute('data-slides');
+
+        $("#" + target).val(value);
+      });
+    }
+
+
+  });
   
 })(jQuery); // End of use strict

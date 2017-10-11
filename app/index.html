@@ -1844,37 +1844,31 @@
               <path class="modal__close--icon" d="M1199.01,185.281l-0.72.732L1184,171.37l-14.29,14.643-0.72-.732,14.3-14.644-13.58-13.911,0.71-.732L1184,169.905l13.58-13.911,0.71,0.732-13.58,13.911Z" transform="translate(-1169 -156)"></path>
             </svg>
           </button>
-          <div class="test">
+          <div class="quiz">
             <div class="row justify-content-center align-items-stretch">
               <div class="col-24">
                 <h2 class="sub-heading modal__heading">Узнайте стоимость вашего проекта</h2>
               </div>
-              <div class="col-24 col-lg-18">
+              <div class="col-24 col-lg-16">
                 <form class="contactForm" method="POST" action="mail/mail.php">
-                  <div class="tabs test__tabs" data-tabs="test-tabs">
+                  <div class="tabs quiz__tabs" data-tabs="test-tabs">
                     <div class="tabs__item tabs__item--active">
-                      <h3 class="test__heading">Выберите тип фундамента</h3>
+                      <h3 class="quiz__heading">Выберите тип фундамента</h3>
                           <div class="progressbar">
                             <div class="progressbar__status"><span class="progressbar__value">0%</span></div>
-                          </div>
-                          <div class="slides">
-                            <p class="slides__info info">Укажите нужную квадратуру, перемещая ползунок </p>
-                            <div class="slides__item">
-                              <input class="slides__control" id="range1" type="text" name="range1">
-                            </div>
                           </div>
                           <div class="row">
                             <div class="col-8 text-center js-slave">
                               <label for="radio-foundation-1"><img class="radiobtns__img img-fluid" src="img/test-1.1.jpg" alt="Ленточный"></label>
                               <div class="radiobtns">
-                                <input class="radiobtns__control" id="radio-foundation-1" type="radio" name="foundation[]" value="Ленточный из ФСБ блоков" data-dependence="item-1" checked>
+                                <input class="radiobtns__control" id="radio-foundation-1" type="radio" name="foundation[]" value="Ленточный из ФСБ блоков" data-dependence="item-1">
                                 <label class="radiobtns__label" for="radio-foundation-1"><span class="radiobtns__check">Ленточный из ФСБ блоков</span></label>
                               </div>
                             </div>
                             <div class="col-8 text-center js-slave">
                               <label for="radio-foundation-2"><img class="radiobtns__img img-fluid" src="img/test-1.2.jpg" alt="Геошурупы"></label>
                               <div class="radiobtns">
-                                <input class="radiobtns__control" id="radio-foundation-2" type="radio" name="foundation[]" value="Геошурупы" data-dependence="item-2">
+                                <input class="radiobtns__control" id="radio-foundation-2" type="radio" name="foundation[]" value="Геошурупы" data-dependence="item-2" checked>
                                 <label class="radiobtns__label" for="radio-foundation-2"><span class="radiobtns__check">Геошурупы</span></label>
                               </div>
                             </div>
@@ -1886,182 +1880,242 @@
                               </div>
                             </div>
                           </div>
+                          <div class="slides quiz__slides">
+                            <p class="slides__descr">Укажите нужную квадратуру, перемещая ползунок </p>
+                            <div class="slides__item">
+                              <input class="slides__control" id="range1" type="number" name="range1" value="150" min="10" max="1000" step="10">
+                              <div class="slides__range" id="control-range1" data-slides="range1"></div>
+                            </div>
+                          </div>
                     </div>
                     <div class="tabs__item">
-                      <h3 class="test__heading">Выберите тип фундамента</h3>
+                      <h3 class="quiz__heading">Выберите материал каркаса</h3>
+                          <div class="progressbar">
+                            <div class="progressbar__status"><span class="progressbar__value">11%</span></div>
+                          </div>
+                          <div class="row">
+                            <div class="col-8 text-center js-slave">
+                              <label for="radio-skeleton-1"><img class="radiobtns__img img-fluid" src="img/test-2.1.jpg" alt="Газобетон"></label>
+                              <div class="radiobtns">
+                                <input class="radiobtns__control" id="radio-skeleton-1" type="radio" name="skeleton[]" value="Газобетон" data-slave="item-1">
+                                <label class="radiobtns__label" for="radio-skeleton-1"><span class="radiobtns__check">Газобетон</span></label>
+                              </div>
+                            </div>
+                            <div class="col-8 text-center js-slave">
+                              <label for="radio-skeleton-2"><img class="radiobtns__img img-fluid" src="img/test-2.2.jpg" alt="Дерево"></label>
+                              <div class="radiobtns">
+                                <input class="radiobtns__control" id="radio-skeleton-2" type="radio" name="skeleton[]" value="Дерево" data-slave="item-2" checked>
+                                <label class="radiobtns__label" for="radio-skeleton-2"><span class="radiobtns__check">Дерево</span></label>
+                              </div>
+                            </div>
+                            <div class="col-8 text-center js-slave">
+                              <label for="radio-skeleton-3"><img class="radiobtns__img img-fluid" src="img/test-2.3.jpg" alt="Железобетон"></label>
+                              <div class="radiobtns">
+                                <input class="radiobtns__control" id="radio-skeleton-3" type="radio" name="skeleton[]" value="Железобетон" data-slave="item-3">
+                                <label class="radiobtns__label" for="radio-skeleton-3"><span class="radiobtns__check">Железобетон</span></label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="slides quiz__slides">
+                            <p class="slides__descr">Укажите нужную квадратуру, перемещая ползунок </p>
+                            <div class="slides__item">
+                              <input class="slides__control" id="range2" type="number" name="range2" value="150" min="10" max="1000" step="10">
+                              <div class="slides__range" id="control-range2" data-slides="range2"></div>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="tabs__item">
+                      <h3 class="quiz__heading">Выберите материал фасада</h3>
+                          <div class="progressbar">
+                            <div class="progressbar__status"><span class="progressbar__value">22%</span></div>
+                          </div>
+                          <div class="row">
+                            <div class="col-8 text-center js-slave">
+                              <label for="radio-facade-1"><img class="radiobtns__img img-fluid" src="img/test-3.1.jpg" alt="Короед"></label>
+                              <div class="radiobtns">
+                                <input class="radiobtns__control" id="radio-facade-1" type="radio" name="facade[]" value="Короед">
+                                <label class="radiobtns__label" for="radio-facade-1"><span class="radiobtns__check">Короед</span></label>
+                              </div>
+                            </div>
+                            <div class="col-8 text-center js-slave">
+                              <label for="radio-facade-2"><img class="radiobtns__img img-fluid" src="img/test-3.2.jpg" alt="Вентилируемый"></label>
+                              <div class="radiobtns">
+                                <input class="radiobtns__control" id="radio-facade-2" type="radio" name="facade[]" value="Вентилируемый" checked>
+                                <label class="radiobtns__label" for="radio-facade-2"><span class="radiobtns__check">Вентилируемый</span></label>
+                              </div>
+                            </div>
+                            <div class="col-8 text-center js-slave">
+                              <label for="radio-facade-3"><img class="radiobtns__img img-fluid" src="img/test-3.3.jpg" alt="Кирпичный"></label>
+                              <div class="radiobtns">
+                                <input class="radiobtns__control" id="radio-facade-3" type="radio" name="facade[]" value="Кирпичный">
+                                <label class="radiobtns__label" for="radio-facade-3"><span class="radiobtns__check">Кирпичный</span></label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="slides quiz__slides">
+                            <p class="slides__descr">Укажите нужную квадратуру, перемещая ползунок</p>
+                            <div class="slides__item">
+                              <input class="slides__control" id="range3" type="number" name="range3" value="150" min="10" max="1000" step="10">
+                              <div class="slides__range" id="control-range3" data-slides="range3"></div>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="tabs__item">
+                      <h3 class="quiz__heading">Укажите площадь первого этажа</h3>
                           <div class="progressbar">
                             <div class="progressbar__status"><span class="progressbar__value">33%</span></div>
                           </div>
-                          <div class="slides">
-                            <p class="slides__info info">Укажите нужную квадратуру, перемещая ползунок </p>
+                          <div class="slides quiz__slides">
+                            <p class="slides__descr"></p>
                             <div class="slides__item">
-                              <input class="slides__control" id="range1" type="text" name="range1">
+                              <input class="slides__control" id="range4" type="number" name="range4" value="150" min="10" max="1000" step="10">
+                              <div class="slides__range" id="control-range4" data-slides="range4"></div>
                             </div>
-                          </div>
-                          <div class="row">
-                            <div class="col-8 text-center js-slave">
-                              <label for="radio-foundatoinkj-1"><img class="radiobtns__img img-fluid" src="img/test-1.1.jpg" alt="Ленточный"></label>
-                              <div class="radiobtns">
-                                <input class="radiobtns__control" id="radio-foundatoinkj-1" type="radio" name="foundationkj[]" value="1Ленточный из ФСБ блоков" data-slave="item-1" checked>
-                                <label class="radiobtns__label" for="radio-foundatoinkj-1"><span class="radiobtns__check">1Ленточный из ФСБ блоков</span></label>
-                              </div>
-                            </div>
-                            <div class="col-8 text-center js-slave">
-                              <label for="radio-foundatoinkj-2"><img class="radiobtns__img img-fluid" src="img/test-1.2.jpg" alt="Геошурупы"></label>
-                              <div class="radiobtns">
-                                <input class="radiobtns__control" id="radio-foundatoinkj-2" type="radio" name="foundationkj[]" value="1Геошурупы" data-slave="item-1">
-                                <label class="radiobtns__label" for="radio-foundatoinkj-2"><span class="radiobtns__check">1Геошурупы</span></label>
-                              </div>
-                            </div>
-                            <div class="col-8 text-center js-slave">
-                              <label for="radio-foundatoinkj-3"><img class="radiobtns__img img-fluid" src="img/test-1.3.jpg" alt="Монолитные"></label>
-                              <div class="radiobtns">
-                                <input class="radiobtns__control" id="radio-foundatoinkj-3" type="radio" name="foundationkj[]" value="1Монолитные" data-slave="item-1">
-                                <label class="radiobtns__label" for="radio-foundatoinkj-3"><span class="radiobtns__check">1Монолитные</span></label>
-                              </div>
-                            </div>
-                            <div class="col-8 text-center js-slave">
-                              <label for="radio-foundatoinkj-4"><img class="radiobtns__img img-fluid" src="img/test-1.1.jpg" alt="Ленточный"></label>
-                              <div class="radiobtns">
-                                <input class="radiobtns__control" id="radio-foundatoinkj-4" type="radio" name="foundationkj[]" value="2Ленточный из ФСБ блоков" data-slave="item-2">
-                                <label class="radiobtns__label" for="radio-foundatoinkj-4"><span class="radiobtns__check">2Ленточный из ФСБ блоков</span></label>
-                              </div>
-                            </div>
-                            <div class="col-8 text-center js-slave">
-                              <label for="radio-foundatoinkj-5"><img class="radiobtns__img img-fluid" src="img/test-1.2.jpg" alt="Геошурупы"></label>
-                              <div class="radiobtns">
-                                <input class="radiobtns__control" id="radio-foundatoinkj-5" type="radio" name="foundationkj[]" value="2Геошурупы" data-slave="item-2">
-                                <label class="radiobtns__label" for="radio-foundatoinkj-5"><span class="radiobtns__check">2Геошурупы</span></label>
-                              </div>
-                            </div>
-                            <div class="col-8 text-center js-slave">
-                              <label for="radio-foundatoinkj-6"><img class="radiobtns__img img-fluid" src="img/test-1.3.jpg" alt="Монолитные"></label>
-                              <div class="radiobtns">
-                                <input class="radiobtns__control" id="radio-foundatoinkj-6" type="radio" name="foundationkj[]" value="2Монолитные" data-slave="item-2">
-                                <label class="radiobtns__label" for="radio-foundatoinkj-6"><span class="radiobtns__check">2Монолитные</span></label>
-                              </div>
-                            </div>
-                            <div class="col-8 text-center js-slave">
-                              <label for="radio-foundatoinkj-7"><img class="radiobtns__img img-fluid" src="img/test-1.1.jpg" alt="Ленточный"></label>
-                              <div class="radiobtns">
-                                <input class="radiobtns__control" id="radio-foundatoinkj-7" type="radio" name="foundationkj[]" value="3Ленточный из ФСБ блоков" data-slave="item-3">
-                                <label class="radiobtns__label" for="radio-foundatoinkj-7"><span class="radiobtns__check">3Ленточный из ФСБ блоков</span></label>
-                              </div>
-                            </div>
-                            <div class="col-8 text-center js-slave">
-                              <label for="radio-foundatoinkj-8"><img class="radiobtns__img img-fluid" src="img/test-1.2.jpg" alt="Геошурупы"></label>
-                              <div class="radiobtns">
-                                <input class="radiobtns__control" id="radio-foundatoinkj-8" type="radio" name="foundationkj[]" value="3Геошурупы" data-slave="item-3">
-                                <label class="radiobtns__label" for="radio-foundatoinkj-8"><span class="radiobtns__check">3Геошурупы</span></label>
-                              </div>
-                            </div>
-                            <div class="col-8 text-center js-slave">
-                              <label for="radio-foundatoinkj-9"><img class="radiobtns__img img-fluid" src="img/test-1.3.jpg" alt="Монолитные"></label>
-                              <div class="radiobtns">
-                                <input class="radiobtns__control" id="radio-foundatoinkj-9" type="radio" name="foundationkj[]" value="3Монолитные" data-slave="item-3">
-                                <label class="radiobtns__label" for="radio-foundatoinkj-9"><span class="radiobtns__check">3Монолитные</span></label>
-                              </div>
-                            </div>
+                            <p class="slides__info info"><i class="info__icon ic ic--info"></i>Перемещайте ползунок, чтобы выбрать подходящую Вам площадь.
+                            </p>
                           </div>
                     </div>
                     <div class="tabs__item">
-                      <h3 class="test__heading">Выберите тип фундамента</h3>
+                      <h3 class="quiz__heading">Укажите площадь второго этажа</h3>
+                          <div class="progressbar">
+                            <div class="progressbar__status"><span class="progressbar__value">44%</span></div>
+                          </div>
+                          <div class="slides quiz__slides">
+                            <p class="slides__descr"></p>
+                            <div class="slides__item">
+                              <input class="slides__control" id="range5" type="number" name="range5" value="150" min="10" max="1000" step="10">
+                              <div class="slides__range" id="control-range5" data-slides="range5"></div>
+                            </div>
+                            <p class="slides__info info"><i class="info__icon ic ic--info"></i>Перемещайте ползунок, чтобы выбрать подходящую Вам площадь.
+                            </p>
+                          </div>
+                    </div>
+                    <div class="tabs__item">
+                      <h3 class="quiz__heading">Укажите площадь высоту этажа</h3>
+                          <div class="progressbar">
+                            <div class="progressbar__status"><span class="progressbar__value">55%</span></div>
+                          </div>
+                          <div class="slides quiz__slides">
+                            <p class="slides__descr"></p>
+                            <div class="slides__item">
+                              <input class="slides__control" id="range6" type="number" name="range6" value="150" min="10" max="1000" step="10">
+                              <div class="slides__range" id="control-range6" data-slides="range6"></div>
+                            </div>
+                            <p class="slides__info info"><i class="info__icon ic ic--info"></i>Перемещайте ползунок, чтобы выбрать подходящую Вам площадь.
+                            </p>
+                          </div>
+                    </div>
+                    <div class="tabs__item">
+                      <h3 class="quiz__heading">Укажите тип перекрытия</h3>
                           <div class="progressbar">
                             <div class="progressbar__status"><span class="progressbar__value">66%</span></div>
                           </div>
-                          <div class="slides">
-                            <p class="slides__info info">Укажите нужную квадратуру, перемещая ползунок </p>
-                            <div class="slides__item">
-                              <input class="slides__control" id="range1" type="text" name="range1">
-                            </div>
-                          </div>
                           <div class="row">
                             <div class="col-8 text-center js-slave">
-                              <label for="radio-foundation123-1"><img class="radiobtns__img img-fluid" src="img/test-1.1.jpg" alt="Ленточный"></label>
+                              <label for="radio-overlap-1"><img class="radiobtns__img img-fluid" src="img/test-7.1.jpg" alt="Комбинированное"></label>
                               <div class="radiobtns">
-                                <input class="radiobtns__control" id="radio-foundation123-1" type="radio" name="foundation123[]" value="1Ленточный из ФСБ блоков" data-slave="item-1" checked>
-                                <label class="radiobtns__label" for="radio-foundation123-1"><span class="radiobtns__check">1Ленточный из ФСБ блоков</span></label>
+                                <input class="radiobtns__control" id="radio-overlap-1" type="radio" name="overlap[]" value="Комбинированное дерево-метал" data-slave="item-1">
+                                <label class="radiobtns__label" for="radio-overlap-1"><span class="radiobtns__check">Комбинированное дерево-метал</span></label>
                               </div>
                             </div>
                             <div class="col-8 text-center js-slave">
-                              <label for="radio-foundation123-2"><img class="radiobtns__img img-fluid" src="img/test-1.2.jpg" alt="Геошурупы"></label>
+                              <label for="radio-overlap-2"><img class="radiobtns__img img-fluid" src="img/test-7.2.jpg" alt="Дерево"></label>
                               <div class="radiobtns">
-                                <input class="radiobtns__control" id="radio-foundation123-2" type="radio" name="foundation123[]" value="2Геошурупы" data-slave="item-2">
-                                <label class="radiobtns__label" for="radio-foundation123-2"><span class="radiobtns__check">2Геошурупы</span></label>
+                                <input class="radiobtns__control" id="radio-overlap-2" type="radio" name="overlap[]" value="Дерево" data-slave="item-2" checked>
+                                <label class="radiobtns__label" for="radio-overlap-2"><span class="radiobtns__check">Дерево</span></label>
                               </div>
                             </div>
-                            <div class="col-8 text-center js-slave">
-                              <label for="radio-foundation123-3"><img class="radiobtns__img img-fluid" src="img/test-1.3.jpg" alt="Монолитные"></label>
-                              <div class="radiobtns">
-                                <input class="radiobtns__control" id="radio-foundation123-3" type="radio" name="foundation123[]" value="3Монолитные" data-slave="item-3">
-                                <label class="radiobtns__label" for="radio-foundation123-3"><span class="radiobtns__check">3Монолитные</span></label>
-                              </div>
-                            </div>
-                            <div class="col-8 text-center js-slave">
-                              <label for="radio-foundation123-4"><img class="radiobtns__img img-fluid" src="img/test-1.1.jpg" alt="Ленточный"></label>
-                              <div class="radiobtns">
-                                <input class="radiobtns__control" id="radio-foundation123-4" type="radio" name="foundation123[]" value="1Ленточный из ФСБ блоков" data-slave="item-1">
-                                <label class="radiobtns__label" for="radio-foundation123-4"><span class="radiobtns__check">1Ленточный из ФСБ блоков</span></label>
-                              </div>
-                            </div>
-                            <div class="col-8 text-center js-slave">
-                              <label for="radio-foundation123-5"><img class="radiobtns__img img-fluid" src="img/test-1.2.jpg" alt="Геошурупы"></label>
-                              <div class="radiobtns">
-                                <input class="radiobtns__control" id="radio-foundation123-5" type="radio" name="foundation123[]" value="2Геошурупы" data-slave="item-2">
-                                <label class="radiobtns__label" for="radio-foundation123-5"><span class="radiobtns__check">2Геошурупы</span></label>
-                              </div>
-                            </div>
-                            <div class="col-8 text-center js-slave">
-                              <label for="radio-foundation123-6"><img class="radiobtns__img img-fluid" src="img/test-1.3.jpg" alt="Монолитные"></label>
-                              <div class="radiobtns">
-                                <input class="radiobtns__control" id="radio-foundation123-6" type="radio" name="foundation123[]" value="3Монолитные" data-slave="item-3">
-                                <label class="radiobtns__label" for="radio-foundation123-6"><span class="radiobtns__check">3Монолитные</span></label>
-                              </div>
-                            </div>
-                            <div class="col-8 text-center js-slave">
-                              <label for="radio-foundation123-7"><img class="radiobtns__img img-fluid" src="img/test-1.1.jpg" alt="Ленточный"></label>
-                              <div class="radiobtns">
-                                <input class="radiobtns__control" id="radio-foundation123-7" type="radio" name="foundation123[]" value="3Ленточный из ФСБ блоков" data-slave="item-3">
-                                <label class="radiobtns__label" for="radio-foundation123-7"><span class="radiobtns__check">3Ленточный из ФСБ блоков</span></label>
-                              </div>
-                            </div>
-                            <div class="col-8 text-center js-slave">
-                              <label for="radio-foundation123-8"><img class="radiobtns__img img-fluid" src="img/test-1.2.jpg" alt="Геошурупы"></label>
-                              <div class="radiobtns">
-                                <input class="radiobtns__control" id="radio-foundation123-8" type="radio" name="foundation123[]" value="1Геошурупы" data-slave="item-1">
-                                <label class="radiobtns__label" for="radio-foundation123-8"><span class="radiobtns__check">1Геошурупы</span></label>
-                              </div>
-                            </div>
-                            <div class="col-8 text-center js-slave">
-                              <label for="radio-foundation123-9"><img class="radiobtns__img img-fluid" src="img/test-1.3.jpg" alt="Монолитные"></label>
-                              <div class="radiobtns">
-                                <input class="radiobtns__control" id="radio-foundation123-9" type="radio" name="foundation123[]" value="2Монолитные" data-slave="item-2">
-                                <label class="radiobtns__label" for="radio-foundation123-9"><span class="radiobtns__check">2Монолитные</span></label>
-                              </div>
+                          </div>
+                          <div class="slides quiz__slides">
+                            <p class="slides__descr">Укажите нужную квадратуру, перемещая ползунок </p>
+                            <div class="slides__item">
+                              <input class="slides__control" id="range7" type="number" name="range7" value="150" min="10" max="1000" step="10">
+                              <div class="slides__range" id="control-range7" data-slides="range7"></div>
                             </div>
                           </div>
                     </div>
                     <div class="tabs__item">
-                      <h3 class="test__heading">Получите расчет сметы и ваш подарок</h3>
+                      <h3 class="quiz__heading">Укажите тип каркаса кровли</h3>
                           <div class="progressbar">
-                            <div class="progressbar__status"><span class="progressbar__value">100%</span></div>
+                            <div class="progressbar__status"><span class="progressbar__value">77%</span></div>
                           </div>
-                      <div class="tabs__text">В ближайшее время мы сделаем расчет возможной стоимости вашего проекта исходя из ваших ответов. Укажите ваш номер телефона, чтобы мы могли сообщить вам стоимость работ.</div>
-                          <legend class="test__legend">
+                          <div class="row">
+                            <div class="col-8 text-center js-slave">
+                              <label for="radio-roofskeleton-1"><img class="radiobtns__img img-fluid" src="img/test-8.1.jpg" alt="Метал"></label>
+                              <div class="radiobtns">
+                                <input class="radiobtns__control" id="radio-roofskeleton-1" type="radio" name="roofskeleton[]" value="Метал">
+                                <label class="radiobtns__label" for="radio-roofskeleton-1"><span class="radiobtns__check">Метал</span></label>
+                              </div>
+                            </div>
+                            <div class="col-8 text-center js-slave">
+                              <label for="radio-roofskeleton-2"><img class="radiobtns__img img-fluid" src="img/test-8.2.jpg" alt="Дерево"></label>
+                              <div class="radiobtns">
+                                <input class="radiobtns__control" id="radio-roofskeleton-2" type="radio" name="roofskeleton[]" value="Дерево" checked>
+                                <label class="radiobtns__label" for="radio-roofskeleton-2"><span class="radiobtns__check">Дерево</span></label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="slides quiz__slides">
+                            <p class="slides__descr">Укажите нужную квадратуру, перемещая ползунок </p>
+                            <div class="slides__item">
+                              <input class="slides__control" id="range8" type="number" name="range8" value="150" min="10" max="1000" step="10">
+                              <div class="slides__range" id="control-range8" data-slides="range8"></div>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="tabs__item">
+                      <h3 class="quiz__heading">Укажите вид покрытия кровли</h3>
+                          <div class="progressbar">
+                            <div class="progressbar__status"><span class="progressbar__value">88%</span></div>
+                          </div>
+                          <div class="row">
+                            <div class="col-8 text-center js-slave">
+                              <label for="radio-roof-1"><img class="radiobtns__img img-fluid" src="img/test-9.1.jpg" alt="Металлочерепица"></label>
+                              <div class="radiobtns">
+                                <input class="radiobtns__control" id="radio-roof-1" type="radio" name="roof[]" value="Металлочерепица">
+                                <label class="radiobtns__label" for="radio-roof-1"><span class="radiobtns__check">Металлочерепица</span></label>
+                              </div>
+                            </div>
+                            <div class="col-8 text-center js-slave">
+                              <label for="radio-roof-2"><img class="radiobtns__img img-fluid" src="img/test-9.2.jpg" alt="Битумная черепица"></label>
+                              <div class="radiobtns">
+                                <input class="radiobtns__control" id="radio-roof-2" type="radio" name="roof[]" value="Битумная черепица" checked>
+                                <label class="radiobtns__label" for="radio-roof-2"><span class="radiobtns__check">Битумная черепица</span></label>
+                              </div>
+                            </div>
+                            <div class="col-8 text-center js-slave">
+                              <label for="radio-roof-3"><img class="radiobtns__img img-fluid" src="img/test-9.3.jpg" alt="Фальцевая кровля"></label>
+                              <div class="radiobtns">
+                                <input class="radiobtns__control" id="radio-roof-3" type="radio" name="roof[]" value="Фальцевая кровля">
+                                <label class="radiobtns__label" for="radio-roof-3"><span class="radiobtns__check">Фальцевая кровля</span></label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="slides quiz__slides">
+                            <p class="slides__descr">Укажите нужную квадратуру, перемещая ползунок </p>
+                            <div class="slides__item">
+                              <input class="slides__control" id="range9" type="number" name="range9" value="150" min="10" max="1000" step="10">
+                              <div class="slides__range" id="control-range9" data-slides="range9"></div>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="tabs__item">
+                      <h3 class="quiz__heading">Получите расчет сметы и ваш подарок</h3>
+                          <legend class="quiz__legend">
                             <div class="stamp"><i class="stamp__icon ic ic--stamp"></i><span class="stamp__text">Ваш подарок!</span></div>Получите эксклюзивную скидку на материалы и 10 лет гарантии!
                           </legend>
                           <fieldset class="form-group">
                             <input type="text" placeholder="Телефон" name="phone" required>
                           </fieldset>
                           <button class="button" type="submit">Заказать просчет сметы бесплатно</button>
-                          <p class="test__notify notify">Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с<a class="notify__link" href="#confidient">Политикой конфиденциальности</a>
+                          <p class="quiz__notify notify">Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с<a class="notify__link" href="#confidient">Политикой конфиденциальности</a>
                           </p>
                     </div>
                   </div>
                 </form>
               </div>
-              <div class="col-24 col-lg-6">
-                <div class="tabs test__tabs" data-tabs="test-tabs">
+              <div class="col-24 col-lg-8">
+                <div class="tabs quiz__tabs" data-tabs="test-tabs">
                   <div class="tabs__item tabs__item--active">
                     <div class="card">
                       <div class="card__head">
@@ -2070,7 +2124,7 @@
                           <div class="profile__col profile__col--right">
                             <div class="profile__name">Николай</div>
                             <div class="profile__descr">Эксперт по всем вопросам</div>
-                            <div class="tab-question">Вопрос <span class="tab-question__current">1</span> из <span class="tab-question__total">4</span>
+                            <div class="tab-question">Вопрос <span class="tab-question__current">1</span> из <span class="tab-question__total">9</span>
                             </div>
                           </div>
                         </div>
@@ -2080,8 +2134,8 @@
                       </div>
                       <div class="card__footer">
                             <div class="button-group text-center">
-                              <button class="button test__btn test__btn--next" data-tabs-control="next" data-tabs-toggle="test-tabs">
-                                <div class="test__btn--text">Далее</div>
+                              <button class="button quiz__btn test__btn--next" data-tabs-control="next" data-tabs-toggle="test-tabs">
+                                <div class="quiz__btn--text">Далее</div>
                               </button>
                             </div>
                       </div>
@@ -2095,7 +2149,7 @@
                           <div class="profile__col profile__col--right">
                             <div class="profile__name">Николай</div>
                             <div class="profile__descr">Эксперт по всем вопросам</div>
-                            <div class="tab-question">Вопрос <span class="tab-question__current">2</span> из <span class="tab-question__total">4</span>
+                            <div class="tab-question">Вопрос <span class="tab-question__current">2</span> из <span class="tab-question__total">9</span>
                             </div>
                           </div>
                         </div>
@@ -2105,10 +2159,10 @@
                       </div>
                       <div class="card__footer">
                             <div class="button-group text-center">
-                              <button class="button test__btn test__btn--next" data-tabs-control="next" data-tabs-toggle="test-tabs">
-                                <div class="test__btn--text">Далее</div>
-                              </button><a class="test__btn test__btn--prev test__btn--prev" href="#" data-tabs-control="prev" data-tabs-toggle="test-tabs">
-                                <div class="test__btn--text">Назад</div></a>
+                              <button class="button quiz__btn test__btn--next" data-tabs-control="next" data-tabs-toggle="test-tabs">
+                                <div class="quiz__btn--text">Далее</div>
+                              </button><a class="quiz__btn quiz__btn--prev test__btn--prev" href="#" data-tabs-control="prev" data-tabs-toggle="test-tabs">
+                                <div class="quiz__btn--text">Назад</div></a>
                             </div>
                       </div>
                     </div>
@@ -2121,7 +2175,7 @@
                           <div class="profile__col profile__col--right">
                             <div class="profile__name">Николай</div>
                             <div class="profile__descr">Эксперт по всем вопросам</div>
-                            <div class="tab-question">Вопрос <span class="tab-question__current">3</span> из <span class="tab-question__total">4</span>
+                            <div class="tab-question">Вопрос <span class="tab-question__current">3</span> из <span class="tab-question__total">9</span>
                             </div>
                           </div>
                         </div>
@@ -2131,13 +2185,171 @@
                       </div>
                       <div class="card__footer">
                             <div class="button-group text-center">
-                              <button class="button test__btn test__btn--next" data-tabs-control="next" data-tabs-toggle="test-tabs">
-                                <div class="test__btn--text">Далее</div>
-                              </button><a class="test__btn test__btn--prev test__btn--prev" href="#" data-tabs-control="prev" data-tabs-toggle="test-tabs">
-                                <div class="test__btn--text">Назад</div></a>
+                              <button class="button quiz__btn test__btn--next" data-tabs-control="next" data-tabs-toggle="test-tabs">
+                                <div class="quiz__btn--text">Далее</div>
+                              </button><a class="quiz__btn quiz__btn--prev test__btn--prev" href="#" data-tabs-control="prev" data-tabs-toggle="test-tabs">
+                                <div class="quiz__btn--text">Назад</div></a>
                             </div>
                       </div>
                     </div>
+                  </div>
+                  <div class="tabs__item">
+                    <div class="card">
+                      <div class="card__head">
+                        <div class="profile">
+                          <div class="profile__col profile__col--left"><img src="img/manager.jpg" alt="Николай"></div>
+                          <div class="profile__col profile__col--right">
+                            <div class="profile__name">Николай</div>
+                            <div class="profile__descr">Эксперт по всем вопросам</div>
+                            <div class="tab-question">Вопрос <span class="tab-question__current">4</span> из <span class="tab-question__total">9</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card__body">
+                        <p class="card__text">4.This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
+                      </div>
+                      <div class="card__footer">
+                            <div class="button-group text-center">
+                              <button class="button quiz__btn test__btn--next" data-tabs-control="next" data-tabs-toggle="test-tabs">
+                                <div class="quiz__btn--text">Далее</div>
+                              </button><a class="quiz__btn quiz__btn--prev test__btn--prev" href="#" data-tabs-control="prev" data-tabs-toggle="test-tabs">
+                                <div class="quiz__btn--text">Назад</div></a>
+                            </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tabs__item">
+                    <div class="card">
+                      <div class="card__head">
+                        <div class="profile">
+                          <div class="profile__col profile__col--left"><img src="img/manager.jpg" alt="Николай"></div>
+                          <div class="profile__col profile__col--right">
+                            <div class="profile__name">Николай</div>
+                            <div class="profile__descr">Эксперт по всем вопросам</div>
+                            <div class="tab-question">Вопрос <span class="tab-question__current">5</span> из <span class="tab-question__total">9</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card__body">
+                        <p class="card__text">5.This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
+                      </div>
+                      <div class="card__footer">
+                            <div class="button-group text-center">
+                              <button class="button quiz__btn test__btn--next" data-tabs-control="next" data-tabs-toggle="test-tabs">
+                                <div class="quiz__btn--text">Далее</div>
+                              </button><a class="quiz__btn quiz__btn--prev test__btn--prev" href="#" data-tabs-control="prev" data-tabs-toggle="test-tabs">
+                                <div class="quiz__btn--text">Назад</div></a>
+                            </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tabs__item">
+                    <div class="card">
+                      <div class="card__head">
+                        <div class="profile">
+                          <div class="profile__col profile__col--left"><img src="img/manager.jpg" alt="Николай"></div>
+                          <div class="profile__col profile__col--right">
+                            <div class="profile__name">Николай</div>
+                            <div class="profile__descr">Эксперт по всем вопросам</div>
+                            <div class="tab-question">Вопрос <span class="tab-question__current">6</span> из <span class="tab-question__total">9</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card__body">
+                        <p class="card__text">6.This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
+                      </div>
+                      <div class="card__footer">
+                            <div class="button-group text-center">
+                              <button class="button quiz__btn test__btn--next" data-tabs-control="next" data-tabs-toggle="test-tabs">
+                                <div class="quiz__btn--text">Далее</div>
+                              </button><a class="quiz__btn quiz__btn--prev test__btn--prev" href="#" data-tabs-control="prev" data-tabs-toggle="test-tabs">
+                                <div class="quiz__btn--text">Назад</div></a>
+                            </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tabs__item">
+                    <div class="card">
+                      <div class="card__head">
+                        <div class="profile">
+                          <div class="profile__col profile__col--left"><img src="img/manager.jpg" alt="Николай"></div>
+                          <div class="profile__col profile__col--right">
+                            <div class="profile__name">Николай</div>
+                            <div class="profile__descr">Эксперт по всем вопросам</div>
+                            <div class="tab-question">Вопрос <span class="tab-question__current">7</span> из <span class="tab-question__total">9</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card__body">
+                        <p class="card__text">7.This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
+                      </div>
+                      <div class="card__footer">
+                            <div class="button-group text-center">
+                              <button class="button quiz__btn test__btn--next" data-tabs-control="next" data-tabs-toggle="test-tabs">
+                                <div class="quiz__btn--text">Далее</div>
+                              </button><a class="quiz__btn quiz__btn--prev test__btn--prev" href="#" data-tabs-control="prev" data-tabs-toggle="test-tabs">
+                                <div class="quiz__btn--text">Назад</div></a>
+                            </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tabs__item">
+                    <div class="card">
+                      <div class="card__head">
+                        <div class="profile">
+                          <div class="profile__col profile__col--left"><img src="img/manager.jpg" alt="Николай"></div>
+                          <div class="profile__col profile__col--right">
+                            <div class="profile__name">Николай</div>
+                            <div class="profile__descr">Эксперт по всем вопросам</div>
+                            <div class="tab-question">Вопрос <span class="tab-question__current">8</span> из <span class="tab-question__total">9</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card__body">
+                        <p class="card__text">8.This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
+                      </div>
+                      <div class="card__footer">
+                            <div class="button-group text-center">
+                              <button class="button quiz__btn test__btn--next" data-tabs-control="next" data-tabs-toggle="test-tabs">
+                                <div class="quiz__btn--text">Далее</div>
+                              </button><a class="quiz__btn quiz__btn--prev test__btn--prev" href="#" data-tabs-control="prev" data-tabs-toggle="test-tabs">
+                                <div class="quiz__btn--text">Назад</div></a>
+                            </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tabs__item">
+                    <div class="card">
+                      <div class="card__head">
+                        <div class="profile">
+                          <div class="profile__col profile__col--left"><img src="img/manager.jpg" alt="Николай"></div>
+                          <div class="profile__col profile__col--right">
+                            <div class="profile__name">Николай</div>
+                            <div class="profile__descr">Эксперт по всем вопросам</div>
+                            <div class="tab-question">Вопрос <span class="tab-question__current">9</span> из <span class="tab-question__total">9</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card__body">
+                        <p class="card__text">9.This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
+                      </div>
+                      <div class="card__footer">
+                            <div class="button-group text-center">
+                              <button class="button quiz__btn test__btn--next" data-tabs-control="next" data-tabs-toggle="test-tabs">
+                                <div class="quiz__btn--text">Далее</div>
+                              </button><a class="quiz__btn quiz__btn--prev test__btn--prev" href="#" data-tabs-control="prev" data-tabs-toggle="test-tabs">
+                                <div class="quiz__btn--text">Назад</div></a>
+                            </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tabs__item"><i class="quiz__icon ic ic--contractor"></i>
                   </div>
                 </div>
               </div>
@@ -2170,6 +2382,9 @@
     <script src="js/jquery.mCustomScrollbar.js"></script>
     <!-- MaskedInput JavaScript-->
     <script src="js/jquery.maskedinput.js"></script>
+    <!-- NoUISlider JavaScript-->
+    <script src="js/wNumb.js"></script>
+    <script src="js/nouislider.js"></script>
     <!-- Custom JavaScript-->
     <script src="js/main.js"></script>
     <!-- endbuild-->

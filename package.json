@@ -67,10 +67,12 @@
     "jquery": "^3.2.1",
     "jquery-match-height": "^0.7.2",
     "malihu-custom-scrollbar-plugin": "^3.1.5",
+    "nouislider": "^10.1.0",
     "select2": "^4.0.3",
     "slick-carousel": "^1.7.1",
     "tether": "^1.4.0",
     "vue": "^2.4.4",
-    "vue-carousel-3d": "^0.1.18"
+    "vue-carousel-3d": "^0.1.18",
+    "wnumb": "^1.1.0"
   }
 }

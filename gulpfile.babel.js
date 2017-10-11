@@ -79,6 +79,8 @@ gulp.task('scripts', () => {
     'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
     'node_modules/jquery-match-height/jquery.matchHeight.js',
     'node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js',
+    'node_modules/nouislider/distribute/nouislider.js',
+    'node_modules/wnumb/wNumb.js',
     //'node_modules/onepage-scroll/jquery.onepage-scroll.js',
     //'node_modules/jquery.cookie/jquery.cookie.js',
     //'node_modules/bootstrap-slider/dist/bootstrap-slider.js',

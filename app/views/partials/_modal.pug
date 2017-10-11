@@ -227,10 +227,10 @@
         p.confident__text
           | 9.4. Действующая Политика конфиденциальности размещена на странице по адресу delovaya.com.ua
 
-- var test = content.site.modal.test1
+- var quiz = content.site.modal.test1
 mixin progressbar(i)
-  - var items = test.tabs.items.length
-  if ( i < items )
+  - var items = quiz.tabs.items.length
+  if ( i < items - 1 )
     .progressbar
       .progressbar__status
         span.progressbar__value!= ~~(100 / (items - 1) * i) + "%"
@@ -238,17 +238,22 @@ mixin navigate(item, toggle)
   if (item)
     .button-group.text-center
       if (item.next)
-        button.button.test__btn(class=item.next.class, data-tabs-control="next", data-tabs-toggle=toggle)
-          .test__btn--text!= item.next.text
+        button.button.quiz__btn(class=item.next.class, data-tabs-control="next", data-tabs-toggle=toggle)
+          .quiz__btn--text!= item.next.text
       if (item.prev)
-        a.test__btn.test__btn--prev(class=item.prev.class, href="#", data-tabs-control="prev", data-tabs-toggle=toggle)
-          .test__btn--text!= item.prev.text
+        a.quiz__btn.quiz__btn--prev(class=item.prev.class, href="#", data-tabs-control="prev", data-tabs-toggle=toggle)
+          .quiz__btn--text!= item.prev.text
 mixin range(item)
   if (item)
-    .slides
-      p.slides__info.info!= item.info.text
+    .slides.quiz__slides
+      p.slides__descr!= item.descr
       .slides__item
-        input.slides__control(id=item.id, type="text", name=item.name)
+        input.slides__control(id=item.id, type="number", name=item.name,  value=item.start, min=item.min, max=item.max, step=item.step)
+        .slides__range(id="control-" + item.id, data-slides=item.id)
+      if (item.info)
+        p.slides__info.info
+          i.info__icon(class=item.info.icon)
+          != item.info.text
 mixin radiobtns(item)
   if (item)
     .row
@@ -256,7 +261,7 @@ mixin radiobtns(item)
         - var id = "radio-" + item.id + "-" + (i + 1)
         - var dependence = (radio.dependence) ? radio.dependence : undefined
         - var slave = (radio.slave) ? radio.slave : undefined
-        - var checked = (i === 0) ? true : undefined
+        - var checked = (i === 1) ? true : undefined
         .col-8.text-center.js-slave
           label(for=id)
             img.radiobtns__img.img-fluid(src=radio.img.src, alt=radio.img.alt)
@@ -266,7 +271,7 @@ mixin radiobtns(item)
               span.radiobtns__check!= radio.value 
 mixin submit(form)
   if (form)
-    legend.test__legend
+    legend.quiz__legend
       .stamp
         i.stamp__icon(class=form.head.icon)
         span.stamp__text!= form.head.text
@@ -276,7 +281,7 @@ mixin submit(form)
       fieldset.form-group
         input(type=item.type, placeholder=item.placeholder, name=item.name, required=required)
     button.button(type="submit")!= form.submit.text
-    p.test__notify.notify!= form.notify.text
+    p.quiz__notify.notify!= form.notify.text
       - var link = form.notify.link
       a.notify__link(href=link.href)!= link.text
 
@@ -286,47 +291,50 @@ mixin submit(form)
       button.close.modal__close(type='button', data-dismiss='modal', aria-hidden='true')
         svg(xmlns='http://www.w3.org/2000/svg', width='30', height='30', viewbox='0 0 30 30')
           path.modal__close--icon(d='M1199.01,185.281l-0.72.732L1184,171.37l-14.29,14.643-0.72-.732,14.3-14.644-13.58-13.911,0.71-.732L1184,169.905l13.58-13.911,0.71,0.732-13.58,13.911Z', transform='translate(-1169 -156)')
-      .test
+      .quiz
         .row.justify-content-center.align-items-stretch
           .col-24
-            h2.sub-heading.modal__heading!= test.heading
-          .col-24.col-lg-18
+            h2.sub-heading.modal__heading!= quiz.heading
+          .col-24.col-lg-16
             form.contactForm(method="POST", action="mail/mail.php")
-              .tabs.test__tabs(data-tabs=test.tabs.id)
-                each item, i in test.tabs.items
+              .tabs.quiz__tabs(data-tabs=quiz.tabs.id)
+                each item, i in quiz.tabs.items
                   .tabs__item(class={"tabs__item--active" : i === 0})
-                    h3.test__heading!= item.heading
+                    h3.quiz__heading!= item.heading
                     if (item.desr)
-                      p.test__descr!= item.descr
+                      p.quiz__descr!= item.descr
                     +progressbar(i)
-                    +range(item.range)
-                    if (item.descr)
-                      .tabs__text!= item.descr
                     +radiobtns(item.radiobtns) 
+                    +range(item.range)
                     +submit(item.formGroup)    
-          .col-24.col-lg-6
-            .tabs.test__tabs(data-tabs=test.tabs.id)
-              each item, i in test.tabs.items
-                if ( i < test.tabs.items.length - 1)
+          .col-24.col-lg-8
+            .tabs.quiz__tabs(data-tabs=quiz.tabs.id)
+              each item, i in quiz.tabs.items
+                if ( i < quiz.tabs.items.length - 1)
                   .tabs__item(class={"tabs__item--active" : i === 0})
-                    .card
-                      - var card = test.card
-                      .card__head
-                        - var profile = card.profile
-                        .profile
-                          .profile__col.profile__col--left
-                            img(src=profile.img.src, alt=profile.img.alt)
-                          .profile__col.profile__col--right
-                            .profile__name!= profile.name
-                            .profile__descr!= profile.descr
-                            .tab-question
-                              != card.question.text
-                              span.tab-question__current!= (i + 1)
-                              != card.question.delimeter
-                              span.tab-question__total!= test.tabs.items.length
-                      .card__body
-                        each text in card.items[i].text
-                          p.card__text!= text
-                      .card__footer
-                        +navigate(item.btns, test.tabs.id)
+                    if (quiz.card)
+                      - var card = quiz.card
+                      .card
+                        .card__head
+                          - var profile = card.profile
+                          .profile
+                            .profile__col.profile__col--left
+                              img(src=profile.img.src, alt=profile.img.alt)
+                            .profile__col.profile__col--right
+                              .profile__name!= profile.name
+                              .profile__descr!= profile.descr
+                              .tab-question
+                                != card.question.text
+                                span.tab-question__current!= (i + 1)
+                                != card.question.delimeter
+                                span.tab-question__total!= quiz.tabs.items.length - 1
+                        .card__body
+                          each text in card.items[i].text
+                            p.card__text!= text
+                        .card__footer
+                          +navigate(item.btns, quiz.tabs.id)
+                else
+                  .tabs__item(class={"tabs__item--active" : i === 0})
+                    if (item.icon)
+                      i.quiz__icon(class=item.icon)
 
