@@ -1851,7 +1851,7 @@
                 <h2 class="quiz__heading heading heading--border">Узнайте стоимость вашего проекта</h2>
               </div>
               <div class="col-24 col-lg-15">
-                <form class="contactForm" method="POST" action="mail/mail.php">
+                <form class="contactForm form" method="POST" action="mail/mail.php">
                   <div class="tabs quiz__tabs" data-tabs="test-tabs">
                     <div class="tabs__item tabs__item--active">
                       <h3 class="quiz__sub-heading">Выберите тип фундамента</h3>
@@ -2134,14 +2134,15 @@
                     </div>
                     <div class="tabs__item">
                       <h3 class="quiz__sub-heading">Получите расчет сметы и ваш подарок</h3>
+                      <p class="quiz__descr">В ближайшее время мы сделаем расчет возможной стоимости вашего проекта исходя из ваших ответов. Укажите ваш номер телефона, чтобы мы могли сообщить вам стоимость работ.</p>
                           <legend class="quiz__legend">
-                            <div class="stamp"><i class="stamp__icon ic ic--stamp"></i><span class="stamp__text">Ваш подарок!</span></div>Получите эксклюзивную скидку на материалы и 10 лет гарантии!
+                            <div class="stamp quiz__stamp"><i class="stamp__icon ic ic--stamp"></i><span class="stamp__text">Ваш подарок!</span></div>Получите эксклюзивную скидку <br/>на материалы и 10 лет гарантии!
                           </legend>
                           <fieldset class="form-group">
-                            <input type="text" placeholder="Телефон" name="phone" required>
+                            <input class="form-control form__input form__input--phone form__input--wide" type="text" placeholder="Введите ваш номер телефона" name="phone" required>
                           </fieldset>
-                          <button class="button" type="submit">Заказать просчет сметы бесплатно</button>
-                          <p class="quiz__notify notify">Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с<a class="notify__link" href="#confidient">Политикой конфиденциальности</a>
+                          <button class="button button--size quiz__submit" type="submit">Заказать просчет сметы бесплатно</button>
+                          <p class="quiz__notify notify">Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с <a class="notify__link" href="#confidient">Политикой конфиденциальности</a>
                           </p>
                     </div>
                   </div>
@@ -2356,7 +2357,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="tabs__item"><i class="quiz__icon ic ic--contractor"></i>
+                  <div class="tabs__item"><i class="quiz__icon hidden-lg-down ic ic--contractor"></i>
                   </div>
                 </div>
               </div>

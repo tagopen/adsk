@@ -2349,7 +2349,7 @@ li.fancybox-thumbs-loading {
 /* form */
 .text-danger {
   color: #b94a48;
-  text-align: left;
+  text-align: leftf;
 }
 
 .form-group.error .form-control {
@@ -4007,6 +4007,10 @@ button:active {
   color: #2d2d2d;
 }
 
+.form__input--wide {
+  padding: 20px;
+}
+
 .input__heading {
   color: #2d2d2d;
   font: 400 16px/18px "Constantia", sans-serif;
@@ -4823,7 +4827,14 @@ input:checked + .round:before {
 /* Q U I Z    S T Y L E                     */
 /* ---------------------------------------- */
 .quiz {
+  position: relative;
   padding: 48px 30px 88px 62px;
+}
+
+.quiz__icon {
+  position: fixed;
+  right: 20px;
+  bottom: 0;
 }
 
 .quiz__heading {
@@ -4833,6 +4844,12 @@ input:checked + .round:before {
   text-transform: none;
   text-align: left;
   margin-left: -35px;
+}
+
+.quiz__descr {
+  margin-bottom: 24px;
+  font: 400 18px/27px "Constantia", sans-serif;
+  color: #2d2d2d;
 }
 
 .quiz__sub-heading {
@@ -4856,6 +4873,24 @@ input:checked + .round:before {
 .quiz__btn--prev:hover, .quiz__btn--prev:focus {
   text-decoration: none;
   color: #c00013;
+}
+
+.quiz__submit {
+  margin-bottom: 20px;
+}
+
+.quiz__legend {
+  position: relative;
+  margin-bottom: 24px;
+  padding: 32px 0 0 47px;
+  font: 400 20px/27px "Constantia", sans-serif;
+  color: #2d2d2d;
+}
+
+.quiz__stamp {
+  position: absolute;
+  top: -27px;
+  left: -57px;
 }
 
 .progressbar {
@@ -5062,4 +5097,39 @@ input:checked + .round:before {
 
 .noUi-marker {
   display: none;
+}
+
+.notify {
+  font: 400 12px/18px "Constantia", sans-serif;
+  color: #a0a0a0;
+  text-align: center;
+}
+
+.notify__link {
+  font: inherit;
+  color: inherit;
+  text-decoration: underline;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+.notify__link:hover, .notify__link:focus {
+  color: #c00013;
+}
+
+.stamp__icon {
+  position: relative;
+  z-index: 3;
+}
+
+.stamp__text {
+  position: absolute;
+  left: 79px;
+  top: 26px;
+  display: inline-block;
+  padding: 0 5px 0 25px;
+  background-color: #24a9e1;
+  font: 700 18px/24px "Constantia", sans-serif;
+  color: #fff;
+  white-space: nowrap;
 }

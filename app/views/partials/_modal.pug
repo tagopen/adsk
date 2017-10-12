@@ -271,15 +271,15 @@ mixin radiobtns(item)
 mixin submit(form)
   if (form)
     legend.quiz__legend
-      .stamp
+      .stamp.quiz__stamp
         i.stamp__icon(class=form.head.icon)
         span.stamp__text!= form.head.text
       != form.head.descr
     each item in form.inputs
       - var required = (item.required !== undefined) ? true : undefined
       fieldset.form-group
-        input(type=item.type, placeholder=item.placeholder, name=item.name, required=required)
-    button.button(type="submit")!= form.submit.text
+        input.form-control.form__input.form__input--phone.form__input--wide(type=item.type, placeholder=item.placeholder, name=item.name, required=required)
+    button.button.button--size.quiz__submit(type="submit")!= form.submit.text
     p.quiz__notify.notify!= form.notify.text
       - var link = form.notify.link
       a.notify__link(href=link.href)!= link.text
@@ -295,12 +295,12 @@ mixin submit(form)
           .col-24
             h2.quiz__heading.heading.heading--border!= quiz.heading
           .col-24.col-lg-15
-            form.contactForm(method="POST", action="mail/mail.php")
+            form.contactForm.form(method="POST", action="mail/mail.php")
               .tabs.quiz__tabs(data-tabs=quiz.tabs.id)
                 each item, i in quiz.tabs.items
                   .tabs__item(class={"tabs__item--active" : i === 0})
                     h3.quiz__sub-heading!= item.heading
-                    if (item.desr)
+                    if (item.descr)
                       p.quiz__descr!= item.descr
                     +progressbar(i)
                     +radiobtns(item.radiobtns) 
@@ -335,5 +335,5 @@ mixin submit(form)
                 else
                   .tabs__item(class={"tabs__item--active" : i === 0})
                     if (item.icon)
-                      i.quiz__icon(class=item.icon)
+                      i.quiz__icon.hidden-lg-down(class=item.icon)
 

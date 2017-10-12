@@ -7,7 +7,7 @@
 +cm('form')
 .text-danger
   color: $text-danger
-  text-align: left
+  text-align: leftf
 .form-group.error
   .form-control
     border-color: $form-control-error-border-color
@@ -176,6 +176,7 @@ button
     width: 100%
   &__ic
     margin-right: 12px
+
 +r(760)
   .button
     white-space: nowrap  
@@ -1104,6 +1105,8 @@ button
     +placeholder
       font: 700 16px/18px $font-constantia
       color: $main-color 
+    &--wide
+      padding: 20px
 .input
   &__heading
     color: $main-color 
@@ -1622,7 +1625,12 @@ input:checked
       width: 1000px          
 +comment('quiz style')
 .quiz
+  position: relative
   padding: 48px 30px 88px 62px
+  &__icon
+    position: fixed
+    right: 20px
+    bottom: 0
   &__heading
     margin-bottom: 36px
     font: 400 28px/32px $font-constantia
@@ -1630,6 +1638,10 @@ input:checked
     text-transform: none
     text-align: left
     margin-left: -35px
+  &__descr
+    margin-bottom: 24px
+    font: 400 18px/27px $font-constantia
+    color: #2d2d2d
   &__sub-heading
     margin-bottom: 15px
     font: 700 30px/32px $font-constantia
@@ -1646,6 +1658,18 @@ input:checked
       &:focus
         text-decoration: none
         color: #c00013
+  &__submit
+    margin-bottom: 20px
+  &__legend
+    position: relative
+    margin-bottom: 24px
+    padding: 32px 0 0 47px
+    font: 400 20px/27px $font-constantia 
+    color: #2d2d2d
+  &__stamp
+    position: absolute
+    top: -27px
+    left: -57px
 .progressbar
   margin-bottom: 20px
   background-color: rgba(45, 45, 45, .1)
@@ -1728,6 +1752,7 @@ input:checked
       vertical-align: top
       margin-right: 3px
       margin-top: 2px
+
 .noUi
   &-target
     background: #d2d2d2
@@ -1765,3 +1790,33 @@ input:checked
     color: $main-color  
   &-marker
     display: none  
+.notify
+  font: 400 12px/18px $font-constantia
+  color: #a0a0a0
+  text-align: center
+  &__link
+    font: inherit
+    color: inherit
+    text-decoration: underline
+    transition: all .3s ease-out
+    &:hover,
+    &:focus
+      color: rgb(192, 0, 19)
+.stamp
+  &__icon
+    position: relative
+    z-index: 3
+  &__text
+    position: absolute
+    left: 79px
+    top: 26px
+    display: inline-block
+    padding: 0 5px 0 25px
+    background-color: #24a9e1
+    font: 700 18px/24px $font-constantia
+    color: #fff
+    white-space: nowrap
+
+
+
+
