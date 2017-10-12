@@ -2157,25 +2157,25 @@ li.fancybox-thumbs-loading {
 .ic--contact-1:before {
   width: 12px;
   height: 12px;
-  background: url(../img/sprite.png) -928px -340px no-repeat;
+  background: url(../img/sprite.png) -950px -340px no-repeat;
 }
 
 .ic--contact-2:before {
   width: 12px;
   height: 12px;
-  background: url(../img/sprite.png) -906px -340px no-repeat;
+  background: url(../img/sprite.png) -928px -340px no-repeat;
 }
 
 .ic--contact-3:before {
   width: 11px;
   height: 9px;
-  background: url(../img/sprite.png) -969px -340px no-repeat;
+  background: url(../img/sprite.png) -991px -340px no-repeat;
 }
 
 .ic--contact-4:before {
   width: 9px;
   height: 12px;
-  background: url(../img/sprite.png) -950px -340px no-repeat;
+  background: url(../img/sprite.png) -972px -340px no-repeat;
 }
 
 .ic--contractor:before {
@@ -2206,6 +2206,12 @@ li.fancybox-thumbs-loading {
   width: 21px;
   height: 24px;
   background: url(../img/sprite.png) -990px -282px no-repeat;
+}
+
+.ic--info:before {
+  width: 12px;
+  height: 12px;
+  background: url(../img/sprite.png) -906px -340px no-repeat;
 }
 
 .ic--list:before {
@@ -3859,6 +3865,7 @@ button:active {
 }
 
 .cost__box {
+  position: relative;
   padding: 35px 15px;
   background-color: #FFF;
   -webkit-border-radius: 5px;
@@ -3866,6 +3873,21 @@ button:active {
   -webkit-box-shadow: 0 5px 18px rgba(52, 60, 59, 0.15);
           box-shadow: 0 5px 18px rgba(52, 60, 59, 0.15);
   margin: 0 -15px;
+}
+
+.cost__bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  top: 50%;
+  margin-top: -360px;
+  width: 100%;
+  text-align: center;
+  z-index: 30;
+}
+
+.cost__bg img {
+  display: inline-block;
 }
 
 .cost__title {
@@ -3937,6 +3959,9 @@ button:active {
     position: absolute;
     left: -145px;
     top: -25px;
+  }
+  .cost__bg {
+    margin-top: -220px;
   }
 }
 
@@ -4137,16 +4162,6 @@ input:checked + .round:before {
 .exp__text {
   font: 400 20px/27px "Constantia", sans-serif;
   color: #c00013;
-}
-
-.exp__image {
-  margin-top: -10px;
-}
-
-@media only screen and (min-width: 760px) {
-  .exp__image {
-    margin-top: -25px;
-  }
 }
 
 /* ---------------------------------------- */
@@ -4737,13 +4752,6 @@ input:checked + .round:before {
 /* ---------------------------------------- */
 /* M O D A L S    S T Y L E                 */
 /* ---------------------------------------- */
-.modal__size {
-  max-width: none;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .tabs__item {
   position: relative;
   display: none;
@@ -4789,8 +4797,24 @@ input:checked + .round:before {
   display: none;
 }
 
+.modal__contento {
+  background-color: whitesmoke;
+  -webkit-box-shadow: 0 0 100px rgba(36, 169, 224, 0.3);
+          box-shadow: 0 0 100px rgba(36, 169, 224, 0.3);
+  -webkit-border-radius: 0;
+          border-radius: 0;
+  border: 0;
+}
+
+.modal__large {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: none;
+  width: 100%;
+}
+
 @media only screen and (min-width: 1024px) {
-  .modal__size {
+  .modal__large {
     width: 1000px;
   }
 }
@@ -4799,7 +4823,7 @@ input:checked + .round:before {
 /* Q U I Z    S T Y L E                     */
 /* ---------------------------------------- */
 .quiz {
-  padding: 48px 64px;
+  padding: 48px 30px 88px 62px;
 }
 
 .quiz__heading {
@@ -4808,6 +4832,7 @@ input:checked + .round:before {
   color: #2d2d2d;
   text-transform: none;
   text-align: left;
+  margin-left: -35px;
 }
 
 .quiz__sub-heading {
@@ -4819,6 +4844,18 @@ input:checked + .round:before {
 .quiz__btn {
   min-width: 0;
   width: 100%;
+}
+
+.quiz__btn--prev {
+  font: 400 14px/16px "Constantia", sans-serif;
+  color: #2d2d2d;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.quiz__btn--prev:hover, .quiz__btn--prev:focus {
+  text-decoration: none;
+  color: #c00013;
 }
 
 .progressbar {
@@ -4861,6 +4898,9 @@ input:checked + .round:before {
           flex-wrap: wrap;
   padding: 33px;
   background-color: #fff;
+  border: 0;
+  -webkit-border-radius: 0;
+          border-radius: 0;
 }
 
 .card__head {
@@ -4892,9 +4932,17 @@ input:checked + .round:before {
       -ms-flex: 0 0 100%;
           flex: 0 0 100%;
   max-width: 100%;
-  -webkit-align-self: flex-end;
-      -ms-flex-item-align: end;
-          align-self: flex-end;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+              -ms-grid-row-align: center;
+          align-self: center;
+  width: 180px;
+}
+
+.card__text {
+  font: 400 16px/21px "Constantia", sans-serif;
+  color: #2d2d2d;
+  margin-bottom: 80px;
 }
 
 .profile {
@@ -4907,6 +4955,7 @@ input:checked + .round:before {
   -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
+  margin-bottom: 40px;
 }
 
 .profile__col--left {
@@ -4914,4 +4963,103 @@ input:checked + .round:before {
   -webkit-flex: 1 0 auto;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
+  padding-right: 20px;
+}
+
+.profile__name {
+  font: 700 20px/22px "Constantia", sans-serif;
+  color: #2d2d2d;
+  margin-bottom: 6px;
+}
+
+.profile__descr {
+  font: 400 14px/16px "Constantia", sans-serif;
+  color: #2d2d2d;
+  margin-bottom: 10px;
+}
+
+.tab-question {
+  font: 400 14px/16px "Constantia", sans-serif;
+  color: #d2d2d2;
+}
+
+.js-box {
+  border: 1px solid #e5e5e5;
+  background-color: #FFF;
+  padding-bottom: 15px;
+}
+
+.slides {
+  padding-top: 15px;
+}
+
+.slides__descr {
+  font: 400 20px/20px "Constantia", sans-serif;
+  color: #2d2d2d;
+  margin-bottom: 25px;
+}
+
+.slides__info {
+  font: 400 italic 14px/16px "Constantia", sans-serif;
+  color: #2d2d2d;
+  padding-top: 60px;
+}
+
+.slides__info .ic {
+  vertical-align: top;
+  margin-right: 3px;
+  margin-top: 2px;
+}
+
+.noUi-target {
+  background: #d2d2d2;
+  border: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-border-radius: 0;
+          border-radius: 0;
+}
+
+.noUi-horizontal {
+  height: 3px;
+}
+
+.noUi-handle {
+  top: -10px;
+  width: 0;
+  height: 0;
+  border: 0;
+  border-left: 16px solid transparent;
+  border-right: 16px solid transparent;
+  border-top: 22px solid #24a9e1;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  cursor: pointer;
+}
+
+.noUi-handle:before, .noUi-handle:after {
+  content: none;
+}
+
+.noUi-tooltip {
+  bottom: auto !important;
+  top: 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  -webkit-border-radius: 0;
+          border-radius: 0;
+  height: auto;
+  font: 400 16px/18px "Constantia", sans-serif;
+  color: #2d2d2d;
+}
+
+.noUi-value {
+  font: 400 16px/18px "Constantia", sans-serif;
+  color: #2d2d2d;
+}
+
+.noUi-marker {
+  display: none;
 }

@@ -1014,11 +1014,23 @@ button
   margin-top: -1px
   background: #fff
   &__box
+    position: relative
     padding: 35px 15px
     background-color: #FFF
     border-radius: 5px
     box-shadow: 0 5px 18px rgba(52, 60, 59, 0.15) 
     margin: 0 -15px  
+  &__bg
+    position: absolute
+    left: 0
+    top: 0
+    top: 50%
+    margin-top: -360px
+    width: 100%
+    text-align: center
+    z-index: 30
+    img
+      display: inline-block  
   &__title   
     color: $main-color
     font: 700 20px/30px $font-constantia
@@ -1070,6 +1082,8 @@ button
         position: absolute
         left: -145px
         top: -25px  
+    &__bg
+      margin-top: -220px    
 +r(1200)
   .cost     
     &__image
@@ -1195,13 +1209,7 @@ input:checked
       font: 700 72px/72px $font-trajan
   &__text
     font: 400 20px/27px $font-constantia
-    color: #c00013
-  &__image
-    margin-top: -10px
-+r(760)
-  .exp
-    &__image
-      margin-top: -25px    
+    color: #c00013    
 +comment("team style")     
 .team
   position: relative
@@ -1570,12 +1578,6 @@ input:checked
       font: 700 28px/40px $font-constantia
       text-align: left
 +comment("modals style")
-.modal
-  &__size
-    max-width: none
-    width: 100%
-    margin-left: auto
-    margin-right: auto
 .tabs
   &__item
     position: relative
@@ -1603,20 +1605,31 @@ input:checked
 .radio-group
   &--hidden
     display: none
+.modal
+  &__contento
+    background-color: whitesmoke
+    box-shadow: 0 0 100px rgba(36, 169, 224, 0.3)
+    border-radius: 0
+    border: 0
+  &__large
+    margin-left: auto
+    margin-right: auto
+    max-width: none
+    width: 100%
 +r(1024)
   .modal
-    &__size
-      width: 1000px      
-
+    &__large
+      width: 1000px          
 +comment('quiz style')
 .quiz
-  padding: 48px 64px
+  padding: 48px 30px 88px 62px
   &__heading
     margin-bottom: 36px
     font: 400 28px/32px $font-constantia
-    color: #2d2d2d
+    color: $main-color
     text-transform: none
     text-align: left
+    margin-left: -35px
   &__sub-heading
     margin-bottom: 15px
     font: 700 30px/32px $font-constantia
@@ -1624,6 +1637,15 @@ input:checked
   &__btn
     min-width: 0
     width: 100%
+    &--prev
+      font: 400 14px/16px $font-constantia 
+      color: $main-color
+      text-transform: uppercase
+      text-decoration: none
+      &:hover,
+      &:focus
+        text-decoration: none
+        color: #c00013
 .progressbar
   margin-bottom: 20px
   background-color: rgba(45, 45, 45, .1)
@@ -1649,6 +1671,8 @@ input:checked
   flex-wrap: wrap
   padding: 33px
   background-color: #fff
+  border: 0
+  border-radius: 0
   &__head
     flex: 0 0 100%
     max-width: 100%
@@ -1660,10 +1684,84 @@ input:checked
   &__footer
     flex: 0 0 100%
     max-width: 100%
-    align-self: flex-end
+    align-self: center
+    width: 180px
+  &__text  
+    font: 400 16px/21px $font-constantia
+    color: $main-color  
+    margin-bottom: 80px
 .profile
   display: flex
   flex-direction: row
+  margin-bottom: 40px
   &__col
     &--left
       flex: 1 0 auto
+      padding-right: 20px
+  &__name
+    font: 700 20px/22px $font-constantia
+    color: $main-color   
+    margin-bottom: 6px
+  &__descr 
+    font: 400 14px/16px $font-constantia
+    color: $main-color    
+    margin-bottom: 10px
+.tab
+  &-question
+    font: 400 14px/16px $font-constantia
+    color: #d2d2d2 
+.js-box
+  border: 1px solid #e5e5e5
+  background-color: #FFF
+  padding-bottom: 15px      
+.slides
+  padding-top: 15px
+  &__descr
+    font: 400 20px/20px $font-constantia
+    color: $main-color  
+    margin-bottom: 25px
+  &__info   
+    font: 400 italic 14px/16px $font-constantia
+    color: $main-color     
+    padding-top: 60px
+    .ic
+      vertical-align: top
+      margin-right: 3px
+      margin-top: 2px
+.noUi
+  &-target
+    background: #d2d2d2
+    border: 0
+    box-shadow: none
+    border-radius: 0
+  &-horizontal
+    height: 3px
+  &-handle
+    top: -10px
+    width: 0
+    height: 0
+    border: 0
+    border-left: 16px solid transparent
+    border-right: 16px solid transparent
+    border-top: 22px solid #24a9e1  
+    background-color: transparent
+    box-shadow: none
+    cursor: pointer
+    &:before,
+    &:after
+      content: none
+  &-tooltip
+    bottom: auto !important
+    top: 0   
+    padding: 0
+    background: transparent
+    border: 0
+    border-radius: 0
+    height: auto
+    font: 400 16px/18px $font-constantia
+    color: $main-color  
+  &-value  
+    font: 400 16px/18px $font-constantia
+    color: $main-color  
+  &-marker
+    display: none  

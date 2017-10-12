@@ -238,7 +238,7 @@ mixin navigate(item, toggle)
   if (item)
     .button-group.text-center
       if (item.next)
-        button.button.quiz__btn(class=item.next.class, data-tabs-control="next", data-tabs-toggle=toggle)!= item.next.text
+        button.btn.button.quiz__btn(class=item.next.class, data-tabs-control="next", data-tabs-toggle=toggle)!= item.next.text
       if (item.prev)
         a.quiz__btn.quiz__btn--prev(class=item.prev.class, href="#", data-tabs-control="prev", data-tabs-toggle=toggle)!= item.prev.text
 mixin range(item)
@@ -261,12 +261,13 @@ mixin radiobtns(item)
         - var slave = (radio.slave) ? radio.slave : undefined
         - var checked = (i === 1) ? true : undefined
         .col-8.text-center.js-slave
-          label(for=id)
-            img.radiobtns__img.img-fluid(src=radio.img.src, alt=radio.img.alt)
-          .radiobtns
-            input.radiobtns__control(id=id, type="radio", name=item.name, value=radio.value, data-dependence=dependence, data-slave=slave, checked=checked)
-            label.radiobtns__label(for=id)
-              span.radiobtns__check!= radio.value 
+          .js-box
+            label(for=id)
+              img.radiobtns__img.img-fluid(src=radio.img.src, alt=radio.img.alt)
+            .radiobtns
+              input.radiobtns__control(id=id, type="radio", name=item.name, value=radio.value, data-dependence=dependence, data-slave=slave, checked=checked)
+              label.radiobtns__label(for=id)
+                span.radiobtns__check!= radio.value 
 mixin submit(form)
   if (form)
     legend.quiz__legend
@@ -284,8 +285,8 @@ mixin submit(form)
       a.notify__link(href=link.href)!= link.text
 
 #test__modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myLargeModalLabel', aria-hidden='true')
-  .modal-dialog.modal__size
-    .modal-content
+  .modal-dialog.modal__large
+    .modal-content.modal__contento
       button.close.modal__close(type='button', data-dismiss='modal', aria-hidden='true')
         svg(xmlns='http://www.w3.org/2000/svg', width='30', height='30', viewbox='0 0 30 30')
           path.modal__close--icon(d='M1199.01,185.281l-0.72.732L1184,171.37l-14.29,14.643-0.72-.732,14.3-14.644-13.58-13.911,0.71-.732L1184,169.905l13.58-13.911,0.71,0.732-13.58,13.911Z', transform='translate(-1169 -156)')
@@ -293,7 +294,7 @@ mixin submit(form)
         .row.justify-content-center.align-items-stretch
           .col-24
             h2.quiz__heading.heading.heading--border!= quiz.heading
-          .col-24.col-lg-16
+          .col-24.col-lg-15
             form.contactForm(method="POST", action="mail/mail.php")
               .tabs.quiz__tabs(data-tabs=quiz.tabs.id)
                 each item, i in quiz.tabs.items
@@ -305,7 +306,7 @@ mixin submit(form)
                     +radiobtns(item.radiobtns) 
                     +range(item.range)
                     +submit(item.formGroup)    
-          .col-24.col-lg-8
+          .col-24.col-lg-9
             .tabs.quiz__tabs(data-tabs=quiz.tabs.id)
               each item, i in quiz.tabs.items
                 if ( i < quiz.tabs.items.length - 1)
