@@ -254,7 +254,7 @@ mixin range(item)
           != item.info.text
 mixin radiobtns(item)
   if (item)
-    .row
+    .row.align-items-stretch
       each radio, i in item.items
         - var id = "radio-" + item.id + "-" + (i + 1)
         - var dependence = (radio.dependence) ? radio.dependence : undefined
@@ -279,10 +279,10 @@ mixin submit(form)
       - var required = (item.required !== undefined) ? true : undefined
       fieldset.form-group
         input.form-control.form__input.form__input--phone.form__input--wide(type=item.type, placeholder=item.placeholder, name=item.name, required=required)
-    button.button.button--size.quiz__submit(type="submit")!= form.submit.text
+    button.btn.button.button--size.quiz__submit(type="submit")!= form.submit.text
     p.quiz__notify.notify!= form.notify.text
       - var link = form.notify.link
-      a.notify__link(href=link.href)!= link.text
+      a.notify__link(href=link.href, data-toggle="modal")!= link.text
 
 #test__modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myLargeModalLabel', aria-hidden='true')
   .modal-dialog.modal__large
@@ -298,7 +298,7 @@ mixin submit(form)
             form.contactForm.form(method="POST", action="mail/mail.php")
               .tabs.quiz__tabs(data-tabs=quiz.tabs.id)
                 each item, i in quiz.tabs.items
-                  .tabs__item(class={"tabs__item--active" : i === 0})
+                  .tabs__item(class={"tabs__item--active" : i === 0}, data-mh="tabs")
                     h3.quiz__sub-heading!= item.heading
                     if (item.descr)
                       p.quiz__descr!= item.descr
