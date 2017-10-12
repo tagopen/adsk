@@ -1849,41 +1849,35 @@
             <div class="row justify-content-center align-items-stretch">
               <div class="col-24">
                 <h2 class="quiz__heading heading heading--border">Узнайте стоимость вашего проекта</h2>
+                    <div class="progressbar" id="progressbar-1">
+                      <div class="progressbar__status"><span class="progressbar__value">0%</span></div>
+                    </div>
               </div>
               <div class="col-24 col-lg-15">
                 <form class="contactForm form" method="POST" action="mail/mail.php">
                   <div class="tabs quiz__tabs" data-tabs="test-tabs">
                     <div class="tabs__item tabs__item--active" data-mh="tabs">
                       <h3 class="quiz__sub-heading">Выберите тип фундамента</h3>
-                          <div class="progressbar">
-                            <div class="progressbar__status"><span class="progressbar__value">0%</span></div>
-                          </div>
-                          <div class="row align-items-stretch">
-                            <div class="col-8 text-center js-slave">
-                              <div class="js-box">
-                                <label for="radio-foundation-1"><img class="radiobtns__img img-fluid" src="img/test-1.1.jpg" alt="Ленточный"></label>
-                                <div class="radiobtns">
-                                  <input class="radiobtns__control" id="radio-foundation-1" type="radio" name="foundation[]" value="Ленточный из ФСБ блоков" data-dependence="item-1">
-                                  <label class="radiobtns__label" for="radio-foundation-1"><span class="radiobtns__check">Ленточный из ФСБ блоков</span></label>
-                                </div>
+                          <div class="radio">
+                            <div class="radio__box">
+                              <label class="radio__photo" for="radio-foundation-1"><img class="radiobtns__img img-fluid" src="img/test-1.1.jpg" alt="Ленточный"></label>
+                              <div class="radiobtns radio__group">
+                                <input class="radiobtns__control" id="radio-foundation-1" type="radio" name="foundation[]" value="Ленточный из ФСБ блоков" data-dependence="item-1">
+                                <label class="radiobtns__label" for="radio-foundation-1"><span class="radiobtns__check">Ленточный из ФСБ блоков</span></label>
                               </div>
                             </div>
-                            <div class="col-8 text-center js-slave">
-                              <div class="js-box">
-                                <label for="radio-foundation-2"><img class="radiobtns__img img-fluid" src="img/test-1.2.jpg" alt="Геошурупы"></label>
-                                <div class="radiobtns">
-                                  <input class="radiobtns__control" id="radio-foundation-2" type="radio" name="foundation[]" value="Геошурупы" data-dependence="item-2" checked>
-                                  <label class="radiobtns__label" for="radio-foundation-2"><span class="radiobtns__check">Геошурупы</span></label>
-                                </div>
+                            <div class="radio__box">
+                              <label class="radio__photo" for="radio-foundation-2"><img class="radiobtns__img img-fluid" src="img/test-1.2.jpg" alt="Геошурупы"></label>
+                              <div class="radiobtns radio__group">
+                                <input class="radiobtns__control" id="radio-foundation-2" type="radio" name="foundation[]" value="Геошурупы" data-dependence="item-2" checked>
+                                <label class="radiobtns__label" for="radio-foundation-2"><span class="radiobtns__check">Геошурупы</span></label>
                               </div>
                             </div>
-                            <div class="col-8 text-center js-slave">
-                              <div class="js-box">
-                                <label for="radio-foundation-3"><img class="radiobtns__img img-fluid" src="img/test-1.3.jpg" alt="Монолитные"></label>
-                                <div class="radiobtns">
-                                  <input class="radiobtns__control" id="radio-foundation-3" type="radio" name="foundation[]" value="Монолитные" data-dependence="item-3">
-                                  <label class="radiobtns__label" for="radio-foundation-3"><span class="radiobtns__check">Монолитные</span></label>
-                                </div>
+                            <div class="radio__box">
+                              <label class="radio__photo" for="radio-foundation-3"><img class="radiobtns__img img-fluid" src="img/test-1.3.jpg" alt="Монолитные"></label>
+                              <div class="radiobtns radio__group">
+                                <input class="radiobtns__control" id="radio-foundation-3" type="radio" name="foundation[]" value="Монолитные" data-dependence="item-3">
+                                <label class="radiobtns__label" for="radio-foundation-3"><span class="radiobtns__check">Монолитные</span></label>
                               </div>
                             </div>
                           </div>
@@ -1897,35 +1891,82 @@
                     </div>
                     <div class="tabs__item" data-mh="tabs">
                       <h3 class="quiz__sub-heading">Выберите материал каркаса</h3>
-                          <div class="progressbar">
-                            <div class="progressbar__status"><span class="progressbar__value">11%</span></div>
-                          </div>
-                          <div class="row align-items-stretch">
-                            <div class="col-8 text-center js-slave">
-                              <div class="js-box">
-                                <label for="radio-skeleton-1"><img class="radiobtns__img img-fluid" src="img/test-2.1.jpg" alt="Газобетон"></label>
-                                <div class="radiobtns">
-                                  <input class="radiobtns__control" id="radio-skeleton-1" type="radio" name="skeleton[]" value="Газобетон" data-slave="item-1">
-                                  <label class="radiobtns__label" for="radio-skeleton-1"><span class="radiobtns__check">Газобетон</span></label>
-                                </div>
+                          <div class="radio">
+                            <div class="radio__box">
+                              <label class="radio__photo" for="radio-skeleton-1"><img class="radiobtns__img img-fluid" src="img/test-2.1.jpg" alt="Газобетон"></label>
+                              <div class="radiobtns radio__group">
+                                <input class="radiobtns__control" id="radio-skeleton-1" type="radio" name="skeleton[]" value="Газобетон" data-slave="item-1">
+                                <label class="radiobtns__label" for="radio-skeleton-1"><span class="radiobtns__check">Газобетон</span></label>
                               </div>
                             </div>
-                            <div class="col-8 text-center js-slave">
-                              <div class="js-box">
-                                <label for="radio-skeleton-2"><img class="radiobtns__img img-fluid" src="img/test-2.2.jpg" alt="Дерево"></label>
-                                <div class="radiobtns">
-                                  <input class="radiobtns__control" id="radio-skeleton-2" type="radio" name="skeleton[]" value="Дерево" data-slave="item-2" checked>
-                                  <label class="radiobtns__label" for="radio-skeleton-2"><span class="radiobtns__check">Дерево</span></label>
-                                </div>
+                            <div class="radio__box">
+                              <label class="radio__photo" for="radio-skeleton-2"><img class="radiobtns__img img-fluid" src="img/test-2.2.jpg" alt="Дерево"></label>
+                              <div class="radiobtns radio__group">
+                                <input class="radiobtns__control" id="radio-skeleton-2" type="radio" name="skeleton[]" value="Дерево" data-slave="item-1" checked>
+                                <label class="radiobtns__label" for="radio-skeleton-2"><span class="radiobtns__check">Дерево</span></label>
                               </div>
                             </div>
-                            <div class="col-8 text-center js-slave">
-                              <div class="js-box">
-                                <label for="radio-skeleton-3"><img class="radiobtns__img img-fluid" src="img/test-2.3.jpg" alt="Железобетон"></label>
-                                <div class="radiobtns">
-                                  <input class="radiobtns__control" id="radio-skeleton-3" type="radio" name="skeleton[]" value="Железобетон" data-slave="item-3">
-                                  <label class="radiobtns__label" for="radio-skeleton-3"><span class="radiobtns__check">Железобетон</span></label>
-                                </div>
+                            <div class="radio__box">
+                              <label class="radio__photo" for="radio-skeleton-3"><img class="radiobtns__img img-fluid" src="img/test-2.3.jpg" alt="Метал"></label>
+                              <div class="radiobtns radio__group">
+                                <input class="radiobtns__control" id="radio-skeleton-3" type="radio" name="skeleton[]" value="Метал" data-slave="item-1">
+                                <label class="radiobtns__label" for="radio-skeleton-3"><span class="radiobtns__check">Метал</span></label>
+                              </div>
+                            </div>
+                            <div class="radio__box">
+                              <label class="radio__photo" for="radio-skeleton-4"><img class="radiobtns__img img-fluid" src="img/test-2.4.jpg" alt="Железобетон"></label>
+                              <div class="radiobtns radio__group">
+                                <input class="radiobtns__control" id="radio-skeleton-4" type="radio" name="skeleton[]" value="Железобетон" data-slave="item-1">
+                                <label class="radiobtns__label" for="radio-skeleton-4"><span class="radiobtns__check">Железобетон</span></label>
+                              </div>
+                            </div>
+                            <div class="radio__box">
+                              <label class="radio__photo" for="radio-skeleton-5"><img class="radiobtns__img img-fluid" src="img/test-2.1.jpg" alt="Газобетон"></label>
+                              <div class="radiobtns radio__group">
+                                <input class="radiobtns__control" id="radio-skeleton-5" type="radio" name="skeleton[]" value="Газобетон" data-slave="item-2">
+                                <label class="radiobtns__label" for="radio-skeleton-5"><span class="radiobtns__check">Газобетон</span></label>
+                              </div>
+                            </div>
+                            <div class="radio__box">
+                              <label class="radio__photo" for="radio-skeleton-6"><img class="radiobtns__img img-fluid" src="img/test-2.2.jpg" alt="Дерево"></label>
+                              <div class="radiobtns radio__group">
+                                <input class="radiobtns__control" id="radio-skeleton-6" type="radio" name="skeleton[]" value="Дерево" data-slave="item-2">
+                                <label class="radiobtns__label" for="radio-skeleton-6"><span class="radiobtns__check">Дерево</span></label>
+                              </div>
+                            </div>
+                            <div class="radio__box">
+                              <label class="radio__photo" for="radio-skeleton-7"><img class="radiobtns__img img-fluid" src="img/test-2.3.jpg" alt="Метал"></label>
+                              <div class="radiobtns radio__group">
+                                <input class="radiobtns__control" id="radio-skeleton-7" type="radio" name="skeleton[]" value="Метал" data-slave="item-2">
+                                <label class="radiobtns__label" for="radio-skeleton-7"><span class="radiobtns__check">Метал</span></label>
+                              </div>
+                            </div>
+                            <div class="radio__box">
+                              <label class="radio__photo" for="radio-skeleton-8"><img class="radiobtns__img img-fluid" src="img/test-2.4.jpg" alt="Железобетон"></label>
+                              <div class="radiobtns radio__group">
+                                <input class="radiobtns__control" id="radio-skeleton-8" type="radio" name="skeleton[]" value="Железобетон" data-slave="item-2">
+                                <label class="radiobtns__label" for="radio-skeleton-8"><span class="radiobtns__check">Железобетон</span></label>
+                              </div>
+                            </div>
+                            <div class="radio__box">
+                              <label class="radio__photo" for="radio-skeleton-9"><img class="radiobtns__img img-fluid" src="img/test-2.1.jpg" alt="Газобетон"></label>
+                              <div class="radiobtns radio__group">
+                                <input class="radiobtns__control" id="radio-skeleton-9" type="radio" name="skeleton[]" value="Газобетон" data-slave="item-3">
+                                <label class="radiobtns__label" for="radio-skeleton-9"><span class="radiobtns__check">Газобетон</span></label>
+                              </div>
+                            </div>
+                            <div class="radio__box">
+                              <label class="radio__photo" for="radio-skeleton-10"><img class="radiobtns__img img-fluid" src="img/test-2.2.jpg" alt="Дерево"></label>
+                              <div class="radiobtns radio__group">
+                                <input class="radiobtns__control" id="radio-skeleton-10" type="radio" name="skeleton[]" value="Дерево" data-slave="item-3">
+                                <label class="radiobtns__label" for="radio-skeleton-10"><span class="radiobtns__check">Дерево</span></label>
+                              </div>
+                            </div>
+                            <div class="radio__box">
+                              <label class="radio__photo" for="radio-skeleton-11"><img class="radiobtns__img img-fluid" src="img/test-2.3.jpg" alt="Метал"></label>
+                              <div class="radiobtns radio__group">
+                                <input class="radiobtns__control" id="radio-skeleton-11" type="radio" name="skeleton[]" value="Метал" data-slave="item-3">
+                                <label class="radiobtns__label" for="radio-skeleton-11"><span class="radiobtns__check">Метал</span></label>
                               </div>
                             </div>
                           </div>
@@ -1939,35 +1980,26 @@
                     </div>
                     <div class="tabs__item" data-mh="tabs">
                       <h3 class="quiz__sub-heading">Выберите материал фасада</h3>
-                          <div class="progressbar">
-                            <div class="progressbar__status"><span class="progressbar__value">22%</span></div>
-                          </div>
-                          <div class="row align-items-stretch">
-                            <div class="col-8 text-center js-slave">
-                              <div class="js-box">
-                                <label for="radio-facade-1"><img class="radiobtns__img img-fluid" src="img/test-3.1.jpg" alt="Короед"></label>
-                                <div class="radiobtns">
-                                  <input class="radiobtns__control" id="radio-facade-1" type="radio" name="facade[]" value="Короед">
-                                  <label class="radiobtns__label" for="radio-facade-1"><span class="radiobtns__check">Короед</span></label>
-                                </div>
+                          <div class="radio">
+                            <div class="radio__box">
+                              <label class="radio__photo" for="radio-facade-1"><img class="radiobtns__img img-fluid" src="img/test-3.1.jpg" alt="Короед"></label>
+                              <div class="radiobtns radio__group">
+                                <input class="radiobtns__control" id="radio-facade-1" type="radio" name="facade[]" value="Короед">
+                                <label class="radiobtns__label" for="radio-facade-1"><span class="radiobtns__check">Короед</span></label>
                               </div>
                             </div>
-                            <div class="col-8 text-center js-slave">
-                              <div class="js-box">
-                                <label for="radio-facade-2"><img class="radiobtns__img img-fluid" src="img/test-3.2.jpg" alt="Вентилируемый"></label>
-                                <div class="radiobtns">
-                                  <input class="radiobtns__control" id="radio-facade-2" type="radio" name="facade[]" value="Вентилируемый" checked>
-                                  <label class="radiobtns__label" for="radio-facade-2"><span class="radiobtns__check">Вентилируемый</span></label>
-                                </div>
+                            <div class="radio__box">
+                              <label class="radio__photo" for="radio-facade-2"><img class="radiobtns__img img-fluid" src="img/test-3.2.jpg" alt="Вентилируемый"></label>
+                              <div class="radiobtns radio__group">
+                                <input class="radiobtns__control" id="radio-facade-2" type="radio" name="facade[]" value="Вентилируемый" checked>
+                                <label class="radiobtns__label" for="radio-facade-2"><span class="radiobtns__check">Вентилируемый</span></label>
                               </div>
                             </div>
-                            <div class="col-8 text-center js-slave">
-                              <div class="js-box">
-                                <label for="radio-facade-3"><img class="radiobtns__img img-fluid" src="img/test-3.3.jpg" alt="Кирпичный"></label>
-                                <div class="radiobtns">
-                                  <input class="radiobtns__control" id="radio-facade-3" type="radio" name="facade[]" value="Кирпичный">
-                                  <label class="radiobtns__label" for="radio-facade-3"><span class="radiobtns__check">Кирпичный</span></label>
-                                </div>
+                            <div class="radio__box">
+                              <label class="radio__photo" for="radio-facade-3"><img class="radiobtns__img img-fluid" src="img/test-3.3.jpg" alt="Кирпичный"></label>
+                              <div class="radiobtns radio__group">
+                                <input class="radiobtns__control" id="radio-facade-3" type="radio" name="facade[]" value="Кирпичный">
+                                <label class="radiobtns__label" for="radio-facade-3"><span class="radiobtns__check">Кирпичный</span></label>
                               </div>
                             </div>
                           </div>
@@ -1981,9 +2013,6 @@
                     </div>
                     <div class="tabs__item" data-mh="tabs">
                       <h3 class="quiz__sub-heading">Укажите площадь первого этажа</h3>
-                          <div class="progressbar">
-                            <div class="progressbar__status"><span class="progressbar__value">33%</span></div>
-                          </div>
                           <div class="slides quiz__slides">
                             <p class="slides__descr"></p>
                             <div class="slides__item">
@@ -1996,9 +2025,6 @@
                     </div>
                     <div class="tabs__item" data-mh="tabs">
                       <h3 class="quiz__sub-heading">Укажите площадь второго этажа</h3>
-                          <div class="progressbar">
-                            <div class="progressbar__status"><span class="progressbar__value">44%</span></div>
-                          </div>
                           <div class="slides quiz__slides">
                             <p class="slides__descr"></p>
                             <div class="slides__item">
@@ -2010,14 +2036,11 @@
                           </div>
                     </div>
                     <div class="tabs__item" data-mh="tabs">
-                      <h3 class="quiz__sub-heading">Укажите площадь высоту этажа</h3>
-                          <div class="progressbar">
-                            <div class="progressbar__status"><span class="progressbar__value">55%</span></div>
-                          </div>
+                      <h3 class="quiz__sub-heading">Укажите высоту этажа</h3>
                           <div class="slides quiz__slides">
                             <p class="slides__descr"></p>
                             <div class="slides__item">
-                              <input class="slides__control" id="range6" type="number" name="range6" value="150" min="10" max="1000" step="10">
+                              <input class="slides__control" id="range6" type="number" name="range6" value="3" min="1" max="10" step="1">
                               <div class="slides__range" id="control-range6" data-slides="range6"></div>
                             </div>
                             <p class="slides__info info"><i class="info__icon ic ic--info"></i>Перемещайте ползунок, чтобы выбрать подходящую Вам площадь.
@@ -2026,26 +2049,54 @@
                     </div>
                     <div class="tabs__item" data-mh="tabs">
                       <h3 class="quiz__sub-heading">Укажите тип перекрытия</h3>
-                          <div class="progressbar">
-                            <div class="progressbar__status"><span class="progressbar__value">66%</span></div>
-                          </div>
-                          <div class="row align-items-stretch">
-                            <div class="col-8 text-center js-slave">
-                              <div class="js-box">
-                                <label for="radio-overlap-1"><img class="radiobtns__img img-fluid" src="img/test-7.1.jpg" alt="Комбинированное"></label>
-                                <div class="radiobtns">
-                                  <input class="radiobtns__control" id="radio-overlap-1" type="radio" name="overlap[]" value="Комбинированное дерево-метал" data-slave="item-1">
-                                  <label class="radiobtns__label" for="radio-overlap-1"><span class="radiobtns__check">Комбинированное дерево-метал</span></label>
-                                </div>
+                          <div class="radio">
+                            <div class="radio__box">
+                              <label class="radio__photo" for="radio-overlap-1"><img class="radiobtns__img img-fluid" src="img/test-7.1.jpg" alt="Круглопустотные"></label>
+                              <div class="radiobtns radio__group">
+                                <input class="radiobtns__control" id="radio-overlap-1" type="radio" name="overlap[]" value="Круглопустотные плиты" data-slave="item-1">
+                                <label class="radiobtns__label" for="radio-overlap-1"><span class="radiobtns__check">Круглопустотные плиты</span></label>
                               </div>
                             </div>
-                            <div class="col-8 text-center js-slave">
-                              <div class="js-box">
-                                <label for="radio-overlap-2"><img class="radiobtns__img img-fluid" src="img/test-7.2.jpg" alt="Дерево"></label>
-                                <div class="radiobtns">
-                                  <input class="radiobtns__control" id="radio-overlap-2" type="radio" name="overlap[]" value="Дерево" data-slave="item-2" checked>
-                                  <label class="radiobtns__label" for="radio-overlap-2"><span class="radiobtns__check">Дерево</span></label>
-                                </div>
+                            <div class="radio__box">
+                              <label class="radio__photo" for="radio-overlap-2"><img class="radiobtns__img img-fluid" src="img/test-7.2.jpg" alt="Дерево"></label>
+                              <div class="radiobtns radio__group">
+                                <input class="radiobtns__control" id="radio-overlap-2" type="radio" name="overlap[]" value="Дерево" data-slave="item-1" checked>
+                                <label class="radiobtns__label" for="radio-overlap-2"><span class="radiobtns__check">Дерево</span></label>
+                              </div>
+                            </div>
+                            <div class="radio__box">
+                              <label class="radio__photo" for="radio-overlap-3"><img class="radiobtns__img img-fluid" src="img/test-7.3.jpg" alt="Монолит железобетонный"></label>
+                              <div class="radiobtns radio__group">
+                                <input class="radiobtns__control" id="radio-overlap-3" type="radio" name="overlap[]" value="Монолит железобетонный" data-slave="item-1">
+                                <label class="radiobtns__label" for="radio-overlap-3"><span class="radiobtns__check">Монолит железобетонный</span></label>
+                              </div>
+                            </div>
+                            <div class="radio__box">
+                              <label class="radio__photo" for="radio-overlap-4"><img class="radiobtns__img img-fluid" src="img/test-7.1.jpg" alt="Круглопустотные"></label>
+                              <div class="radiobtns radio__group">
+                                <input class="radiobtns__control" id="radio-overlap-4" type="radio" name="overlap[]" value="Круглопустотные плиты" data-slave="item-2">
+                                <label class="radiobtns__label" for="radio-overlap-4"><span class="radiobtns__check">Круглопустотные плиты</span></label>
+                              </div>
+                            </div>
+                            <div class="radio__box">
+                              <label class="radio__photo" for="radio-overlap-5"><img class="radiobtns__img img-fluid" src="img/test-7.3.jpg" alt="Монолит железобетонный"></label>
+                              <div class="radiobtns radio__group">
+                                <input class="radiobtns__control" id="radio-overlap-5" type="radio" name="overlap[]" value="Монолит железобетонный" data-slave="item-2">
+                                <label class="radiobtns__label" for="radio-overlap-5"><span class="radiobtns__check">Монолит железобетонный</span></label>
+                              </div>
+                            </div>
+                            <div class="radio__box">
+                              <label class="radio__photo" for="radio-overlap-6"><img class="radiobtns__img img-fluid" src="img/test-7.2.jpg" alt="Дерево"></label>
+                              <div class="radiobtns radio__group">
+                                <input class="radiobtns__control" id="radio-overlap-6" type="radio" name="overlap[]" value="Дерево" data-slave="item-3">
+                                <label class="radiobtns__label" for="radio-overlap-6"><span class="radiobtns__check">Дерево</span></label>
+                              </div>
+                            </div>
+                            <div class="radio__box">
+                              <label class="radio__photo" for="radio-overlap-7"><img class="radiobtns__img img-fluid" src="img/test-7.4.jpg" alt="Комбинированое дерево-метал"></label>
+                              <div class="radiobtns radio__group">
+                                <input class="radiobtns__control" id="radio-overlap-7" type="radio" name="overlap[]" value="Комбинированое дерево-метал" data-slave="item-3">
+                                <label class="radiobtns__label" for="radio-overlap-7"><span class="radiobtns__check">Комбинированое дерево-метал</span></label>
                               </div>
                             </div>
                           </div>
@@ -2059,26 +2110,19 @@
                     </div>
                     <div class="tabs__item" data-mh="tabs">
                       <h3 class="quiz__sub-heading">Укажите тип каркаса кровли</h3>
-                          <div class="progressbar">
-                            <div class="progressbar__status"><span class="progressbar__value">77%</span></div>
-                          </div>
-                          <div class="row align-items-stretch">
-                            <div class="col-8 text-center js-slave">
-                              <div class="js-box">
-                                <label for="radio-roofskeleton-1"><img class="radiobtns__img img-fluid" src="img/test-8.1.jpg" alt="Метал"></label>
-                                <div class="radiobtns">
-                                  <input class="radiobtns__control" id="radio-roofskeleton-1" type="radio" name="roofskeleton[]" value="Метал">
-                                  <label class="radiobtns__label" for="radio-roofskeleton-1"><span class="radiobtns__check">Метал</span></label>
-                                </div>
+                          <div class="radio">
+                            <div class="radio__box">
+                              <label class="radio__photo" for="radio-roofskeleton-1"><img class="radiobtns__img img-fluid" src="img/test-8.1.jpg" alt="Метал"></label>
+                              <div class="radiobtns radio__group">
+                                <input class="radiobtns__control" id="radio-roofskeleton-1" type="radio" name="roofskeleton[]" value="Метал">
+                                <label class="radiobtns__label" for="radio-roofskeleton-1"><span class="radiobtns__check">Метал</span></label>
                               </div>
                             </div>
-                            <div class="col-8 text-center js-slave">
-                              <div class="js-box">
-                                <label for="radio-roofskeleton-2"><img class="radiobtns__img img-fluid" src="img/test-8.2.jpg" alt="Дерево"></label>
-                                <div class="radiobtns">
-                                  <input class="radiobtns__control" id="radio-roofskeleton-2" type="radio" name="roofskeleton[]" value="Дерево" checked>
-                                  <label class="radiobtns__label" for="radio-roofskeleton-2"><span class="radiobtns__check">Дерево</span></label>
-                                </div>
+                            <div class="radio__box">
+                              <label class="radio__photo" for="radio-roofskeleton-2"><img class="radiobtns__img img-fluid" src="img/test-8.2.jpg" alt="Дерево"></label>
+                              <div class="radiobtns radio__group">
+                                <input class="radiobtns__control" id="radio-roofskeleton-2" type="radio" name="roofskeleton[]" value="Дерево" checked>
+                                <label class="radiobtns__label" for="radio-roofskeleton-2"><span class="radiobtns__check">Дерево</span></label>
                               </div>
                             </div>
                           </div>
@@ -2092,35 +2136,26 @@
                     </div>
                     <div class="tabs__item" data-mh="tabs">
                       <h3 class="quiz__sub-heading">Укажите вид покрытия кровли</h3>
-                          <div class="progressbar">
-                            <div class="progressbar__status"><span class="progressbar__value">88%</span></div>
-                          </div>
-                          <div class="row align-items-stretch">
-                            <div class="col-8 text-center js-slave">
-                              <div class="js-box">
-                                <label for="radio-roof-1"><img class="radiobtns__img img-fluid" src="img/test-9.1.jpg" alt="Металлочерепица"></label>
-                                <div class="radiobtns">
-                                  <input class="radiobtns__control" id="radio-roof-1" type="radio" name="roof[]" value="Металлочерепица">
-                                  <label class="radiobtns__label" for="radio-roof-1"><span class="radiobtns__check">Металлочерепица</span></label>
-                                </div>
+                          <div class="radio">
+                            <div class="radio__box">
+                              <label class="radio__photo" for="radio-roof-1"><img class="radiobtns__img img-fluid" src="img/test-9.1.jpg" alt="Металлочерепица"></label>
+                              <div class="radiobtns radio__group">
+                                <input class="radiobtns__control" id="radio-roof-1" type="radio" name="roof[]" value="Металлочерепица">
+                                <label class="radiobtns__label" for="radio-roof-1"><span class="radiobtns__check">Металлочерепица</span></label>
                               </div>
                             </div>
-                            <div class="col-8 text-center js-slave">
-                              <div class="js-box">
-                                <label for="radio-roof-2"><img class="radiobtns__img img-fluid" src="img/test-9.2.jpg" alt="Битумная черепица"></label>
-                                <div class="radiobtns">
-                                  <input class="radiobtns__control" id="radio-roof-2" type="radio" name="roof[]" value="Битумная черепица" checked>
-                                  <label class="radiobtns__label" for="radio-roof-2"><span class="radiobtns__check">Битумная черепица</span></label>
-                                </div>
+                            <div class="radio__box">
+                              <label class="radio__photo" for="radio-roof-2"><img class="radiobtns__img img-fluid" src="img/test-9.2.jpg" alt="Битумная черепица"></label>
+                              <div class="radiobtns radio__group">
+                                <input class="radiobtns__control" id="radio-roof-2" type="radio" name="roof[]" value="Битумная черепица" checked>
+                                <label class="radiobtns__label" for="radio-roof-2"><span class="radiobtns__check">Битумная черепица</span></label>
                               </div>
                             </div>
-                            <div class="col-8 text-center js-slave">
-                              <div class="js-box">
-                                <label for="radio-roof-3"><img class="radiobtns__img img-fluid" src="img/test-9.3.jpg" alt="Фальцевая кровля"></label>
-                                <div class="radiobtns">
-                                  <input class="radiobtns__control" id="radio-roof-3" type="radio" name="roof[]" value="Фальцевая кровля">
-                                  <label class="radiobtns__label" for="radio-roof-3"><span class="radiobtns__check">Фальцевая кровля</span></label>
-                                </div>
+                            <div class="radio__box">
+                              <label class="radio__photo" for="radio-roof-3"><img class="radiobtns__img img-fluid" src="img/test-9.3.jpg" alt="Фальцевая кровля"></label>
+                              <div class="radiobtns radio__group">
+                                <input class="radiobtns__control" id="radio-roof-3" type="radio" name="roof[]" value="Фальцевая кровля">
+                                <label class="radiobtns__label" for="radio-roof-3"><span class="radiobtns__check">Фальцевая кровля</span></label>
                               </div>
                             </div>
                           </div>

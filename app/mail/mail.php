@@ -125,6 +125,10 @@
     array_push($data, $stack);
   }
 
+
+
+
+
   if ( !empty($_POST["fondation"])  && (isset($_POST["fondation"])) ) {
     if (is_array($_POST['fondation'])) {
       $post["fondation"] = implode(", ", $_POST["fondation"]);
@@ -138,6 +142,14 @@
     array_push($data, $stack);
   }
 
+  if ( (!empty($_POST["range1"])) && (isset($_POST["range1"])) ) {
+    $post["user_range1"] = $_POST["range1"];
+    $stack = array(
+      "key"   => "Квадратура фундамента: ",
+      "value" => $post["user_range1"]
+    );
+    array_push($data, $stack);
+  }
 
   if ( !empty($_POST["skeleton"])  && (isset($_POST["skeleton"])) ) {
     if (is_array($_POST['skeleton'])) {
@@ -152,6 +164,16 @@
     array_push($data, $stack);
   }
 
+  if ( (!empty($_POST["range2"])) && (isset($_POST["range2"])) ) {
+    $post["user_range2"] = $_POST["range2"];
+    $stack = array(
+      "key"   => "Квадратура каркаса: ",
+      "value" => $post["user_range2"]
+    );
+    array_push($data, $stack);
+  }
+
+
   if ( !empty($_POST["facade"])  && (isset($_POST["facade"])) ) {
     if (is_array($_POST['facade'])) {
       $post["facade"] = implode(", ", $_POST["facade"]);
@@ -161,63 +183,6 @@
     $stack = array(
       "key"   => "Материал фасада: ",
       "value" => $post["facade"]
-    );
-    array_push($data, $stack);
-  }
-
-  if ( !empty($_POST["overlap"])  && (isset($_POST["overlap"])) ) {
-    if (is_array($_POST['overlap'])) {
-      $post["overlap"] = implode(", ", $_POST["overlap"]);
-    } else {
-      $post["overlap"] = $_POST["overlap"];
-    }
-    $stack = array(
-      "key"   => "Тип перекрытия: ",
-      "value" => $post["overlap"]
-    );
-    array_push($data, $stack);
-  }
-
-  if ( !empty($_POST["roofskeleton"])  && (isset($_POST["roofskeleton"])) ) {
-    if (is_array($_POST['roofskeleton'])) {
-      $post["roofskeleton"] = implode(", ", $_POST["roofskeleton"]);
-    } else {
-      $post["roofskeleton"] = $_POST["roofskeleton"];
-    }
-    $stack = array(
-      "key"   => "Тип каркаса кровли: ",
-      "value" => $post["roofskeleton"]
-    );
-    array_push($data, $stack);
-  }
-
-  if ( !empty($_POST["roof"])  && (isset($_POST["roof"])) ) {
-    if (is_array($_POST['roof'])) {
-      $post["roof"] = implode(", ", $_POST["roof"]);
-    } else {
-      $post["roof"] = $_POST["roof"];
-    }
-    $stack = array(
-      "key"   => "Вид покрытия кровли: ",
-      "value" => $post["roof"]
-    );
-    array_push($data, $stack);
-  }
-
-  if ( (!empty($_POST["range1"])) && (isset($_POST["range1"])) ) {
-    $post["user_range1"] = $_POST["range1"];
-    $stack = array(
-      "key"   => "Квадратура фундамента: ",
-      "value" => $post["user_range1"]
-    );
-    array_push($data, $stack);
-  }
-
-  if ( (!empty($_POST["range2"])) && (isset($_POST["range2"])) ) {
-    $post["user_range2"] = $_POST["range2"];
-    $stack = array(
-      "key"   => "Квадратура каркаса: ",
-      "value" => $post["user_range2"]
     );
     array_push($data, $stack);
   }
@@ -258,6 +223,19 @@
     array_push($data, $stack);
   }
 
+  if ( !empty($_POST["overlap"])  && (isset($_POST["overlap"])) ) {
+    if (is_array($_POST['overlap'])) {
+      $post["overlap"] = implode(", ", $_POST["overlap"]);
+    } else {
+      $post["overlap"] = $_POST["overlap"];
+    }
+    $stack = array(
+      "key"   => "Тип перекрытия: ",
+      "value" => $post["overlap"]
+    );
+    array_push($data, $stack);
+  }
+
   if ( (!empty($_POST["range7"])) && (isset($_POST["range7"])) ) {
     $post["user_range7"] = $_POST["range7"];
     $stack = array(
@@ -267,11 +245,37 @@
     array_push($data, $stack);
   }
 
+  if ( !empty($_POST["roofskeleton"])  && (isset($_POST["roofskeleton"])) ) {
+    if (is_array($_POST['roofskeleton'])) {
+      $post["roofskeleton"] = implode(", ", $_POST["roofskeleton"]);
+    } else {
+      $post["roofskeleton"] = $_POST["roofskeleton"];
+    }
+    $stack = array(
+      "key"   => "Тип каркаса кровли: ",
+      "value" => $post["roofskeleton"]
+    );
+    array_push($data, $stack);
+  }
+
   if ( (!empty($_POST["range8"])) && (isset($_POST["range8"])) ) {
     $post["user_range8"] = $_POST["range8"];
     $stack = array(
       "key"   => "Площадь каркаса кровли: ",
       "value" => $post["user_range8"]
+    );
+    array_push($data, $stack);
+  }
+  
+  if ( !empty($_POST["roof"])  && (isset($_POST["roof"])) ) {
+    if (is_array($_POST['roof'])) {
+      $post["roof"] = implode(", ", $_POST["roof"]);
+    } else {
+      $post["roof"] = $_POST["roof"];
+    }
+    $stack = array(
+      "key"   => "Вид покрытия кровли: ",
+      "value" => $post["roof"]
     );
     array_push($data, $stack);
   }

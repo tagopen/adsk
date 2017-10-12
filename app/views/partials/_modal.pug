@@ -228,12 +228,11 @@
           | 9.4. Действующая Политика конфиденциальности размещена на странице по адресу delovaya.com.ua
 
 - var quiz = content.site.modal.test1
-mixin progressbar(i)
+mixin progressbar()
   - var items = quiz.tabs.items.length
-  if ( i < items - 1 )
-    .progressbar
+    #progressbar-1.progressbar
       .progressbar__status
-        span.progressbar__value!= ~~(100 / (items - 1) * i) + "%"
+        span.progressbar__value 0%
 mixin navigate(item, toggle)
   if (item)
     .button-group.text-center
@@ -254,17 +253,16 @@ mixin range(item)
           != item.info.text
 mixin radiobtns(item)
   if (item)
-    .row.align-items-stretch
+    .radio
       each radio, i in item.items
         - var id = "radio-" + item.id + "-" + (i + 1)
         - var dependence = (radio.dependence) ? radio.dependence : undefined
         - var slave = (radio.slave) ? radio.slave : undefined
         - var checked = (i === 1) ? true : undefined
-        .col-8.text-center.js-slave
-          .js-box
-            label(for=id)
+        .radio__box
+            label.radio__photo(for=id)
               img.radiobtns__img.img-fluid(src=radio.img.src, alt=radio.img.alt)
-            .radiobtns
+            .radiobtns.radio__group
               input.radiobtns__control(id=id, type="radio", name=item.name, value=radio.value, data-dependence=dependence, data-slave=slave, checked=checked)
               label.radiobtns__label(for=id)
                 span.radiobtns__check!= radio.value 
@@ -294,6 +292,7 @@ mixin submit(form)
         .row.justify-content-center.align-items-stretch
           .col-24
             h2.quiz__heading.heading.heading--border!= quiz.heading
+            +progressbar(i)
           .col-24.col-lg-15
             form.contactForm.form(method="POST", action="mail/mail.php")
               .tabs.quiz__tabs(data-tabs=quiz.tabs.id)
@@ -302,7 +301,6 @@ mixin submit(form)
                     h3.quiz__sub-heading!= item.heading
                     if (item.descr)
                       p.quiz__descr!= item.descr
-                    +progressbar(i)
                     +radiobtns(item.radiobtns) 
                     +range(item.range)
                     +submit(item.formGroup)    

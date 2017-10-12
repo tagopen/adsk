@@ -370,18 +370,32 @@ $('.worth__size').matchHeight({
         var  $item = $(this).find('.tabs__item'),
              $currentItem = $item.filter('.tabs__item--active').closest('.tabs__item'),
              activeItem = $currentItem.index(),
-             $progressbarStatus = $(this).find('.progressbar__status');
+             $progressbar = $('#progressbar-1'),
+             $progressbarStatus = $progressbar.find('.progressbar__status'),
+             $progressbarNumber = $progressbar.find('.progressbar__value'),
+             progressValue = 0;
+
+        // Tabs control button
         if (control === 'prev') {
-          $progressbarStatus.css({
-            width: (~~(100 / ($item.length - 1) * (activeItem - 1))) + "%"
-          });
-          $item.removeClass('tabs__item--active').eq(activeItem - 1).addClass('tabs__item--active');
+          activeItem = activeItem - 1;
         } else if (control === 'next') {
-          $progressbarStatus.css({
-            width: (~~(100 / ($item.length - 1) * (activeItem + 1))) + "%"
-          });
-          $item.removeClass('tabs__item--active').eq(activeItem + 1).addClass('tabs__item--active');
+          activeItem = activeItem + 1;
         }
+
+        progressValue = (~~(100 / ($item.length - 2) * (activeItem))) + "%";
+
+        $progressbarStatus.css({
+          width: progressValue
+        });
+
+        $item.removeClass('tabs__item--active').eq(activeItem).addClass('tabs__item--active');
+
+        if ($item.length - 1 <= activeItem)  {
+          $progressbar.slideUp('10');
+        }
+        
+
+        $progressbarNumber.html(progressValue);
       });
     e.preventDefault();
     });
@@ -394,9 +408,9 @@ $('.worth__size').matchHeight({
       $checkboxes = $('[data-slave=' + target + ']'),
       hiddenClass = 'hidden-md-up hidden-md-down';
 
-      $('[data-slave]').closest('.js-slave').addClass(hiddenClass);
+      $('[data-slave]').closest('.radio__box').addClass(hiddenClass);
 
-      var $group = $checkboxes.closest('.js-slave');
+      var $group = $checkboxes.closest('.radio__box');
       $group.removeClass(hiddenClass);
     });
     $('[data-dependence]:checked').triggerHandler('click');
@@ -404,30 +418,48 @@ $('.worth__size').matchHeight({
 
   // range nouislider
   $(function() {
-    var ranges = ["control-range1","control-range2","control-range3","control-range4","control-range5","control-range6","control-range7","control-range8","control-range9",];
-    var format = wNumb({ decimals: 0, suffix: 'м²' });
+    var ranges = ["control-range1","control-range2","control-range3","control-range4","control-range5","control-range6","control-range7","control-range8","control-range9"],
+        options = {
+          start: 150,
+          step: 10,
+          tooltips: wNumb({ decimals: 0, suffix: 'м²' }),
+          range: {
+            'min': 10,
+            'max': 1000
+          },
+          pips: {
+            mode: 'values',
+            values: [10, 1000],
+            density: -1,
+            format: wNumb({ decimals: 0, suffix: 'м²' })
+          }
+        },
+        options6 = {
+          start: 3,
+          step: 1,
+          tooltips: wNumb({ decimals: 0, suffix: 'м' }),
+          range: {
+            'min': 1,
+            'max': 10
+          },
+          pips: {
+            mode: 'values',
+            values: [1, 10],
+            density: -1,
+            format: wNumb({ decimals: 0, suffix: 'м' })
+          }
+        };
 
     for (var i = 0; i < ranges.length; i++) {
 
       var range = document.getElementById(ranges[i]);
       var target = $(range).data('slides');
       $("#" + target).hide();
-
-      noUiSlider.create(range, {
-        start: 150,
-        step: 10,
-        tooltips: format,
-        range: {
-          'min': 10,
-          'max': 1000
-        },
-        pips: {
-          mode: 'values',
-          values: [10, 1000],
-          density: -1,
-          format: format
-        }
-      });
+      if (i == 5) {
+        noUiSlider.create(range, options6);
+      } else { 
+        noUiSlider.create(range, options);
+      }
 
       range.noUiSlider.on('update', function( values, handle ) {
         var value = values[handle],
