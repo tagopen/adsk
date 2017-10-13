@@ -81,6 +81,7 @@ gulp.task('scripts', () => {
     'node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js',
     'node_modules/nouislider/distribute/nouislider.js',
     'node_modules/wnumb/wNumb.js',
+    'node_modules/loadjs/dist/loadjs.min.js',
     //'node_modules/onepage-scroll/jquery.onepage-scroll.js',
     //'node_modules/jquery.cookie/jquery.cookie.js',
     //'node_modules/bootstrap-slider/dist/bootstrap-slider.js',
@@ -308,35 +309,39 @@ gulp.task('watch', function(){
     });
 });
 
-//gulp.task('build', ['clean', 'pug', 'img', 'scripts', 'sass'], function() {
-//  var buildCss = gulp.src([
-//      'app/css/**/*.css'
-//    ])
-//    .pipe($.plumber())
-//    //.pipe(gulp.dest('dist/css'))   // if need not minified files
-//    .pipe($.cleanCSS())
-//    .pipe($.rename({suffix: '.min'}))
-//    .pipe(gulp.dest('dist/css'));
-//
-//  var buildFonts = gulp.src('app/font/**/*')
-//    .pipe(gulp.dest('dist/font'));
-//
-//  var buildJs = gulp.src('app/js/**/*.js')
-//    .pipe(gulp.dest('dist/js'))
-//    .pipe($.uglifyjs())
-//    .pipe($.rename({suffix: '.min'}))
-//    //.pipe($.concat('all.min.js')) // if need concat js
-//    //.pipe($.uglify())
-//    .pipe(gulp.dest('dist/js'));
-//
-//  var buildHtml = gulp.src('app/*.html')
-//    .pipe(useref())
-//    .pipe(gulpif('*.js', uglifyjs()))
-//    .pipe(gulpif('*.css', cleanCss()))
-//    .pipe(gulp.dest('dist'));
-//});
+gulp.task('prod', function() {
+ 
+ var buildJS = gulp.src('app/js/*.js')
+    .pipe($.plumber({
+      handleError: function (err) {
+        console.log(err);
+        this.emit('end');
+      }
+    }))
+   .pipe($.uglify())
+   .pipe($.rename({suffix: '.min'}))
+   //.pipe($.concat('all.min.js')) // if need concat js
+   //.pipe($.uglify())
+   .pipe(gulp.dest('dist/js'));
 
-gulp.task('dev', ['clean', 'pug', 'fonts', 'sprite', 'img', 'sass', 'scripts'], () => {
+ var buildCSS = gulp.src('app/css/*.css')
+    .pipe($.plumber({
+      handleError: function (err) {
+        console.log(err);
+        this.emit('end');
+      }
+    }))
+   .pipe($.cssnano({
+      discardComments: {removeAll: true}
+    }))
+   .pipe($.rename({suffix: '.min'}))
+   //.pipe($.concat('all.min.js')) // if need concat js
+   //.pipe($.uglify())
+   .pipe(gulp.dest('dist/css'));
+
+});
+
+gulp.task('dev', ['clean', 'pug', 'fonts', 'sprite', 'sass', 'scripts'], () => {
 
   let buildmail = gulp.src(path.watch.mail)
     .pipe(gulp.dest(path.build.mail));

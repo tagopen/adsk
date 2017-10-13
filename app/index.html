@@ -53,6 +53,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
     <!-- endbuild-->
+    <script src="js/loadjs.min.js"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries-->
     <!-- WARNING: Respond.js doesn't work if you view the page via file://--><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -2401,35 +2402,56 @@
         </div>
       </div>
     </div>
-    <!-- build:js js/bundle.min.js-->
-    <!-- jQuery-->
-    <script src="js/jquery.js"></script>
-    <!-- Tether JavaScript    -->
-    <script src="js/tether.js"></script>
-    <!-- Bootstrap JavaScript-->
-    <script src="js/bootstrap.js"></script>
-    <!-- Old browsers reject JavaScript-->
-    <script src="js/jquery.reject.js"></script>
-    <!-- Slick-Slider JavaScript-->
-    <script src="js/slick.js"></script>
-    <!-- Vue-Carousel JavaScript    -->
-    <script src="js/vue.js"></script>
-    <script src="js/vue-carousel-3d.min.js"></script>
-    <!-- Match-Height JavaScript      -->
-    <script src="js/jquery.matchHeight.js"></script>
-    <!-- Fancybox 3 JavaScript-->
-    <script src="js/jquery.fancybox.js"></script>
-    <!-- Select2 JavaScript-->
-    <script src="js/select2.full.js"></script>
-    <!-- Custom scrollbar Javascript-->
-    <script src="js/jquery.mCustomScrollbar.js"></script>
-    <!-- MaskedInput JavaScript-->
-    <script src="js/jquery.maskedinput.js"></script>
-    <!-- NoUISlider JavaScript-->
-    <script src="js/wNumb.js"></script>
-    <script src="js/nouislider.js"></script>
-    <!-- Custom JavaScript-->
-    <script src="js/main.js"></script>
-    <!-- endbuild-->
+    <script>
+      loadjs(
+        [
+          'js/jquery.min.js'
+        ],
+        'jquery'
+      );
+      
+      loadjs.ready(['jquery'], {
+        success: function() {
+      
+          // jQuery is now loaded and ready to use
+          loadjs(['js/tether.js', 'js/bootstrap.min.js'], 'bootstrap', {
+            async: false
+          });
+      
+          loadjs(['js/vue.js', 'js/vue-carousel-3d.min.js'], 'vue', {
+            async: false
+          });
+      
+          loadjs(['js/wNumb.js', 'js/nouislider.min.js'], 'nouislider', {
+            async: false
+          });
+      
+          loadjs(
+            [
+              'js/jquery.reject.min.js',
+              'js/slick.js',
+              'js/jquery.matchHeight.min.js',
+              'js/jquery.fancybox.min.js',
+              'js/select2.full.min.js',
+              'js/jquery.mCustomScrollbar.min.js',
+              'js/jquery.maskedinput.min.js',
+            ],
+            'jquery-plugins'
+          );
+      
+          loadjs.ready(['jquery-plugins', 'vue', 'bootstrap', 'nouislider'], {
+            success: function() {
+            // jQuery and the jQuery plugins are now all loaded and ready to use
+              loadjs(
+                [
+                  'js/main.min.js'
+                ],
+                'customjs'
+              )
+            }
+          });
+        } 
+      });
+    </script>
   </body>
 </html>

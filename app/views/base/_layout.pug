@@ -69,6 +69,8 @@ html(lang='ru' prefix='og: http://ogp.me/ns#')
 
     // endbuild
 
+    script(src='js/loadjs.min.js')
+
     // HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
     // WARNING: Respond.js doesn't work if you view the page via file://
     <!--[if lt IE 9]>
@@ -88,36 +90,87 @@ html(lang='ru' prefix='og: http://ogp.me/ns#')
     block footer
     block modal
 
-    // build:js js/bundle.min.js
-
-    // jQuery
-    script(src='js/jquery.js')
-    // Tether JavaScript    
-    script(src='js/tether.js')
-    // Bootstrap JavaScript
-    script(src='js/bootstrap.js')
-    // Old browsers reject JavaScript
-    script(src='js/jquery.reject.js')
+    //- // build:js js/bundle.min.js
+    //- // jQuery
+    //- script(src='js/jquery.js')
+    //- // Tether JavaScript    
+    //- script(src='js/tether.js')
+    //- // Bootstrap JavaScript
+    //- script(src='js/bootstrap.js')
+    //- // Old browsers reject JavaScript
+    //- script(src='js/jquery.reject.js')
     block scripts
-    // Slick-Slider JavaScript
-    script(src='js/slick.js')
-    // Vue-Carousel JavaScript    
-    script(src='js/vue.js')
-    script(src='js/vue-carousel-3d.min.js')
-    // Match-Height JavaScript      
-    script(src='js/jquery.matchHeight.js')
-    // Fancybox 3 JavaScript
-    script(src='js/jquery.fancybox.js')
-    // Select2 JavaScript
-    script(src='js/select2.full.js')
-    // Custom scrollbar Javascript
-    script(src='js/jquery.mCustomScrollbar.js')
-    // MaskedInput JavaScript
-    script(src='js/jquery.maskedinput.js')
-    // NoUISlider JavaScript
-    script(src='js/wNumb.js')
-    script(src='js/nouislider.js')
-    // Custom JavaScript
-    script(src='js/main.js')
+    //- // Slick-Slider JavaScript
+    //- script(src='js/slick.js')
+    //- // Vue-Carousel JavaScript    
+    //- script(src='js/vue.js')
+    //- script(src='js/vue-carousel-3d.min.js')
+    //- // Match-Height JavaScript      
+    //- script(src='js/jquery.matchHeight.js')
+    //- // Fancybox 3 JavaScript
+    //- script(src='js/jquery.fancybox.js')
+    //- // Select2 JavaScript
+    //- script(src='js/select2.full.js')
+    //- // Custom scrollbar Javascript
+    //- script(src='js/jquery.mCustomScrollbar.js')
+    //- // MaskedInput JavaScript
+    //- script(src='js/jquery.maskedinput.js')
+    //- // NoUISlider JavaScript
+    //- script(src='js/wNumb.js')
+    //- script(src='js/nouislider.js')
+    //- // Custom JavaScript
+    //- script(src='js/main.js')
 
-    // endbuild
+    //- // endbuild
+
+
+    script.
+      loadjs(
+        [
+          'js/jquery.min.js'
+        ],
+        'jquery'
+      );
+
+      loadjs.ready(['jquery'], {
+        success: function() {
+
+          // jQuery is now loaded and ready to use
+          loadjs(['js/tether.js', 'js/bootstrap.min.js'], 'bootstrap', {
+            async: false
+          });
+
+          loadjs(['js/vue.js', 'js/vue-carousel-3d.min.js'], 'vue', {
+            async: false
+          });
+
+          loadjs(['js/wNumb.js', 'js/nouislider.min.js'], 'nouislider', {
+            async: false
+          });
+
+          loadjs(
+            [
+              'js/jquery.reject.min.js',
+              'js/slick.js',
+              'js/jquery.matchHeight.min.js',
+              'js/jquery.fancybox.min.js',
+              'js/select2.full.min.js',
+              'js/jquery.mCustomScrollbar.min.js',
+              'js/jquery.maskedinput.min.js',
+            ],
+            'jquery-plugins'
+          );
+
+          loadjs.ready(['jquery-plugins', 'vue', 'bootstrap', 'nouislider'], {
+            success: function() {
+            // jQuery and the jQuery plugins are now all loaded and ready to use
+              loadjs(
+                [
+                  'js/main.min.js'
+                ],
+                'customjs'
+              )
+            }
+          });
+        } 
+      });
