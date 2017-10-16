@@ -15,7 +15,7 @@
                       img.img-fluid.slider__img.slider__img--big(src=slide.image.src, alt=slide.image.alt)
                     each item in slide.gallery   
                       a.hidden-md-up.hidden-md-down.slider__link.slider__fancybox(data-fancybox="images" + i, href=item.src)
-                        img.img-fluid.slider__img.slider__img--big(src=item.src, alt="Картинка")
+                        //-img.img-fluid.slider__img.slider__img--big(src=item.src, alt="Картинка")
                     .slider__thumb
                       button.btn.button.button--size.js-fancybox!=content.index.project.btn
                 .col-24.col-lg-12
@@ -47,7 +47,7 @@
                           img.img-fluid.slider__img.slider__img--big(src=slide.image.src, alt=slide.image.alt)
                         each item in slide.gallery   
                           a.hidden-md-up.hidden-md-down.slider__link.slider__fancybox(data-fancybox="images" + i, href=item.src)
-                            img.img-fluid.slider__img.slider__img--big(src=item.src, alt="Картинка")
+                            //-img.img-fluid.slider__img.slider__img--big(src=item.src, alt="Картинка")
                         .slider__thumb
                           button.btn.button.button--size.js-fancybox!=content.index.project.btn
                     .col-12
